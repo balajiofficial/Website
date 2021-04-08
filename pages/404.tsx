@@ -15,7 +15,7 @@ export default function FourOFour() {
       >
         Error 404 Page Not Found
       </p>
-      <div className="mt-4 flex justify-center">
+      <div className="mt-5 flex justify-center">
         <Link href="/">
           <button className="p-3 bg-blue-600 text-white hover:shadow-lg rounded-lg text-lg  hover:bg-blue-500">
             Return to Home Page
