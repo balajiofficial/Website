@@ -36,3 +36,4 @@ yarn-error.log*
 # tailwind css
 /styles/tailwind.css
 /tailwind.config.js
+/next.config.js

@@ -6,7 +6,7 @@ export default function FourOFour() {
   return (
     <Layout>
       <Head>
-        <title>404 Not Found | Balaji</title>
+        <title>Error 404 | Balaji</title>
       </Head>
       <p
         className={

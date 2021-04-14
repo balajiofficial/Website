@@ -4,7 +4,12 @@ import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <nav className={styles.nav + " shadow-md text-lg bg-blue-100"}>
+    <nav
+      className={
+        styles.nav +
+        " shadow-lg text-lg bg-gradient-to-tl from-pink-600 to-blue-600 text-white"
+      }
+    >
       <div>
         <ul className="flex justify-evenly font-medium">
           <Link href="/">
@@ -22,22 +27,17 @@ export default function NavBar() {
           </Link>
           <Link href="/projects">
             <a>
-              <li className="text-gray-600 hover:text-gray-900">Projects</li>
+              <li className="hover:text-gray-900">Projects</li>
             </a>
           </Link>
           <Link href="/resume">
             <a>
-              <li className="text-gray-600 hover:text-gray-900">Resume</li>
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a>
-              <li className="text-gray-600 hover:text-gray-900">Contact Me</li>
+              <li className="hover:text-gray-900">Resume</li>
             </a>
           </Link>
           <Link href="/blog">
             <a>
-              <li className="text-gray-600 hover:text-gray-900">Blog</li>
+              <li className="hover:text-gray-900">Blog</li>
             </a>
           </Link>
         </ul>
