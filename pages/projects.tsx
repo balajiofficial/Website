@@ -30,14 +30,14 @@ export default function Projects() {
         <title>Projects | Balaji</title>
       </Head>
       <div>
-        <div className="mt-4 flex justify-center">
+        <div className="mt-4 flex justify-center pl-10 pr-10">
           <div className="width2">
             {content.map((e) => {
               return (
                 <div>
                   <div className="flex flex-col lg:flex-row">
                     <div className="break-words pt-4 pb-4">
-                      <div className="flex justify-between">
+                      <div className="flex justify-between pr-2">
                         <div>
                           <a
                             href={e[3]}

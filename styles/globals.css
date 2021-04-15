@@ -8,12 +8,22 @@
   outline: 0 !important;
 }
 
-.width {
-  width: 40%;
+@media (min-width: 1024px) {
+  .width2 {
+    width: 75%;
+  }
+
+  .width {
+    width: 40%;
+  }
 }
 
-.width2 {
-  width: 75%;
+.width {
+  width: 100%;
+}
+
+.width-about {
+  width: 60%;
 }
 
 .font-footer {
