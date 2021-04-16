@@ -30,9 +30,9 @@ export default function NavBar() {
               <li className="hover:text-gray-900">Projects</li>
             </a>
           </Link>
-          <Link href="/resume">
+          <Link href="/academics">
             <a>
-              <li className="hover:text-gray-900">Resume</li>
+              <li className="hover:text-gray-900">Academic Milestones</li>
             </a>
           </Link>
           <Link href="/blog">

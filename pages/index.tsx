@@ -9,14 +9,14 @@ export default function Home() {
         <title>Home | Balaji</title>
       </Head>
       <div>
-        <div className="lg:pt-56 pt-20">
+        <div className="lg:pt-56 pt-20 pb-56">
           <h1 className="flex justify-center text-9xl pb-10 font-semibold">
             Balaji
           </h1>
           <div className="flex justify-center">
             <div className="text-white flex lg:justify-evenly width2 justify-start flex-col lg:flex-row">
               <div className="pt-2 pb-2">
-                <a href="https://github.com/K-Balaji">
+                <a href="https://github.com/K-Balaji" target="_blank">
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg
@@ -40,7 +40,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="pt-2 pb-2">
-                <a href="#">
+                <a href="#" target="_blank">
                   <button className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg
@@ -59,7 +59,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="pt-2 pb-2">
-                <a href="#">
+                <a href="#" target="_blank">
                   <button className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg">
                     <svg
                       fill="#ffffff"
@@ -78,7 +78,7 @@ export default function Home() {
                 </a>
               </div>
               <div className="pt-2 pb-2">
-                <a href="mailto:aa@aa.com">
+                <a href="mailto:notanemail@email.com">
                   <button className="bg-indigo-600 hover:bg-indigo-500 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <svg
                       version="1.1"
@@ -109,20 +109,6 @@ export default function Home() {
                 </a>
               </div>
             </div>
-          </div>
-          <div className="flex justify-center lg:pt-44 pt-24 pb-4">
-            <svg
-              className="animate-bounce w-8 h-8"
-              fill="none"
-              color="#070047"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
           </div>
         </div>
       </div>
