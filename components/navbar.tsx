@@ -25,19 +25,25 @@ export default function NavBar() {
               </li>
             </a>
           </Link>
-          <Link href="/projects">
+          <Link href="/about">
             <a>
-              <li className="hover:text-gray-900">Projects</li>
+              <li className="hover:text-gray-900 border-b-2 border-transparent hover:border-black">
+                About
+              </li>
             </a>
           </Link>
-          <Link href="/academics">
+          <Link href="/projects">
             <a>
-              <li className="hover:text-gray-900">Academic Milestones</li>
+              <li className="hover:text-gray-900 border-b-2 border-transparent hover:border-black">
+                Projects
+              </li>
             </a>
           </Link>
           <Link href="/blog">
             <a>
-              <li className="hover:text-gray-900">Blog</li>
+              <li className="hover:text-gray-900 border-b-2 border-transparent hover:border-black">
+                Blog
+              </li>
             </a>
           </Link>
         </ul>

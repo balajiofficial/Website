@@ -1,15 +1,14 @@
 import Layout from "../components/layout";
 import Head from "next/head";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <Layout footer>
+    <Layout>
       <Head>
         <title>Home | Balaji</title>
       </Head>
       <div>
-        <div className="lg:pt-56 pt-20 pb-56">
+        <div className="lg:pt-56 pt-20">
           <h1 className="flex justify-center text-9xl pb-10 font-semibold">
             Balaji
           </h1>
@@ -110,29 +109,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="pb-14 pt-5 bg-red-600 text-white flex justify-center">
-        <div className="mt-12 flex lg:justify-center flex-col lg:flex-row font-about width-about">
-          <Image
-            src="/profile.png"
-            alt="Profile"
-            className="rounded-full"
-            width={246}
-            height={258}
-          />
-          <p className="width pl-9">
-            <h1 className="font-semibold text-3xl mt-5">About</h1>
-            <h2 className="pt-2 text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              magnam ad aspernatur molestiae cum nulla ab, repellat omnis
-              impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Et, culpa tempore ducimus magnam quibusdam architecto repellat
-              suscipit facere esse fuga ullam eos! Cupiditate, tempora
-              exercitationem. Eligendi
-            </h2>
-          </p>
         </div>
       </div>
     </Layout>

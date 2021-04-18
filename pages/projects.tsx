@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 
 export default function Projects() {
-  let content = [
+  let content: Array<Array<string>> = [
     [
       "Project 1",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
@@ -32,7 +32,7 @@ export default function Projects() {
       <div>
         <div className="mt-4 flex justify-center pl-10 pr-10">
           <div className="width2">
-            {content.map((e) => {
+            {content.map((e: Array<string>) => {
               return (
                 <div>
                   <div className="flex flex-col lg:flex-row">

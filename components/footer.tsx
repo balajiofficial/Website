@@ -12,6 +12,15 @@ export default function Footer() {
             <h2>License</h2>
           </a>
         </span>
+        <p>
+          Contact me at{" "}
+          <a
+            href="mailto:notanemail@email.com"
+            className="underline hover:no-underline"
+          >
+            notanemail@email.com
+          </a>
+        </p>
       </div>
     </footer>
   );
