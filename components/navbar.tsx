@@ -1,4 +1,3 @@
-import styles from "../styles/NavBar.module.css";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,8 +5,7 @@ export default function NavBar() {
   return (
     <nav
       className={
-        styles.nav +
-        " shadow-lg text-lg bg-gradient-to-tl from-pink-600 to-blue-600 text-white"
+        "nav shadow-lg text-lg bg-gradient-to-tl from-pink-600 to-blue-600 text-white"
       }
     >
       <div>

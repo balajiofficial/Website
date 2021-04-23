@@ -49,3 +49,11 @@
   margin-right: -15px;
   margin-left: -15px;
 }
+
+.nav {
+  display: block;
+  text-align: center;
+  height: 67px;
+  line-height: 65px;
+  z-index: 1020;
+}
