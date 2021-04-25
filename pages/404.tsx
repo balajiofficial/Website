@@ -17,9 +17,11 @@ export default function FourOFour() {
       </p>
       <div className="mt-5 flex justify-center">
         <Link href="/">
-          <button className="p-3 bg-blue-600 text-white hover:shadow-lg rounded-lg text-lg  hover:bg-blue-500">
-            Return to Home Page
-          </button>
+          <a>
+            <p className="p-3 text-blue-600 hover:text-blue-400 text-lg">
+              Return to Home Page
+            </p>
+          </a>
         </Link>
       </div>
     </Layout>

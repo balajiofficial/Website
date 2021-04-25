@@ -7,13 +7,13 @@ export default function Home() {
       <Head>
         <title>Home | Balaji</title>
       </Head>
-      <div>
+      <div className="dark:bg-gray-800 p-bottom">
         <div className="lg:pt-56 pt-20">
-          <h1 className="flex justify-center text-9xl pb-10 font-semibold">
+          <h1 className="dark:text-blue-200 flex justify-center text-9xl pb-10 font-semibold">
             Balaji
           </h1>
           <div className="flex justify-center">
-            <div className="text-white flex lg:justify-evenly width2 justify-start flex-col lg:flex-row">
+            <div className="text-white dark:text-blue-100 flex lg:justify-evenly width2 justify-start flex-col lg:flex-row">
               <div className="pt-2 pb-2">
                 <a href="https://github.com/K-Balaji" target="_blank">
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">

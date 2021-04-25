@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <nav
       className={
-        "nav shadow-lg text-lg bg-gradient-to-tl from-pink-600 to-blue-600 text-white"
+        "nav shadow-lg text-lg bg-gradient-to-tl from-pink-600 to-blue-600 text-white dark:text-indigo-200"
       }
     >
       <div>
