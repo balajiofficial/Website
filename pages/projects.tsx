@@ -43,19 +43,20 @@ export default function Projects() {
       </Head>
       <div className="dark:bg-gray-800">
         <div className="pt-4 flex justify-center pl-10 pr-10">
-          <div className="width2">
+          <ul className="width2">
             {content.map((e: Array<string>) => {
               return (
-                <div
+                <li
                   className={`rounded-lg bg-gradient-to-br ${
                     [
-                      "dark:from-blue-400 dark:to-blue-700",
-                      "dark:from-red-600 dark:to-pink-600",
-                      "dark:from-green-400 dark:to-green-800",
-                      "dark:from-yellow-400 dark:to-yellow-700",
-                      "dark:from-purple-500 dark:to-purple-700",
+                      "from-blue-400 to-blue-700",
+                      "from-pink-600 to-red-600",
+                      "from-green-400 to-green-800",
+                      "from-yellow-400 to-yellow-700",
+                      "from-purple-500 to-purple-700",
                     ][content.indexOf(e) % 5]
                   } mb-4 p-5`}
+                  key={e[0]}
                 >
                   <div className="flex flex-col lg:flex-row">
                     <div className="break-words">
@@ -63,12 +64,12 @@ export default function Projects() {
                         <div>
                           <a href={e[3]} target="_blank">
                             <div className="break-words">
-                              <h1 className="hover:underline text-2xl font-semibold text-purple-900 hover:text-black dark:text-purple-500 dark:hover:text-purple-700">
+                              <h1 className="hover:underline text-2xl font-semibold text-black hover:text-gray-800">
                                 {e[0]}
                               </h1>
                             </div>
                           </a>
-                          <p className="text-gray-500 text-sm">{e[2]}</p>
+                          <p className="text-white text-sm">{e[2]}</p>
                           <div className="break-words"></div>
                           <h2 className="text-lg">{e[1]}</h2>
                         </div>
@@ -83,10 +84,10 @@ export default function Projects() {
                       />
                     </div>
                   </div>
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ul>
         </div>
       </div>
     </Layout>
