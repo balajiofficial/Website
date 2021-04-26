@@ -50,10 +50,10 @@ export default function Projects() {
                   className={`rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
-                      "from-pink-600 to-red-600",
+                      "from-red-400 to-red-600",
                       "from-green-400 to-green-800",
                       "from-yellow-400 to-yellow-700",
-                      "from-purple-500 to-purple-700",
+                      "from-purple-400 to-purple-700",
                     ][content.indexOf(e) % 5]
                   } mb-4 p-5`}
                   key={e[0]}
@@ -75,12 +75,13 @@ export default function Projects() {
                         </div>
                       </div>
                     </div>
-                    <div>
+                    <div className="bg-gradient-to-l dark:from-pink-600 dark:to-indigo-600 from-gray-400 to-white p-3 rounded-lg">
                       <Image
                         src={e[3] + "/blob/main/images/Screenshot.png?raw=true"}
                         alt="Screenshot"
                         width={1920}
                         height={1080}
+                        quality={25}
                       />
                     </div>
                   </div>
