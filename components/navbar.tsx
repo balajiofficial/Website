@@ -9,9 +9,9 @@ export default class NavBar extends Component {
       .setAttribute(
         "class",
         window.document.getElementsByTagName("body")[0].getAttribute("class") ==
-          "light"
-          ? "dark"
-          : "light"
+          "dark"
+          ? "light"
+          : "dark"
       );
   };
 

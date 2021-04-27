@@ -81,7 +81,7 @@ export default function Projects() {
                         alt="Screenshot"
                         width={1920}
                         height={1080}
-                        quality={25}
+                        quality={1}
                       />
                     </div>
                   </div>
