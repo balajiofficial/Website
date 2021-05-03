@@ -61,3 +61,11 @@
 .p-bottom {
   padding-bottom: 13.9rem;
 }
+
+.bg-card {
+  background-color: #00bbff;
+}
+
+.hover\:zoom:hover {
+  transform: scale(1.01);
+}

@@ -3,36 +3,41 @@ import Image from "next/image";
 import Head from "next/head";
 
 export default function Projects() {
-  let content: Array<Array<string>> = [
+  let content: Array<Array<Array<string> | string>> = [
     [
       "Project 1",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
       "https://github.com/K-Balaji/CompetitiveProgramming",
+      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 2",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
       "https://github.com/K-Balaji/BalaNotes",
+      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 3",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
       "https://github.com/K-Balaji/BalaNotes",
+      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 4",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
-      "https://github.com/K-Balaji/CompetitiveProgramming",
+      "https://github.com/K-Balaji/DataPlotter",
+      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 5",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
       "https://github.com/K-Balaji/CompetitiveProgramming",
+      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
   ];
 
@@ -47,7 +52,7 @@ export default function Projects() {
             {content.map((e: Array<string>) => {
               return (
                 <li
-                  className={`rounded-lg bg-gradient-to-br ${
+                  className={`hover:zoom hover:shadow-2xl rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
                       "from-red-400 to-red-600",
@@ -70,19 +75,35 @@ export default function Projects() {
                             </div>
                           </a>
                           <p className="text-white text-sm">{e[2]}</p>
+                          <div className="flex mt-1 mb-1">
+                            <p className="font-semibold mr-2 p-1">Keywords: </p>
+                            <ul className="flex">
+                              {e[4].map((keyword: string) => {
+                                return (
+                                  <li className="mr-2 rounded font-semibold bg-card p-1" key={keyword}>
+                                    {keyword}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </div>
                           <div className="break-words"></div>
                           <h2 className="text-lg">{e[1]}</h2>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-gradient-to-l dark:from-pink-600 dark:to-indigo-600 from-gray-400 to-white p-3 rounded-lg">
-                      <Image
-                        src={e[3] + "/blob/main/images/Screenshot.png?raw=true"}
-                        alt="Screenshot"
-                        width={1920}
-                        height={1080}
-                        quality={1}
-                      />
+                    <div className="pt-3 lg:pt-6">
+                      <div className="dark:bg-indigo-700 bg-gray-300 p-3 rounded-lg">
+                        <Image
+                          src={
+                            e[3] + "/blob/main/images/Screenshot.png?raw=true"
+                          }
+                          alt="Screenshot"
+                          width={1920}
+                          height={1080}
+                          quality={1}
+                        />
+                      </div>
                     </div>
                   </div>
                 </li>
