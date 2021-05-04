@@ -11,11 +11,11 @@ export default function About() {
         <div className="pb-3">
           <div className="pt-5 pb-5 flex justify-center">
             <div className="flex lg:justify-center flex-col lg:flex-row font-about w-2/3">
-              <p className="width">
-                <h1 className="font-semibold text-3xl mt-5 dark:text-blue-400">
+              <h1 className="width">
+                <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   About
-                </h1>
-                <h2 className="pt-2 text-lg dark:text-gray-400">
+                </p>
+                <p className="pt-2 text-lg dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda magnam ad aspernatur molestiae cum nulla ab,
                   repellat omnis impedit. Lorem ipsum dolor sit amet consectetur
@@ -36,17 +36,17 @@ export default function About() {
                   adipisicing elit. Obcaecati quis expedita aut eos consequatur.
                   Ad voluptatem explicabo amet dolorum saepe omnis corrupti
                   natus id aperiam neque? Laborum voluptatibus itaque porro.
-                </h2>
-              </p>
+                </p>
+              </h1>
             </div>
           </div>
           <div className="flex justify-center">
             <div className="flex lg:justify-center flex-col lg:flex-row font-about w-2/3">
-              <p className="width">
-                <h1 className="font-semibold text-3xl mt-5 dark:text-blue-400">
+              <h1 className="width">
+                <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   Passions
-                </h1>
-                <h2 className="pt-2 text-lg dark:text-gray-400">
+                </p>
+                <p className="pt-2 text-lg dark:text-gray-400">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda magnam ad aspernatur molestiae cum nulla ab,
                   repellat omnis impedit. Lorem ipsum dolor sit amet consectetur
@@ -61,8 +61,8 @@ export default function About() {
                   doloremque ab accusamus suscipit. Necessitatibus eos molestiae
                   autem tempora placeat nisi dolorem et hic delectus cumque,
                   possimus quo magnam!
-                </h2>
-              </p>
+                </p>
+              </h1>
             </div>
           </div>
         </div>
