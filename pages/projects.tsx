@@ -46,7 +46,7 @@ export default function Projects() {
       <Head>
         <title>Projects | Balaji</title>
       </Head>
-      <div className="dark:bg-gray-800">
+      <div className="dark:bg-gray-800 fade-in-2">
         <div className="pt-4 flex justify-center pl-10 pr-10">
           <ul className="width2">
             {content.map((e: Array<string>) => {
