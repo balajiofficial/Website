@@ -9,36 +9,39 @@ export default function Projects() {
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
       "https://github.com/K-Balaji/CompetitiveProgramming",
-      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 2",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
       "https://github.com/K-Balaji/BalaNotes",
-      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 3",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
       "https://github.com/K-Balaji/BalaNotes",
-      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 4",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
       "https://github.com/K-Balaji/DataPlotter",
-      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
     [
       "Project 5",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
       "https://github.com/K-Balaji/CompetitiveProgramming",
-      ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
     ],
+  ];
+
+  let keywords: Array<Array<string>> = [
+    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
+    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
+    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
+    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
+    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
   ];
 
   return (
@@ -78,13 +81,18 @@ export default function Projects() {
                           <div className="flex mt-1 mb-1">
                             <p className="font-semibold mr-2 p-1">Keywords: </p>
                             <ul className="flex">
-                              {e[4].map((keyword: string) => {
-                                return (
-                                  <li className="mr-2 rounded font-semibold bg-card p-1" key={keyword}>
-                                    {keyword}
-                                  </li>
-                                );
-                              })}
+                              {keywords[content.indexOf(e)].map(
+                                (keyword: string) => {
+                                  return (
+                                    <li
+                                      className="mr-2 rounded font-semibold bg-card p-1"
+                                      key={keyword}
+                                    >
+                                      {keyword}
+                                    </li>
+                                  );
+                                }
+                              )}
                             </ul>
                           </div>
                           <div className="break-words"></div>
