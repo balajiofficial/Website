@@ -34,6 +34,5 @@ yarn-error.log*
 .vercel
 
 # tailwind css
-/styles/tailwind.css
+/styles/styles.css
 /tailwind.config.js
-/next.config.js

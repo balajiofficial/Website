@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 
 export default function Projects() {
-  let content: Array<Array<Array<string> | string>> = [
+  let content: Array<Array<string>> = [
     [
       "Project 1",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
