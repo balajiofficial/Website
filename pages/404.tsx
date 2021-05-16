@@ -10,11 +10,7 @@ export default function FourOFour() {
       </Head>
       <div className="dark:bg-gray-800 p-bottom">
         <div className="pb-24 pt-4">
-          <p
-            className={
-              "flex justify-center align-middle pt-60 text-4xl font-extrabold text-center dark:text-gray-300"
-            }
-          >
+          <p className="flex justify-center align-middle pt-60 text-4xl font-extrabold text-center dark:text-gray-300">
             Error 404 Page Not Found
           </p>
           <div className="pt-2 flex justify-center pb-3">
