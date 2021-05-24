@@ -55,7 +55,7 @@ export default function Projects() {
             {content.map((e: Array<string>) => {
               return (
                 <li
-                  className={`hover:zoom hover:shadow-2xl rounded-lg bg-gradient-to-br ${
+                  className={`hover:shadow-2xl rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
                       "from-red-400 to-red-600",
@@ -95,7 +95,6 @@ export default function Projects() {
                               )}
                             </ul>
                           </div>
-                          <div className="break-words"></div>
                           <h2 className="text-lg">{e[1]}</h2>
                         </div>
                       </div>

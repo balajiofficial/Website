@@ -67,10 +67,6 @@
   background-color: #00bbff;
 }
 
-.hover\:zoom:hover {
-  transform: scale(1.01);
-}
-
 .fade-in-4 {
   animation: fadeIn 4s;
   -webkit-animation: fadeIn 4s;
