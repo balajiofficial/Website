@@ -7,7 +7,7 @@ export default function About() {
       <Head>
         <title>About | Balaji</title>
       </Head>
-      <div className="dark:bg-gray-800 pb-8 fade-in-2">
+      <div className="dark:bg-gray-800 pb-8">
         <div className="pb-3">
           <div className="pt-5 pb-5 flex justify-center">
             <div className="flex lg:justify-center flex-col lg:flex-row font-about w-2/3">

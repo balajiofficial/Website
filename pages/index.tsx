@@ -8,7 +8,7 @@ export default function Home() {
         <title>Home | Balaji</title>
       </Head>
       <div className="dark:bg-gray-800 p-bottom">
-        <div className="lg:pt-56 pt-20 fade-in-2">
+        <div className="lg:pt-56 pt-20">
           <h1 className="dark:text-blue-200 flex justify-center text-9xl pb-10 font-semibold">
             Balaji
           </h1>
