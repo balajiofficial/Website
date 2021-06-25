@@ -55,7 +55,7 @@ export default function Projects() {
             {content.map((e: Array<string>) => {
               return (
                 <li
-                  className={`hover:shadow-2xl rounded-lg bg-gradient-to-br ${
+                  className={`rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
                       "from-red-400 to-red-600",
