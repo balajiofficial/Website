@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function NavBar() {
   return (
-    <nav className="nav shadow-lg text-lg bg-gradient-to-br from-pink-600 to-blue-600 text-white dark:text-indigo-200 dark:from-purple-700 dark:to-blue-700">
+    <nav className="nav shadow-lg text-lg bg-gradient-to-r from-pink-600 to-blue-600 text-white dark:text-indigo-200 dark:from-purple-700 dark:to-blue-700">
       <div>
         <ul className="flex justify-evenly font-medium">
           <Link href="/">
@@ -49,9 +49,10 @@ export default function NavBar() {
               </li>
             </a>
           </Link>
-          <a className="mt-5">
+          <a className="mt-4">
             <li
               key="mode"
+              className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-500 cursor-pointer"
               onClick={() => {
                 window.document
                   .getElementsByTagName("body")[0]
