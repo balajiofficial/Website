@@ -3,7 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 
 export default function Blog() {
-  let content = [] // Blog
+  let content = []
 
   return (
     <Layout footer>
