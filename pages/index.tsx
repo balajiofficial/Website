@@ -15,7 +15,7 @@ export default function Home() {
           <div className="flex justify-center fade-in-4">
             <div className="text-white dark:text-blue-100 flex lg:justify-evenly width2 justify-start flex-col lg:flex-row">
               <div className="pt-2 pb-2">
-                <a href="https://github.com/K-Balaji" target="_blank">
+                <a href="https://github.com/balajiofficial" target="_blank">
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg
