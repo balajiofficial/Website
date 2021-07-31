@@ -8,31 +8,31 @@ export default function Projects() {
       "Project 1",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
-      "https://github.com/K-Balaji/CompetitiveProgramming",
+      "https://github.com/balajiofficial/CompetitiveProgramming",
     ],
     [
       "Project 2",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
-      "https://github.com/K-Balaji/BalaNotes",
+      "https://github.com/balajiofficial/BalaNotes",
     ],
     [
       "Project 3",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "16 February 2019",
-      "https://github.com/K-Balaji/BalaNotes",
+      "https://github.com/balajiofficial/BalaNotes",
     ],
     [
       "Project 4",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
-      "https://github.com/K-Balaji/DataPlotter",
+      "https://github.com/balajiofficial/DataPlotter",
     ],
     [
       "Project 5",
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
       "12 December 2020",
-      "https://github.com/K-Balaji/CompetitiveProgramming",
+      "https://github.com/balajiofficial/EncryptCLI",
     ],
   ];
 

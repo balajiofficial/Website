@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "buildcss": "tailwindcss build styles/globals.css -o styles/styles.css -c tailwind.config.js"
+    "buildcss": "tailwindcss build -i styles/globals.css -o styles/styles.css -c tailwind.config.js"
   },
   "dependencies": {
     "next": "10.1.3",
