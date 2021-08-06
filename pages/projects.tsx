@@ -5,43 +5,72 @@ import Head from "next/head";
 export default function Projects() {
   let content: Array<Array<string>> = [
     [
-      "Project 1",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
+      "Competitive Programming",
+      "A library of my competitive programming codes from Codeforces, USACO, Codechef, etc. It also contains the code for several algorithms and data structures",
       "12 December 2020",
       "https://github.com/balajiofficial/CompetitiveProgramming",
     ],
     [
-      "Project 2",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
+      "Bala Notes",
+      "Bala Notes is an open source desktop app created for taking notes. It was created using frontend technologies like HTML, CSS and Javascript. It uses a framework called Electron to convert web apps into functioning desktop apps. The app has a great UI thanks to the Tailwind CSS framework and works on high resolution systems as well but it is very ram and storage heavy because of the chromium engine used by electron.",
       "16 February 2019",
       "https://github.com/balajiofficial/BalaNotes",
     ],
     [
-      "Project 3",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
+      "Data Plotter",
+      "Data Plotter is a software that can be used to read xlsx and csv files to plot different types of graphs. The GUI of the app has been created with tkinter. It has different GUI themes and all matplotlib's graph themes. The app uses pandas to read data files and uses matplotlib to plot this data to a graph. Data Plotter can be used by non developers and by developers who do not wish to spend time implementing their own programs.",
       "16 February 2019",
-      "https://github.com/balajiofficial/BalaNotes",
-    ],
-    [
-      "Project 4",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
-      "12 December 2020",
       "https://github.com/balajiofficial/DataPlotter",
     ],
     [
-      "Project 5",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur iusto nesciunt ipsam illo tempora eligendi ullam exercitationem est aspernatur obcaecati voluptates excepturi aliquam optio maxime, assumenda ea ab suscipit labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia cupiditate, vitae ea quidem alias rerum voluptatum, reprehenderit ipsam perferendis odit, enim corporis labore explicabo distinctio. Sunt nostrum maxime explicabo libero?",
+      "EncryptCLI",
+      "EncryptCLI is a command line tool that encrypts documents. This program is written in golang and uses the golang standard library. It converts unicode text to an unintelligible document filled with numbers. It creates a pseudo-random key to encrypt each character in the document. It can encrypt documents with unicode characters. Since it's a command line tool it works by using the command prompt in windows.",
       "12 December 2020",
       "https://github.com/balajiofficial/EncryptCLI",
+    ],
+    [
+      "Github Pages Website",
+      "This uses github pages to redirect to the main site. The main site has been created using next.js, react and typescript. It uses cookies to store the user's theme choice. It uses Tailwind CSS for the UI. Nextjs enables the site to open web pages fast without reloading the website. Using react means components like the navigation bar and the footer don't have to repeated everytime and projects can be dynamically rendered.",
+      "12 December 2020",
+      "https://github.com/balajiofficial/balajiofficial.github.io",
     ],
   ];
 
   let keywords: Array<Array<string>> = [
     ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
-    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
-    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
-    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
-    ["Lorem", "ipsum", "dolor", "sit", "amet", "consectetur"],
+    ["notes-app", "electron-app", "bala-notes", "notes", "javascript"],
+    ["data-plotter", "graph", "plotting", "matplotlib", "python"],
+    ["encryption", "command-line-tool", "encrypting", "unicode", "golang"],
+    ["github-pages", "redirect", "website", "nextjs", "react", "typescript"],
+  ];
+
+  let links: Array<Array<Array<string>>> = [
+    [["Github", "https://github.com/balajiofficial/CompetitiveProgramming"]],
+    [
+      ["Github", "https://github.com/balajiofficial/BalaNotes"],
+      [
+        "Download",
+        "https://github.com/balajiofficial/BalaNotes/releases/tag/7.0.0",
+      ],
+    ],
+    [
+      ["Github", "https://github.com/balajiofficial/DataPlotter"],
+      [
+        "Download",
+        "https://github.com/balajiofficial/DataPlotter/releases/tag/4.0.0",
+      ],
+    ],
+    [
+      ["Github", "https://github.com/balajiofficial/EncryptCLI"],
+      [
+        "Download",
+        "https://github.com/balajiofficial/EncryptCLI/releases/tag/4.0.0",
+      ],
+    ],
+    [
+      ["Github", "https://github.com/balajiofficial/balajiofficial.github.io"],
+      ["Website", "https://balajiofficial.github.io"],
+    ],
   ];
 
   return (
@@ -96,11 +125,33 @@ export default function Projects() {
                             </ul>
                           </div>
                           <h2 className="text-lg">{e[1]}</h2>
+                          <ul className="flex pt-2">
+                            <p className="font-semibold pr-1">
+                              Important Links :
+                            </p>
+                            {links[content.indexOf(e)].map(
+                              (link: Array<string>) => {
+                                return (
+                                  <li key={link[0]} className="flex">
+                                    <a href={link[1]} target="_blank">
+                                      <p className="hover:underline text-gray-100 font-semibold">
+                                        {(links[content.indexOf(e)].indexOf(
+                                          link
+                                        ) == 0
+                                          ? ""
+                                          : ", ") + link[0]}
+                                      </p>
+                                    </a>
+                                  </li>
+                                );
+                              }
+                            )}
+                          </ul>
                         </div>
                       </div>
                     </div>
                     <div className="pt-3 lg:pt-6">
-                      <div className="dark:bg-indigo-700 bg-gray-300 p-3 rounded-lg">
+                      <div className="dark:bg-indigo-700 bg-gray-300 p-3 rounded-lg ">
                         <Image
                           src={
                             e[3] + "/blob/main/images/Screenshot.png?raw=true"
