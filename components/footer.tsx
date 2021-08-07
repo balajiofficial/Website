@@ -5,10 +5,17 @@ export default class Footer extends Component {
     fetch("https://ipapi.co/json/").then((r) => {
       r.json()
         .then((rnew) => {
-          var data = rnew["country_name"];
-          document.getElementById("footer").innerHTML += data;
+          var code: string = rnew["country_code"];
+          document.getElementById(
+            "footer"
+          ).innerHTML = `<img class="inline-block" src=https://www.countryflags.io/${code.toLowerCase()}/flat/64.png width=24/>`;
+          document.getElementById(
+            "footer"
+          ).innerHTML += `<p class="inline-block pl-2">${rnew["country_name"]}</p>`;
         })
-        .catch((e) => {});
+    })
+    .catch((e) => {
+      document.getElementById("footer").innerHTML += "<a class=hover:underline href=mailto:notanemail@email.com>Email</a>"
     });
   }
 
