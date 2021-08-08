@@ -37,7 +37,7 @@ export default function Projects() {
   ];
 
   let keywords: Array<Array<string>> = [
-    ["data-plotter", "graph", "plotting", "matplotlib", "python"],
+    ["data-plotter", "graph", "plotting", "matplotlib", "tkinter", "python"],
     ["github-pages", "redirect", "vercel", "nextjs", "react", "typescript"],
     ["encryption", "command-line-tool", "encrypting", "unicode", "golang"],
     ["notes-app", "electron-app", "bala-notes", "notes", "javascript"],
