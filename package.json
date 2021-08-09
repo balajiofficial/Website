@@ -1,10 +1,9 @@
 {
   "name": "website",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run buildcss && next build",
     "start": "next start",
     "buildcss": "tailwindcss build -i styles/globals.css -o styles/styles.css -c tailwind.config.js"
   },
