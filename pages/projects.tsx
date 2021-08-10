@@ -53,7 +53,7 @@ export default function Projects() {
       ],
     ],
     [
-      ["Github", "https://github.com/balajiofficial/balajiofficial.github.io"],
+      ["Github", "https://github.com/balajiofficial/Website"],
       ["Website", "https://balajiofficial.github.io"],
     ],
     [
