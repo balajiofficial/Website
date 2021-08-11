@@ -2,9 +2,9 @@ import { Component } from "react";
 
 export default class Footer extends Component {
   componentDidMount() {
-    fetch("https://ipapi.co/json/").then((r) => {
-      r.json()
-        .then((rnew) => {
+    fetch("https://ipapi.co/json/")
+      .then((r) => {
+        r.json().then((rnew) => {
           var code: string = rnew["country_code"];
           document.getElementById(
             "footer"
@@ -12,11 +12,12 @@ export default class Footer extends Component {
           document.getElementById(
             "footer"
           ).innerHTML += `<p class="inline-block pl-2">${rnew["country_name"]}</p>`;
-        })
-    })
-    .catch((e) => {
-      document.getElementById("footer").innerHTML += "<a class=hover:underline href=mailto:notanemail@email.com>Email</a>"
-    });
+        });
+      })
+      .catch((e) => {
+        document.getElementById("footer").innerHTML +=
+          "<a class=hover:underline href=mailto:notanemail@email.com>Email</a>";
+      });
   }
 
   render() {
@@ -25,7 +26,11 @@ export default class Footer extends Component {
         <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-600">
           <div className="max-w-screen-xl mx-auto pt-5 pb-5 dark:text-gray-300">
             <span className="flex justify-evenly">
-              <a href="#" className="hover:underline">
+              <a
+                href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
+                target="_blank"
+                className="hover:underline"
+              >
                 License
               </a>
               <h1 className="inline-block pr-1">Copyright © 2021 Balaji K</h1>
