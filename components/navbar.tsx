@@ -6,7 +6,7 @@ export default class Navbar extends Component {
   changeTheme = () => {
     if (localStorage.getItem("balajiofficial_theme") == "dark") {
       window.document
-        .getElementsByTagName("body")[0]
+        .getElementsByTagName("html")[0]
         .setAttribute("class", "dark");
       document.getElementById(
         "theme"
@@ -15,7 +15,7 @@ export default class Navbar extends Component {
     </svg>`;
     } else {
       window.document
-        .getElementsByTagName("body")[0]
+        .getElementsByTagName("html")[0]
         .setAttribute("class", "light");
       document.getElementById(
         "theme"

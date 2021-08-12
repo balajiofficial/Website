@@ -10,7 +10,7 @@ export default function About() {
       <div className="dark:bg-gray-800 pb-8">
         <div className="pb-3">
           <div className="pt-5 pb-5 flex justify-center">
-            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-2/3">
+            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-10/12 sm:w-2/3">
               <h1 className="width">
                 <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   About
@@ -41,7 +41,7 @@ export default function About() {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-2/3">
+            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-10/12 sm:w-2/3">
               <h1 className="width">
                 <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   Passions

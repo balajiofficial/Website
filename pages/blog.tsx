@@ -10,7 +10,7 @@ export default function Blog() {
 
       <div className="dark:bg-gray-800 p-bottom">
         <div className="flex justify-center pt-72 pb-32">
-          <div className="pb-2">
+          <div className="pb-2 text-center">
             <h1 className="text-4xl font-semibold dark:text-blue-300">
               Blog Coming Soon...
             </h1>

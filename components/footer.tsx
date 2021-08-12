@@ -25,16 +25,18 @@ export default class Footer extends Component {
       <div>
         <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-600">
           <div className="max-w-screen-xl mx-auto pt-5 pb-5 dark:text-gray-300">
-            <span className="flex justify-evenly">
-              <a
-                href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
-                target="_blank"
-                className="hover:underline"
-              >
-                License
-              </a>
-              <h1 className="inline-block pr-1">Copyright © 2021 Balaji K</h1>
-              <p id="footer" className="inline-block"></p>
+            <span className="text-center md:flex md:justify-evenly">
+              <div>
+                <a
+                  href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
+                  target="_blank"
+                  className="hover:underline md:inline-block"
+                >
+                  License
+                </a>
+              </div>
+              <h1 className="md:inline-block">Copyright © 2021 Balaji K</h1>
+              <p id="footer" className="md:inline-block"></p>
             </span>
           </div>
         </footer>

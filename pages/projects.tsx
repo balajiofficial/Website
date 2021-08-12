@@ -37,11 +37,11 @@ export default function Projects() {
   ];
 
   let keywords: Array<Array<string>> = [
-    ["data-plotter", "graph", "plotting", "matplotlib", "tkinter", "python"],
-    ["github-pages", "redirect", "vercel", "nextjs", "react", "typescript"],
-    ["encryption", "command-line-tool", "encrypting", "unicode", "golang"],
-    ["notes-app", "electron-app", "bala-notes", "notes", "javascript"],
-    ["competitive-programming", "c++", "algorithm", "codeforces", "usaco"],
+    ["graph", "matplotlib", "tkinter", "python"],
+    ["vercel", "nextjs", "react", "typescript"],
+    ["encryption", "cli", "unicode", "golang"],
+    ["electron", "tailwindcss", "javascript"],
+    ["c++", "algorithm", "codeforces", "usaco"],
   ];
 
   let links: Array<Array<Array<string>>> = [
@@ -79,12 +79,12 @@ export default function Projects() {
         <title>Projects | Balaji</title>
       </Head>
       <div className="dark:bg-gray-800">
-        <div className="pt-4 flex justify-center pl-10 pr-10">
-          <ul className="width2">
+        <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
+          <ul className="xl:w-10/12">
             {content.map((e: Array<string>) => {
               return (
                 <li
-                  className={`rounded-lg bg-gradient-to-br ${
+                  className={`rounded-none sm:rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
                       "from-yellow-400 to-yellow-700",
@@ -97,7 +97,7 @@ export default function Projects() {
                 >
                   <div className="flex flex-col lg:flex-row">
                     <div className="break-words">
-                      <div className="flex justify-between pr-2">
+                      <div className="flex justify-between">
                         <div>
                           <div className="break-words">
                             <h1 className="text-2xl font-semibold text-black hover:text-gray-800">
@@ -106,7 +106,6 @@ export default function Projects() {
                           </div>
                           <p className="text-white text-sm">{e[2]}</p>
                           <div className="flex mt-1 mb-1">
-                            <p className="font-semibold mr-2 p-1">Keywords: </p>
                             <ul className="flex">
                               {keywords[content.indexOf(e)].map(
                                 (keyword: string) => {
@@ -122,7 +121,7 @@ export default function Projects() {
                               )}
                             </ul>
                           </div>
-                          <h2 className="text-lg">{e[1]}</h2>
+                          <h2 className="text-lg mr-1">{e[1]}</h2>
                           <ul className="flex pt-2">
                             <p className="font-semibold pr-1">Links :</p>
                             {links[content.indexOf(e)].map(
@@ -147,7 +146,7 @@ export default function Projects() {
                       </div>
                     </div>
                     <div className="pt-3 lg:pt-6">
-                      <div className="dark:bg-indigo-700 bg-gray-300 p-3 rounded-lg ">
+                      <div className="dark:bg-indigo-900 bg-gray-300 p-3 rounded-lg">
                         <Image
                           src={e[3]}
                           alt="Screenshot"
