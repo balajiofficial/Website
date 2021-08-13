@@ -8,13 +8,13 @@ export default function Home() {
         <title>Home | Balaji</title>
       </Head>
       <div className="dark:bg-gray-800 p-bottom">
-        <div className="lg:pt-56 pt-20">
+        <div className="lg:pt-52 pt-20">
           <h1 className="dark:text-blue-200 flex justify-center text-9xl pb-10 font-semibold">
             Balaji
           </h1>
-          <div className="flex justify-center fade-in-4">
+          <div className="flex justify-center">
             <div className="text-white dark:text-blue-100 flex lg:justify-evenly width2 flex-col lg:flex-row">
-              <div className="pt-2 pb-2">
+              <div className="pt-3 pb-3">
                 <a href="https://github.com/balajiofficial" target="_blank">
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
@@ -38,7 +38,7 @@ export default function Home() {
                   </button>
                 </a>
               </div>
-              <div className="pt-2 pb-2">
+              <div className="pt-3 pb-3">
                 <a href="#" target="_blank">
                   <button className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
@@ -57,7 +57,7 @@ export default function Home() {
                   </button>
                 </a>
               </div>
-              <div className="pt-2 pb-2">
+              <div className="pt-3 pb-3">
                 <a href="#" target="_blank">
                   <button className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg">
                     <svg
@@ -76,7 +76,7 @@ export default function Home() {
                   </button>
                 </a>
               </div>
-              <div className="pt-2 pb-2">
+              <div className="pt-3 pb-4">
                 <a href="mailto:notanemail@email.com">
                   <button className="bg-indigo-600 hover:bg-indigo-500 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <svg
