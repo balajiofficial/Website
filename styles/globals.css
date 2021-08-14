@@ -1,12 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 * {
   outline: 0 !important;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 @media (min-width: 1024px) {

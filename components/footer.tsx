@@ -28,9 +28,9 @@ export default class Footer extends Component {
             <span className="text-center md:flex md:justify-evenly">
               <div>
                 <a
-                  href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
+                  href="https://raw.githubusercontent.com/balajiofficial/Website/main/LICENSE"
                   target="_blank"
-                  className="hover:underline md:inline-block"
+                  className="underline md:inline-block hover:no-underline"
                 >
                   License
                 </a>
