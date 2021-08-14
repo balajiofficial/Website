@@ -36,7 +36,7 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="nav shadow-lg text-lg bg-gradient-to-r from-pink-600 to-blue-600 text-white dark:text-indigo-200 dark:from-purple-700 dark:to-blue-700">
+      <nav className="nav shadow-lg text-lg bg-gradient-to-r from-pink-600 to-blue-600 text-white dark:text-indigo-200 dark:from-purple-700 dark:to-green-700">
         <div>
           <ul className="flex justify-evenly font-medium">
             <Link href="/">
@@ -48,6 +48,7 @@ export default class Navbar extends Component {
                     width={41}
                     height={43}
                     className="rounded-full"
+                    quality={5}
                   />
                 </li>
               </a>
@@ -56,7 +57,7 @@ export default class Navbar extends Component {
               <a>
                 <li
                   key="about"
-                  className="hover:text-gray-900 border-b-2 border-transparent hover:border-black"
+                  className="dark:hover:text-white hover:text-black border-b-2 border-transparent dark:hover:border-white hover:border-black"
                 >
                   About
                 </li>
@@ -66,7 +67,7 @@ export default class Navbar extends Component {
               <a>
                 <li
                   key="projects"
-                  className="hover:text-gray-900 border-b-2 border-transparent hover:border-black"
+                  className="dark:hover:text-white hover:text-black border-b-2 border-transparent dark:hover:border-white hover:border-black"
                 >
                   Projects
                 </li>
@@ -76,7 +77,7 @@ export default class Navbar extends Component {
               <a>
                 <li
                   key="blog"
-                  className="hover:text-gray-900 border-b-2 border-transparent hover:border-black"
+                  className="dark:hover:text-white hover:text-black border-b-2 border-transparent dark:hover:border-white hover:border-black"
                 >
                   Blog
                 </li>
@@ -85,7 +86,7 @@ export default class Navbar extends Component {
             <a className="mt-4">
               <li
                 key="mode"
-                className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-500 cursor-pointer"
+                className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-green-900 cursor-pointer"
                 onClick={() => {
                   window.localStorage.setItem(
                     "balajiofficial_theme",
