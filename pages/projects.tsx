@@ -140,15 +140,18 @@ export default function Projects() {
                               (link: Array<string>) => {
                                 return (
                                   <li key={link[0]} className="flex">
-                                    <a href={link[1]} target="_blank">
-                                      <p className="hover:underline text-gray-100 font-semibold">
-                                        {(links[content.indexOf(e)].indexOf(
-                                          link
-                                        ) == 0
-                                          ? ""
-                                          : ", ") + link[0]}
+                                    <p className="text-gray-100 font-semibold inline-block">
+                                      {links[content.indexOf(e)].indexOf(
+                                        link
+                                      ) == 0
+                                        ? ""
+                                        : ", "}
+                                      <p className="hover:underline inline-block">
+                                        <a href={link[1]} target="_blank">
+                                          {link[0]}
+                                        </a>
                                       </p>
-                                    </a>
+                                    </p>
                                   </li>
                                 );
                               }
