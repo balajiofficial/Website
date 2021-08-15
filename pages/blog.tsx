@@ -1,7 +1,8 @@
 import Layout from "../components/layout";
 import Head from "next/head";
+import { ReactElement, ReactFragment } from "react";
 
-export default function Blog() {
+export default function Blog(): ReactElement<ReactFragment> {
   return (
     <Layout>
       <Head>

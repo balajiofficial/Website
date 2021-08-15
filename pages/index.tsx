@@ -1,14 +1,15 @@
 import Layout from "../components/layout";
 import Head from "next/head";
+import { ReactElement, ReactFragment } from "react";
 
-export default function Home() {
+export default function Home(): ReactElement<ReactFragment> {
   return (
     <Layout>
       <Head>
         <title>Home | Balaji</title>
         <meta name="description" content="The Official Website of Balaji K." />
       </Head>
-      <div className="dark:bg-gray-800 p-bottom">
+      <div className="dark:bg-gray-800">
         <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-8">
           <h1 className="dark:text-blue-200 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold">
             Balaji
@@ -16,7 +17,11 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="text-white dark:text-blue-100 flex md:justify-evenly md:w-3/4 flex-col md:flex-row">
               <div className="pt-3 pb-3">
-                <a href="https://github.com/balajiofficial" target="_blank">
+                <a
+                  href="https://github.com/balajiofficial"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg

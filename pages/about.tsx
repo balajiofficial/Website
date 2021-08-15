@@ -1,7 +1,8 @@
 import Layout from "../components/layout";
 import Head from "next/head";
+import { ReactElement, ReactFragment } from "react";
 
-export default function About() {
+export default function About(): ReactElement<ReactFragment> {
   return (
     <Layout footer>
       <Head>
@@ -11,8 +12,8 @@ export default function About() {
       <div className="dark:bg-gray-800 pb-8">
         <div className="pb-3">
           <div className="pt-5 pb-5 flex justify-center">
-            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-10/12 sm:w-2/3">
-              <h1 className="width">
+            <div className="flex justify-center font-about">
+              <h1 className="w-11/12 lg:w-3/5">
                 <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   About
                 </p>
@@ -42,8 +43,8 @@ export default function About() {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="flex lg:justify-center flex-col lg:flex-row font-about w-10/12 sm:w-2/3">
-              <h1 className="width">
+            <div className="flex justify-center font-about">
+              <h1 className="w-11/12 lg:w-3/5">
                 <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
                   Passions
                 </p>

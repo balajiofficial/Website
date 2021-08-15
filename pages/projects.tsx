@@ -1,8 +1,9 @@
 import Layout from "../components/layout";
 import Image from "next/image";
 import Head from "next/head";
+import { ReactElement, ReactFragment } from "react";
 
-export default function Projects() {
+export default function Projects(): ReactElement<ReactFragment> {
   let content: Array<Array<string>> = [
     [
       "Data Plotter",
@@ -140,18 +141,22 @@ export default function Projects() {
                               (link: Array<string>) => {
                                 return (
                                   <li key={link[0]} className="flex">
-                                    <p className="text-gray-100 font-semibold inline-block">
+                                    <div className="text-gray-100 font-semibold inline-block">
                                       {links[content.indexOf(e)].indexOf(
                                         link
                                       ) == 0
                                         ? ""
                                         : ", "}
                                       <p className="hover:underline inline-block">
-                                        <a href={link[1]} target="_blank">
+                                        <a
+                                          href={link[1]}
+                                          target="_blank"
+                                          rel="noreferrer"
+                                        >
                                           {link[0]}
                                         </a>
                                       </p>
-                                    </p>
+                                    </div>
                                   </li>
                                 );
                               }
@@ -162,7 +167,7 @@ export default function Projects() {
                     </div>
                     <div className="pt-3 lg:pt-6">
                       <div className="dark:bg-indigo-900 bg-gray-300 p-3 rounded-lg">
-                        <a href={e[3]} target="_blank">
+                        <a href={e[3]} target="_blank" rel="noreferrer">
                           <Image
                             src={e[3]}
                             alt="Screenshot"
