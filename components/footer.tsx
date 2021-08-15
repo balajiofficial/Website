@@ -5,10 +5,10 @@ export default class Footer extends Component {
     fetch("https://ipapi.co/json/")
       .then((r) => {
         r.json().then((rnew) => {
-          var code: string = rnew["country_code"];
+          var country_code: string = rnew["country_code"];
           document.getElementById(
             "footer"
-          ).innerHTML = `<img class="inline-block" src=https://www.countryflags.io/${code.toLowerCase()}/flat/64.png width=24/>`;
+          ).innerHTML = `<img class="inline-block" src=https://www.countryflags.io/${country_code.toLowerCase()}/flat/64.png width=24/>`;
           document.getElementById(
             "footer"
           ).innerHTML += `<p class="inline-block pl-2">${rnew["country_name"]}</p>`;
@@ -28,7 +28,7 @@ export default class Footer extends Component {
             <span className="text-center md:flex md:justify-evenly">
               <div>
                 <a
-                  href="https://raw.githubusercontent.com/balajiofficial/Website/main/LICENSE"
+                  href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
                   className="underline md:inline-block hover:no-underline"
                 >

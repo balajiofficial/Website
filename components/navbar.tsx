@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Component } from "react";
 
 export default class Navbar extends Component {
@@ -31,6 +30,9 @@ export default class Navbar extends Component {
       localStorage.getItem("balajiofficial_theme") == "dark" ? "dark" : "light"
     );
 
+    window.document
+      .getElementsByTagName("body")[0]
+      .setAttribute("class", "dark:bg-gray-800 bg-white");
     this.changeTheme();
   }
 
@@ -41,17 +43,21 @@ export default class Navbar extends Component {
           <ul className="flex justify-evenly font-medium">
             <Link href="/">
               <a>
-                <li className="mt-3" key="home">
-                  <Image
+                <li
+                  key="home"
+                  className="dark:hover:text-white hover:text-black border-b-2 border-transparent dark:hover:border-white hover:border-black"
+                >
+                  Home
+                </li>
+              </a>
+              {/*<Image
                     src="/profile.png"
                     alt="Profile"
                     width={41}
                     height={43}
                     className="rounded-full"
-                    quality={5}
-                  />
-                </li>
-              </a>
+                    quality={100}
+                  />*/}
             </Link>
             <Link href="/about">
               <a>

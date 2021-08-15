@@ -37,11 +37,19 @@ export default function Projects() {
   ];
 
   let keywords: Array<Array<string>> = [
-    ["graph", "matplotlib", "tkinter", "python"],
-    ["vercel", "nextjs", "react", "typescript"],
-    ["encryption", "cli", "unicode", "golang"],
-    ["electron", "tailwindcss", "javascript"],
-    ["c++", "algorithm", "codeforces", "usaco"],
+    ["graph", "plotting", "matplotlib", "tkinter", "python"],
+    [
+      "vercel",
+      "nextjs",
+      "react",
+      "typescript",
+      "tailwindcss",
+      "github-pages",
+      "redirect",
+    ],
+    ["encryption", "command-line-tool", "unicode", "golang", "ascii"],
+    ["electron", "tailwindcss", "javascript", "notes-app"],
+    ["c++", "algorithm", "data-structures", "codeforces", "usaco"],
   ];
 
   let links: Array<Array<Array<string>>> = [
@@ -77,6 +85,10 @@ export default function Projects() {
     <Layout footer>
       <Head>
         <title>Projects | Balaji</title>
+        <meta
+          name="description"
+          content="Several of my projects I did over the years."
+        />
       </Head>
       <div className="dark:bg-gray-800">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
@@ -105,13 +117,13 @@ export default function Projects() {
                             </h1>
                           </div>
                           <p className="text-white text-sm">{e[2]}</p>
-                          <div className="flex mt-1 mb-1">
-                            <ul className="flex">
+                          <div className="mb-1">
+                            <ul className="flex flex-wrap">
                               {keywords[content.indexOf(e)].map(
                                 (keyword: string) => {
                                   return (
                                     <li
-                                      className="mr-2 rounded font-semibold bg-card p-1"
+                                      className="mr-2 rounded font-semibold bg-card p-1 mt-1.5"
                                       key={keyword}
                                     >
                                       {keyword}
@@ -147,13 +159,15 @@ export default function Projects() {
                     </div>
                     <div className="pt-3 lg:pt-6">
                       <div className="dark:bg-indigo-900 bg-gray-300 p-3 rounded-lg">
-                        <Image
-                          src={e[3]}
-                          alt="Screenshot"
-                          width={1920}
-                          height={1080}
-                          quality={1}
-                        />
+                        <a href={e[3]} target="_blank">
+                          <Image
+                            src={e[3]}
+                            alt="Screenshot"
+                            width={1920}
+                            height={1080}
+                            quality={1}
+                          />
+                        </a>
                       </div>
                     </div>
                   </div>

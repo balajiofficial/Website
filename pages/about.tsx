@@ -6,6 +6,7 @@ export default function About() {
     <Layout footer>
       <Head>
         <title>About | Balaji</title>
+        <meta name="description" content="About me and my passions." />
       </Head>
       <div className="dark:bg-gray-800 pb-8">
         <div className="pb-3">
