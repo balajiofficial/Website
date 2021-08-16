@@ -1,19 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website
 
-## Getting Started
+## About
 
-First, run the development server:
+My personal website - [https://balajiofficial.vercel.app](https://balajiofficial.vercel.app).
 
-```bash
+## License
+
+The code for the website is open source and is licensed under the [Apache-2.0 License](https://github.com/balajiofficial/Website/blob/main/LICENSE).
+
+## Technologies Used
+
+- [React](https://reactjs.org/)
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [PostCSS](https://postcss.org/)
+- [ESLint](https://eslint.org/)
+- [Heroicons](https://heroicons.com/)
+- [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+
+## Test Locally
+
+1. Download the repository as a [ZIP File](https://github.com/balajiofficial/Website/archive/refs/heads/main.zip) or [TAR.GZ File](https://github.com/balajiofficial/Website/archive/refs/heads/main.tar.gz)
+2. Extract it the file to a directory of your choice.
+3. Open terminal, navigate to that root folder of the directory.
+4. Enter the following -
+
+```
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Then open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-## Deploy on Vercel
+## Screenshots
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Screenshot](https://raw.githubusercontent.com/balajiofficial/balajiofficial.github.io/main/images/Screenshot.png)
