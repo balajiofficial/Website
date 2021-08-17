@@ -32,6 +32,6 @@ npm run dev
 
 5. Then open [http://localhost:3000/](http://localhost:3000/) in your browser.
 
-## Screenshots
+## Screenshot
 
 ![Screenshot](https://raw.githubusercontent.com/balajiofficial/balajiofficial.github.io/main/images/Screenshot.png)

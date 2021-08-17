@@ -58,12 +58,12 @@ export default function Projects(): ReactElement<ReactFragment> {
       ["Github", "https://github.com/balajiofficial/DataPlotter"],
       [
         "Download",
-        "https://github.com/balajiofficial/DataPlotter/releases/tag/4.0.0",
+        "https://github.com/balajiofficial/DataPlotter/releases/tag/5.0.0",
       ],
     ],
     [
       ["Github", "https://github.com/balajiofficial/Website"],
-      ["Website", "https://balajiofficial.github.io"],
+      ["Website", "https://balajiofficial.vercel.app"],
     ],
     [
       ["Github", "https://github.com/balajiofficial/EncryptCLI"],
