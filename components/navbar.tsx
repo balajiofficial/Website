@@ -39,7 +39,7 @@ export default class Navbar extends Component {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <nav className="min-h-full h-12 text-lg bg-gradient-to-r from-pink-600 to-blue-600 text-white dark:text-indigo-200 dark:from-purple-700 dark:to-green-700">
+        <nav className="min-h-full h-12 text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-indigo-200 dark:from-green-700 dark:to-indigo-700">
           <div>
             <ul className="flex justify-evenly font-medium">
               {[
@@ -53,7 +53,7 @@ export default class Navbar extends Component {
                     <a>
                       <li
                         key={e[0]}
-                        className="dark:hover:text-white hover:text-black border-b-2 border-transparent dark:hover:border-white hover:border-black mt-2"
+                        className="border-b-2 border-transparent dark:hover:border-indigo-200 hover:border-white mt-2"
                       >
                         {e[0]}
                       </li>
@@ -64,7 +64,7 @@ export default class Navbar extends Component {
               <a id="svg_size">
                 <li
                   key="mode"
-                  className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-green-900 cursor-pointer"
+                  className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-indigo-900 cursor-pointer"
                   onClick={() => {
                     window.localStorage.setItem(
                       "balajiofficial_theme",

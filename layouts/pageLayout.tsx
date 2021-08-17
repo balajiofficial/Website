@@ -1,5 +1,5 @@
-import NavBar from "./navbar";
-import Footer from "./footer";
+import NavBar from "../components/navbar";
+import Footer from "../components/footer";
 import { Fragment, ReactElement, ReactFragment } from "react";
 
 export default function Layout({

@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 

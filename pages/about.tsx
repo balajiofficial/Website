@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 
@@ -12,12 +12,12 @@ export default function About(): ReactElement<ReactFragment> {
       <div className="dark:bg-gray-800 pb-8">
         <div className="pb-3">
           <div className="pt-5 pb-5 flex justify-center">
-            <div className="flex justify-center font-about">
+            <div className="flex justify-center">
               <h1 className="w-11/12 lg:w-3/5">
-                <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
+                <p className="font-about-header font-semibold text-3xl mt-5 dark:text-blue-400">
                   About
                 </p>
-                <p className="pt-2 text-lg dark:text-gray-400">
+                <p className="pt-2 text-lg dark:text-gray-400 font-about">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda magnam ad aspernatur molestiae cum nulla ab,
                   repellat omnis impedit. Lorem ipsum dolor sit amet consectetur
@@ -43,12 +43,12 @@ export default function About(): ReactElement<ReactFragment> {
             </div>
           </div>
           <div className="flex justify-center">
-            <div className="flex justify-center font-about">
+            <div className="flex justify-center">
               <h1 className="w-11/12 lg:w-3/5">
-                <p className="font-semibold text-3xl mt-5 dark:text-blue-400">
+                <p className="font-about-header font-semibold text-3xl mt-5 dark:text-blue-400">
                   Passions
                 </p>
-                <p className="pt-2 text-lg dark:text-gray-400">
+                <p className="pt-2 text-lg dark:text-gray-400 font-about">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Assumenda magnam ad aspernatur molestiae cum nulla ab,
                   repellat omnis impedit. Lorem ipsum dolor sit amet consectetur

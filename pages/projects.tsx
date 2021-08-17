@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../layouts/pageLayout";
 import Image from "next/image";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
@@ -124,7 +124,7 @@ export default function Projects(): ReactElement<ReactFragment> {
                                 (keyword: string) => {
                                   return (
                                     <li
-                                      className="mr-2 rounded font-semibold bg-card p-1 mt-1.5"
+                                      className="mr-2 rounded bg-card p-1 mt-1.5 font-semibold"
                                       key={keyword}
                                     >
                                       {keyword}
@@ -134,7 +134,9 @@ export default function Projects(): ReactElement<ReactFragment> {
                               )}
                             </ul>
                           </div>
-                          <h2 className="text-lg mr-1">{e[1]}</h2>
+                          <h2 className="text-lg lg:mr-2 mr-0 font-about">
+                            {e[1]}
+                          </h2>
                           <ul className="flex pt-2">
                             <p className="font-semibold pr-1">Links :</p>
                             {links[content.indexOf(e)].map(
@@ -166,7 +168,7 @@ export default function Projects(): ReactElement<ReactFragment> {
                       </div>
                     </div>
                     <div className="pt-3 lg:pt-6">
-                      <div className="dark:bg-indigo-900 bg-gray-300 p-3 rounded-lg">
+                      <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg">
                         <a href={e[3]} target="_blank" rel="noreferrer">
                           <Image
                             src={e[3]}
