@@ -16,7 +16,7 @@ The code for the website is open source and is licensed under the [Apache-2.0 Li
 - [PostCSS](https://postcss.org/)
 - [ESLint](https://eslint.org/)
 - [Heroicons](https://heroicons.com/)
-- [Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+- [Vercel](https://vercel.com/)
 
 ## Test Locally
 

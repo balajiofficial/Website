@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run buildcss && next build",
+    "build": "npm run buildcss && next build && next export",
     "start": "next start",
     "lint": "next lint",
     "buildcss": "tailwindcss build -i styles/globals.css -o styles/styles.css -c tailwind.config.js"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^3.0.0",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"

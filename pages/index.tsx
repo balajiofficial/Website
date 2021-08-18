@@ -84,7 +84,7 @@ export default function Home(): ReactElement<ReactFragment> {
               </div>
               <div className="pt-3 pb-3">
                 <a href="mailto:notanemail@email.com">
-                  <button className="bg-indigo-600 hover:bg-indigo-500 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                  <button className="bg-gradient-to-l from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-9 w-9 inline-block"
