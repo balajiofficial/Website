@@ -19,7 +19,7 @@ export default function Projects(): ReactElement<ReactFragment> {
     ],
     [
       "EncryptCLI",
-      "EncryptCLI is a command line tool that encrypts documents and source codes. This program is written in Go and uses the Go standard library. It converts unicode text to an unintelligible document filled with ascii characters. It creates a pseudo-random key to encrypt each character in the document. It can encrypt documents with unicode characters. Since it's a command line tool it runs on the command prompt window",
+      "EncryptCLI is a command line tool that encrypts documents. This program is written in golang and uses the golang standard library. It converts unicode text to an unintelligible document filled with numbers. It creates a pseudo-random key to encrypt each character in the document. It can encrypt documents with unicode characters. Since it's a command line tool it works by using the command prompt in windows.",
       "March 2021",
       "https://github.com/balajiofficial/EncryptCLI/blob/main/images/Screenshot.png?raw=true",
     ],
@@ -31,7 +31,7 @@ export default function Projects(): ReactElement<ReactFragment> {
     ],
     [
       "Competitive Programming",
-      "This is a github repository is a library of my codes for some competitive programming problems and competitions. It includes codes for USACO, Codeforces and other such competitive programming platforms. It also has codes for several algorithms and data structures. The codes have been written in C++ because of its incredibly fast runtime and the algorithm and data structures support provided by the C++ Standard Library.",
+      "This is a github repository is a library of my codes for some competitive programming problems and competitions. It includes codes for USACO, Codeforces and other such competitive programming platforms. It also has codes for several algorithms and data structures. The codes have been written in C++ because of its incredible fast runtime and the algorithm and data structures support provided by the C++ Standard Library.",
       "December 2020",
       "https://github.com/balajiofficial/CompetitiveProgramming/blob/main/images/Screenshot.png?raw=true",
     ],
@@ -86,6 +86,10 @@ export default function Projects(): ReactElement<ReactFragment> {
     <Layout footer>
       <Head>
         <title>Projects | Balaji</title>
+        <meta
+          name="description"
+          content="Several of my projects I did over the years."
+        />
       </Head>
       <div className="dark:bg-gray-800">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">

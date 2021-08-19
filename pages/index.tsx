@@ -45,8 +45,13 @@ export default function Home(): ReactElement<ReactFragment> {
                 </a>
               </div>
               <div className="pt-3 pb-3">
-                <a href="#" target="_blank">
-                  <button className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                <a href="">
+                  <button
+                    className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
+                    onClick={() => {
+                      alert("No Twitter account created yet");
+                    }}
+                  >
                     <div className="whitespace-nowrap">
                       <svg
                         viewBox="0 0 24 24"
@@ -64,8 +69,13 @@ export default function Home(): ReactElement<ReactFragment> {
                 </a>
               </div>
               <div className="pt-3 pb-3">
-                <a href="#" target="_blank">
-                  <button className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg">
+                <a href="">
+                  <button
+                    className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg"
+                    onClick={() => {
+                      alert("No Instagram account created yet");
+                    }}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"

@@ -1,7 +1,6 @@
 export function sortByDate(a, b) {
-  const a_date = new Date(a.frontmatter.date);
-  const b_date = new Date(b.frontmatter.date);
-
+  let a_date = new Date(a[2]);
+  let b_date = new Date(b[2]);
   if (a_date.getFullYear() == b_date.getFullYear()) {
     if (a_date.getMonth() == b_date.getMonth()) {
       return b_date.getDate() - a_date.getDate();

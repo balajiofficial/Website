@@ -13,10 +13,11 @@ The code for the website is open source and is licensed under the [Apache-2.0 Li
 - [React](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [MDX](https://mdxjs.com/)
 - [PostCSS](https://postcss.org/)
 - [ESLint](https://eslint.org/)
-- [Heroicons](https://heroicons.com/)
 - [Vercel](https://vercel.com/)
+- [Heroicons](https://heroicons.com/)
 
 ## Test Locally
 

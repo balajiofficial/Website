@@ -1,13 +1,13 @@
 import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
-import { readFileSync, readdirSync } from "fs";
-import { join } from "path";
 import Post from "../components/post";
-import matter from "gray-matter";
+import { data } from "../utils/dataBlog";
 import { sortByDate } from "../utils/sortAlgo";
 
-export default function Blog({ posts }): ReactElement<ReactFragment> {
+export default function BlogPage(): ReactElement<ReactFragment> {
+  let data_new = data.sort(sortByDate);
+
   return (
     <Layout>
       <Head>
@@ -17,34 +17,11 @@ export default function Blog({ posts }): ReactElement<ReactFragment> {
       <div className="dark:bg-gray-800 mt-5"></div>
       <div>
         <div id="blog">
-          {posts.map((post) => {
-            return <Post key={post.slug} post={post} />;
+          {data_new.map((post) => {
+            return <Post post={post} key={post[0]} />;
           })}
         </div>
       </div>
     </Layout>
   );
-}
-
-export async function getStaticProps() {
-  const files = readdirSync(join("posts"));
-
-  const posts = files.map((filename) => {
-    const slug = filename.replace(".md", "");
-
-    const markdownWithMeta = readFileSync(join("posts", filename), "utf-8");
-
-    const { data: frontmatter } = matter(markdownWithMeta);
-
-    return {
-      slug,
-      frontmatter,
-    };
-  });
-
-  return {
-    props: {
-      posts: posts.sort(sortByDate),
-    },
-  };
 }
