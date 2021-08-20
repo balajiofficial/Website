@@ -2,7 +2,7 @@ import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import Post from "../components/post";
-import { data } from "../utils/dataBlog";
+import { data } from "../data/dataBlog";
 import { sortByDate } from "../utils/sortAlgo";
 
 export default function BlogPage(): ReactElement<ReactFragment> {
