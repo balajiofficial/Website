@@ -2,11 +2,19 @@ import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import Post from "../components/post";
-import { data } from "../data/dataBlog";
-import { sortByDate } from "../utils/sortAlgo";
+import { getSortedPostsData } from "../lib/posts";
 
-export default function BlogPage(): ReactElement<ReactFragment> {
-  let data_new = data.sort(sortByDate);
+export async function getStaticProps() {
+  let data = getSortedPostsData()
+  return {
+    props: {
+      data
+    }
+  }
+}
+
+export default function BlogPage({ data }): ReactElement<ReactFragment> {
+  let data_new = data
 
   return (
     <Layout>
@@ -18,7 +26,7 @@ export default function BlogPage(): ReactElement<ReactFragment> {
       <div>
         <div id="blog">
           {data_new.map((post) => {
-            return <Post post={post} key={post[0]} />;
+            return <Post post={post} key={post.id} />;
           })}
         </div>
       </div>
