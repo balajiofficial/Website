@@ -5,16 +5,16 @@ import Post from "../components/post";
 import { getSortedPostsData } from "../lib/posts";
 
 export async function getStaticProps() {
-  let data = getSortedPostsData()
+  let data = getSortedPostsData();
   return {
     props: {
-      data
-    }
-  }
+      data,
+    },
+  };
 }
 
 export default function BlogPage({ data }): ReactElement<ReactFragment> {
-  let data_new = data
+  let data_new = data;
 
   return (
     <Layout>

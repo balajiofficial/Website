@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: August 18 2021
+date: August 18, 2021
 ---
 
 # Heading

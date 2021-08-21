@@ -5,14 +5,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run buildcss && next build && next export",
+    "build": "yarn run buildcss && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "buildcss": "tailwindcss build -i styles/globals.css -o styles/styles.css -c tailwind.config.js"
+    "css": "tailwindcss build -i styles/globals.css -o styles/styles.css",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "11.1.0",
+    "prettier": "^2.3.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark": "^14.0.1",
@@ -24,6 +26,7 @@
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.0",
     "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.7",
+    "typescript": "^4.3.5"
   }
 }

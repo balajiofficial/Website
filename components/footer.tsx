@@ -35,24 +35,17 @@ export default class Footer extends Component {
     }
   }
 
-  // From https://abdessalam.dev/blog/detect-device-type-javascript/
   getDeviceType = (): string => {
     const user_agent = window.navigator.userAgent;
-    if (
-      RegExp("(tablet|ipad|playbook|silk)|(android(?!.*mobi))", "i").test(
-        user_agent
-      )
-    ) {
-      return "Tablet";
-    }
-    if (
-      RegExp(
-        "Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)"
-      ).test(user_agent)
-    ) {
-      return "Mobile";
-    }
-    return "Desktop";
+    return RegExp("(tablet|ipad|playbook|silk)|(android(?!.*mobi))", "i").test(
+      user_agent
+    )
+      ? "Tablet"
+      : RegExp(
+          "Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)"
+        ).test(user_agent)
+      ? "Mobile"
+      : "Desktop";
   };
 
   render(): ReactElement<HTMLDivElement> {
