@@ -24,7 +24,7 @@ export default function BlogPage({ data }): ReactElement<ReactFragment> {
 
       <div className="dark:bg-gray-800 mt-5"></div>
       <div>
-        <div id="blog">
+        <div>
           {data_new.map((post) => {
             return <Post post={post} key={post.id} />;
           })}
