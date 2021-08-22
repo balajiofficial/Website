@@ -2,23 +2,6 @@ import { Component, ReactElement } from "react";
 
 export default class Footer extends Component {
   componentDidMount(): void {
-    fetch("https://ipapi.co/json/")
-      .then((r) => {
-        r.json().then((rnew) => {
-          var country_code: string = rnew["country_code"];
-          document.getElementById(
-            "footer"
-          ).innerHTML = `<img class="inline-block" src=https://www.countryflags.io/${country_code.toLowerCase()}/flat/64.png width=24/>`;
-          document.getElementById(
-            "footer"
-          ).innerHTML += `<p class="inline-block pl-2">${rnew["country_name"]}</p>`;
-        });
-      })
-      .catch((e) => {
-        document.getElementById("footer").innerHTML +=
-          "<a class=hover:underline href=mailto:notanemail@email.com>Email</a>";
-      });
-
     const device = this.getDeviceType();
     if (device == "Desktop") {
       window.document.getElementById(
@@ -27,7 +10,7 @@ export default class Footer extends Component {
     } else if (device == "Mobile") {
       window.document.getElementById(
         "device"
-      ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg><p class="inline-block align-middle">Mobile</p>`;
+      ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-1 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg><p class="inline-block align-middle">Mobile</p>`;
     } else {
       window.document.getElementById(
         "device"
@@ -54,9 +37,6 @@ export default class Footer extends Component {
         <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-700">
           <div className="max-w-screen-xl mx-auto pt-5 pb-5 dark:text-gray-300">
             <span className="text-center md:flex md:justify-evenly">
-              <div>
-                <p id="device"></p>
-              </div>
               <h1>
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
@@ -64,10 +44,13 @@ export default class Footer extends Component {
                   className="border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
                   rel="noreferrer"
                 >
-                  Copyright © 2021 Balaji K
+                  License
                 </a>
               </h1>
-              <p id="footer" className="md:inline-block"></p>
+              <h1>Copyright © 2021 Balaji K</h1>
+              <div>
+                <p id="device"></p>
+              </div>
             </span>
           </div>
         </footer>

@@ -1,3 +1,4 @@
 .next
 node_modules
 styles/styles.css
+next-env.d.ts
