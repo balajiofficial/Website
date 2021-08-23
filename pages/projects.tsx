@@ -36,9 +36,9 @@ export default function Projects(): ReactElement<ReactFragment> {
                       <div className="flex justify-between">
                         <div>
                           <div className="break-words">
-                            <h1 className="text-2xl font-semibold text-black hover:text-gray-800">
+                            <p className="text-2xl font-semibold text-black hover:text-gray-800">
                               {e[0]}
-                            </h1>
+                            </p>
                           </div>
                           <p className="text-white text-sm">{e[2]}</p>
                           <div className="mb-1">
@@ -57,9 +57,9 @@ export default function Projects(): ReactElement<ReactFragment> {
                               )}
                             </ul>
                           </div>
-                          <h2 className="text-lg lg:mr-2 mr-0 font-about">
+                          <p className="text-lg lg:mr-2 mr-0 font-about">
                             {e[1]}
-                          </h2>
+                          </p>
                           <ul className="flex pt-2">
                             <p className="font-semibold pr-1">Links :</p>
                             {links[content.indexOf(e)].map(

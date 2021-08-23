@@ -16,14 +16,14 @@ export default function About(): ReactElement<ReactFragment> {
             {aboutData.map((p) => {
               return (
                 <div className="flex justify-center pt-2" key={p[0]}>
-                  <h1 className="w-11/12 lg:w-3/5">
+                  <div className="w-11/12 lg:w-3/5">
                     <p className="font-about-header font-semibold text-3xl mt-5 dark:text-blue-400">
                       {p[0]}
                     </p>
                     <p className="pt-2 text-lg dark:text-gray-400 font-about">
                       {p[1]}
                     </p>
-                  </h1>
+                  </div>
                 </div>
               );
             })}

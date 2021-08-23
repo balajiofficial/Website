@@ -37,7 +37,7 @@ export default class Footer extends Component {
         <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-700">
           <div className="max-w-screen-xl mx-auto pt-5 pb-5 dark:text-gray-300">
             <span className="text-center md:flex md:justify-evenly">
-              <h1>
+              <p>
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
@@ -46,8 +46,8 @@ export default class Footer extends Component {
                 >
                   License
                 </a>
-              </h1>
-              <h1>Copyright © 2021 Balaji K</h1>
+              </p>
+              <p>Copyright © 2021 Balaji K</p>
               <div>
                 <p id="device"></p>
               </div>
