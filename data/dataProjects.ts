@@ -55,7 +55,7 @@ export const links: Array<Array<Array<string>>> = [
     ["Github", "https://github.com/balajiofficial/EncryptCLI"],
     [
       "Download",
-      "https://github.com/balajiofficial/EncryptCLI/releases/tag/4.0.0",
+      "https://github.com/balajiofficial/EncryptCLI/releases/tag/5.0.0",
     ],
   ],
   [
