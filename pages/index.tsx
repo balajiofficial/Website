@@ -21,6 +21,7 @@ export default function Home(): ReactElement<ReactFragment> {
                   href="https://github.com/balajiofficial"
                   target="_blank"
                   rel="noreferrer"
+                  className="text-white"
                 >
                   <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
@@ -45,7 +46,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </a>
               </div>
               <div className="pt-3 pb-3">
-                <a href="">
+                <a href="" className="text-white">
                   <button
                     className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
@@ -69,7 +70,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </a>
               </div>
               <div className="pt-3 pb-3">
-                <a href="">
+                <a href="" className="text-white">
                   <button
                     className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
@@ -93,7 +94,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </a>
               </div>
               <div className="pt-3 pb-3">
-                <a href="mailto:notanemail@email.com">
+                <a href="mailto:notanemail@email.com" className="text-white">
                   <button className="bg-gradient-to-l from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

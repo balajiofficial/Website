@@ -2,7 +2,6 @@ import Layout from "../../layouts/pageLayout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import React from "react";
-import BlogComponent from "../../layouts/blog";
 import readingTime from "reading-time";
 
 export async function getStaticProps({ params }) {
@@ -74,9 +73,9 @@ export default function Post({ postData }) {
             </div>
           </div>
           <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300">
-            <BlogComponent>
+            <div>
               <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-            </BlogComponent>
+            </div>
           </div>
         </div>
       </div>

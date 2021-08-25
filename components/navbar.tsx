@@ -42,7 +42,7 @@ export default class Navbar extends Component {
       <div>
         <nav className="min-h-full h-12 text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-green-700 dark:via-cyan-600 dark:to-indigo-700">
           <div>
-            <ul className="flex justify-evenly font-medium">
+            <div className="flex justify-evenly font-medium">
               {[
                 ["Home", ""],
                 ["About", "about"],
@@ -50,20 +50,20 @@ export default class Navbar extends Component {
                 ["Blog", "blog"],
               ].map((e) => {
                 return (
-                  <Link href={`/${e[1]}`} key={e[0]} passHref={true}>
-                    <a>
-                      <li
+                  <Link href={`/${e[1]}`} key={e[0]} passHref>
+                    <div className="cursor-pointer">
+                      <div
                         key={e[0]}
                         className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-2"
                       >
                         {e[0]}
-                      </li>
-                    </a>
+                      </div>
+                    </div>
                   </Link>
                 );
               })}
-              <a id="svg_size">
-                <li
+              <div className="cursor-pointer" id="svg_size">
+                <div
                   key="mode"
                   className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-blue-900 cursor-pointer"
                   onClick={() => {
@@ -77,9 +77,9 @@ export default class Navbar extends Component {
                   }}
                 >
                   <div id="theme"></div>
-                </li>
-              </a>
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </nav>
       </div>

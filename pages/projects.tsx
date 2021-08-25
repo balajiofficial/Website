@@ -16,10 +16,10 @@ export default function Projects(): ReactElement<ReactFragment> {
       </Head>
       <div className="dark:bg-gray-800">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
-          <ul className="xl:w-10/12">
+          <div className="xl:w-10/12">
             {content.map((e: Array<string>, i_content) => {
               return (
-                <li
+                <div
                   className={`rounded-none sm:rounded-lg bg-gradient-to-br ${
                     [
                       "from-blue-400 to-blue-700",
@@ -42,28 +42,28 @@ export default function Projects(): ReactElement<ReactFragment> {
                           </div>
                           <p className="text-white text-sm">{e[2]}</p>
                           <div className="mb-1">
-                            <ul className="flex flex-wrap">
+                            <div className="flex flex-wrap">
                               {keywords[i_content].map((keyword: string) => {
                                 return (
-                                  <li
+                                  <div
                                     className="mr-2 rounded bg-card p-1 mt-1.5 font-semibold"
                                     key={keyword}
                                   >
                                     {keyword}
-                                  </li>
+                                  </div>
                                 );
                               })}
-                            </ul>
+                            </div>
                           </div>
                           <p className="text-lg lg:mr-2 mr-0 font-about">
                             {e[1]}
                           </p>
-                          <ul className="flex pt-2">
+                          <div className="flex pt-2">
                             <p className="font-semibold pr-1">Links :</p>
                             {links[i_content].map(
                               (link: Array<string>, i_links) => {
                                 return (
-                                  <li key={link[0]} className="flex">
+                                  <div key={link[0]} className="flex">
                                     <div className="text-gray-100 font-semibold inline-block">
                                       {i_links == 0 ? "" : ", "}
                                       <p className="hover:underline inline-block">
@@ -71,16 +71,17 @@ export default function Projects(): ReactElement<ReactFragment> {
                                           href={link[1]}
                                           target="_blank"
                                           rel="noreferrer"
+                                          className="text-white"
                                         >
                                           {link[0]}
                                         </a>
                                       </p>
                                     </div>
-                                  </li>
+                                  </div>
                                 );
                               }
                             )}
-                          </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -98,10 +99,10 @@ export default function Projects(): ReactElement<ReactFragment> {
                       </div>
                     </div>
                   </div>
-                </li>
+                </div>
               );
             })}
-          </ul>
+          </div>
         </div>
       </div>
     </Layout>

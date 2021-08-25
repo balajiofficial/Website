@@ -41,7 +41,7 @@ export default class Footer extends Component {
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
-                  className="border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
+                  className="text-black hover:no-underline border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
                   rel="noreferrer"
                 >
                   License

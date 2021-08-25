@@ -15,12 +15,12 @@ export default function FiveZeroZero(): ReactElement<ReactFragment> {
             Error 500 Page Not Found
           </p>
           <div className="pt-2 flex justify-center">
-            <Link href="/">
-              <a>
+            <Link href="/" passHref>
+              <div className="cursor-pointer hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg">
                 <p className="p-3 text-blue-600 hover:text-blue-400 text-lg dark:text-blue-400 dark:hover:text-blue-200">
                   Return to Home Page
                 </p>
-              </a>
+              </div>
             </Link>
           </div>
         </div>
