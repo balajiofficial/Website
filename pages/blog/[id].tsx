@@ -67,7 +67,7 @@ export default function Post({ postData }) {
                   </div>
                 </div>
                 <p className="font-about font-medium text-gray-500 dark:text-gray-300 text-xl mr-1">
-                  By Balaji K
+                  Balaji K
                 </p>
               </div>
             </div>

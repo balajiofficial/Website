@@ -7,7 +7,7 @@ export default function Post({ post }) {
         <div>
           <Link href={`/blog/${post.id}`} passHref>
             <div className="cursor-pointer">
-              <p className="text-3xl font-extrabold font-sans hover:text-blue-700 dark:text-gray-200 dark:hover:text-purple-400">
+              <p className="text-3xl font-extrabold font-sans hover:text-blue-700 dark:text-gray-100 dark:hover:text-cyan-400">
                 {post.title}
               </p>
             </div>
