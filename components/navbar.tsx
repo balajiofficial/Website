@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     theme: "light",
   };
 
-  componentDidMount(): void {
+  componentDidMount() {
     window.document.body.classList.add("dark:bg-gray-800");
     window.document.body.classList.add("bg-white");
 
@@ -25,7 +25,7 @@ export default class Navbar extends Component {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <nav className="min-h-full h-12 text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-green-700 dark:via-cyan-600 dark:to-indigo-700">
+        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-green-700 dark:via-cyan-600 dark:to-indigo-700">
           <div>
             <div className="flex justify-evenly font-medium">
               {[
@@ -39,7 +39,7 @@ export default class Navbar extends Component {
                     <div className="cursor-pointer">
                       <div
                         key={e[0]}
-                        className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-2"
+                        className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-3 sm:mt-2"
                       >
                         {e[0]}
                       </div>

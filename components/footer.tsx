@@ -18,18 +18,18 @@ export default class Footer extends Component {
       : "Desktop";
   };
 
-  componentDidMount(): void {
+  componentDidMount() {
     const device = this.getDeviceType();
     this.setState({ device: device });
   }
 
   render(): ReactElement<HTMLDivElement> {
     return (
-      <div>
+      <div className="mt-4">
         <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-700">
-          <div className="max-w-screen-xl mx-auto pt-5 pb-5 dark:text-gray-300">
+          <div className="max-w-screen-xl mx-auto pt-2.5 pb-2.5 dark:text-gray-300">
             <span className="text-center md:flex md:justify-evenly">
-              <p>
+              <div>
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
@@ -38,10 +38,10 @@ export default class Footer extends Component {
                 >
                   License
                 </a>
-              </p>
-              <p>Copyright © 2021 Balaji K</p>
+              </div>
+              <div className="mt-1 sm:mt-0">Copyright © 2021 Balaji K</div>
               <div>
-                <p id="device">
+                <div>
                   {this.state.device == "Desktop" ? (
                     <div>
                       <svg
@@ -103,7 +103,7 @@ export default class Footer extends Component {
                       <p className="inline-block align-middle">Tablet</p>
                     </div>
                   )}
-                </p>
+                </div>
               </div>
             </span>
           </div>

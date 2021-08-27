@@ -87,15 +87,13 @@ export default function Projects(): ReactElement<ReactFragment> {
                     </div>
                     <div className="pt-3 lg:pt-6">
                       <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg">
-                        <a href={e[3]} target="_blank" rel="noreferrer">
-                          <Image
-                            src={e[3]}
-                            alt="Screenshot"
-                            width={1920}
-                            height={1080}
-                            quality={1}
-                          />
-                        </a>
+                        <Image
+                          src={e[3]}
+                          alt="Screenshot"
+                          width={1920}
+                          height={1080}
+                          quality={1}
+                        />
                       </div>
                     </div>
                   </div>
