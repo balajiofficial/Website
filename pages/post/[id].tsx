@@ -44,9 +44,10 @@ export default function Post({ postData }) {
               <div className="flex justify-between">
                 <div>
                   <div className="text-lg font-about text-gray-500 dark:text-gray-300 ml-1">
+                    <div className="flex items-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 inline-block mr-1 align-middle"
+                      className="h-6 w-6 mr-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -58,7 +59,7 @@ export default function Post({ postData }) {
                         d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                       />
                     </svg>
-                    <p className="inline-block align-middle">
+                    <p className="align-middle">
                       {readingTime(postData.content).minutes >= 1
                         ? Math.ceil(readingTime(postData.content).minutes) +
                           " minutes"
@@ -66,6 +67,7 @@ export default function Post({ postData }) {
                             readingTime(postData.content).minutes * 60
                           ) + " seconds"}
                     </p>
+                    </div>
                   </div>
                 </div>
                 <div className="font-about text-gray-500 dark:text-gray-300 text-lg mr-1">
