@@ -14,7 +14,7 @@ export default function Projects(): ReactElement<ReactFragment> {
           content="Several of my projects I did over the years."
         />
       </Head>
-      <div className="dark:bg-gray-800">
+      <div className="dark:bg-gray-900">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
           <div className="xl:w-10/12">
             {content.map((e: Array<string>, i_content) => {

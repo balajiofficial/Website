@@ -9,12 +9,12 @@ export default function Home(): ReactElement<ReactFragment> {
         <title>Home | Balaji</title>
         <meta name="description" content="The Official Website of Balaji K." />
       </Head>
-      <div className="dark:bg-gray-800">
+      <div className="dark:bg-gray-900">
         <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-8">
-          <h1 className="dark:text-blue-300 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold">
+          <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-bold">
             Balaji
           </h1>
-          <div className="flex justify-center mt-7">
+          <div className="flex justify-center mt-3 md:mt-7">
             <div className="text-white dark:text-blue-100 flex md:justify-evenly md:w-3/4 flex-col md:flex-row">
               <div className="pt-3 pb-3">
                 <a
@@ -23,7 +23,7 @@ export default function Home(): ReactElement<ReactFragment> {
                   rel="noreferrer"
                   className="text-white"
                 >
-                  <button className="bg-black hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                  <button className="bg-black hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg
                         height="32"

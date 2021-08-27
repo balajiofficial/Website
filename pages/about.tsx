@@ -11,7 +11,7 @@ export default function About(): ReactElement<ReactFragment> {
         <title>About | Balaji</title>
         <meta name="description" content="About me and my passions." />
       </Head>
-      <div className="dark:bg-gray-800">
+      <div className="dark:bg-gray-900">
         <div>
           <div className="flex justify-center pt-5">
             <Image
@@ -30,7 +30,7 @@ export default function About(): ReactElement<ReactFragment> {
                     <p
                       className={`font-about-header font-semibold text-3xl ${
                         i == 0 ? "" : "mt-5"
-                      } dark:text-blue-400`}
+                      } dark:text-blue-300`}
                     >
                       {p[0]}
                     </p>

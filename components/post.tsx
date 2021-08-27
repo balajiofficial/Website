@@ -5,12 +5,12 @@ export default function Post({ post }) {
     <div className="flex justify-center">
       <div className="font-about md:w-2/3 w-11/12 mt-4">
         <div>
-          <Link href={`/blog/${post.id}`} passHref>
-            <div className="cursor-pointer">
-              <p className="text-3xl font-extrabold font-sans hover:text-blue-700 dark:text-gray-100 dark:hover:text-cyan-400">
-                {post.title}
-              </p>
-            </div>
+          <Link href={`/post/${post.id}`} passHref>
+            <a className="text-3xl font-extrabold font-sans text-black hover:text-blue-700 dark:text-gray-100 dark:hover:text-cyan-400 hover:no-underline">
+              <div className="cursor-pointer">
+                <p>{post.title}</p>
+              </div>
+            </a>
           </Link>
           <p className="text-gray-600 text-lg dark:text-blue-300">
             {post.date}

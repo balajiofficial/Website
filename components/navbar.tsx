@@ -7,7 +7,7 @@ export default class Navbar extends Component {
   };
 
   componentDidMount() {
-    window.document.body.classList.add("dark:bg-gray-800");
+    window.document.body.classList.add("dark:bg-gray-900");
     window.document.body.classList.add("bg-white");
 
     localStorage.setItem(
@@ -25,25 +25,27 @@ export default class Navbar extends Component {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-green-700 dark:via-cyan-600 dark:to-indigo-700">
+        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-cyan-600 dark:via-blue-600 dark:to-indigo-700">
           <div>
             <div className="flex justify-evenly font-medium">
               {[
                 ["Home", ""],
                 ["About", "about"],
                 ["Projects", "projects"],
-                ["Blog", "blog"],
+                ["Posts", "posts"],
               ].map((e) => {
                 return (
                   <Link href={`/${e[1]}`} key={e[0]} passHref>
-                    <div className="cursor-pointer">
-                      <div
-                        key={e[0]}
-                        className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-3 sm:mt-2"
-                      >
-                        {e[0]}
+                    <a className="text-white hover:no-underline no-underline">
+                      <div className="cursor-pointer">
+                        <div
+                          key={e[0]}
+                          className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-3 sm:mt-2"
+                        >
+                          {e[0]}
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   </Link>
                 );
               })}

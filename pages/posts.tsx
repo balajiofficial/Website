@@ -22,7 +22,7 @@ export default function BlogPage({ data }): ReactElement<ReactFragment> {
         <title>Blog | Balaji</title>
       </Head>
 
-      <div className="dark:bg-gray-800 mt-5"></div>
+      <div className="dark:bg-gray-900 mt-5"></div>
       <div>
         <div>
           {data_new.map((post) => {

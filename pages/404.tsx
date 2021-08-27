@@ -9,7 +9,7 @@ export default function FourOFour(): ReactElement<ReactFragment> {
       <Head>
         <title>Error 404 | Balaji</title>
       </Head>
-      <div className="dark:bg-gray-800">
+      <div className="dark:bg-gray-900">
         <div className="pt-4">
           <p className="flex justify-center align-middle pt-60 text-4xl font-extrabold text-center dark:text-gray-300">
             Error 404 Page Not Found
