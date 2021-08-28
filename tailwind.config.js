@@ -25,6 +25,9 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       cyan: colors.cyan,
+      fuchsia: colors.fuchsia,
+      rose: colors.rose,
+      lime: colors.lime,
     },
   },
   variants: {

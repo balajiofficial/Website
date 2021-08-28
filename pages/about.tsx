@@ -12,7 +12,7 @@ export default function About(): ReactElement<ReactFragment> {
         <meta name="description" content="About me and my passions." />
       </Head>
       <div className="dark:bg-gray-900">
-        <div>
+        <div className="mb-4">
           <div className="flex justify-center pt-5">
             <Image
               src="/profile.png"

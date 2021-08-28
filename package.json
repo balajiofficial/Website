@@ -8,7 +8,7 @@
     "build": "yarn run css && next build",
     "start": "next start",
     "lint": "next lint",
-    "css": "tailwindcss build -i styles/globals.css -o styles/styles.css",
+    "css": "tailwindcss build -i styles/global.css -o styles/styles.css",
     "prettier": "prettier --write ."
   },
   "dependencies": {

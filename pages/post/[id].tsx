@@ -35,7 +35,7 @@ export default function Post({ postData }) {
             <p className="text-5xl font-bold mt-3 text-center dark:text-white">
               {postData.title}
             </p>
-            <div className="font-about">
+            <div className="font-about mb-4">
               <p className="text-gray-600 dark:text-gray-400 text-lg text-center">
                 {postData.date}
               </p>
@@ -45,28 +45,28 @@ export default function Post({ postData }) {
                 <div>
                   <div className="text-lg font-about text-gray-500 dark:text-gray-300 ml-1">
                     <div className="flex items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 mr-1"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <p className="align-middle">
-                      {readingTime(postData.content).minutes >= 1
-                        ? Math.ceil(readingTime(postData.content).minutes) +
-                          " minutes"
-                        : Math.ceil(
-                            readingTime(postData.content).minutes * 60
-                          ) + " seconds"}
-                    </p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={1.5}
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <p className="align-middle">
+                        {readingTime(postData.content).minutes >= 1
+                          ? Math.ceil(readingTime(postData.content).minutes) +
+                            " minutes"
+                          : Math.ceil(
+                              readingTime(postData.content).minutes * 60
+                            ) + " seconds"}
+                      </p>
                     </div>
                   </div>
                 </div>

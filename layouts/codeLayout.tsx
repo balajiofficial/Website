@@ -1,6 +1,6 @@
-import { Component } from "react";
+import { Component, Fragment } from "react";
 import hljs from "highlight.js";
-import "highlight.js/styles/atom-one-dark.css";
+import "highlight.js/styles/github-dark-dimmed.css";
 
 export default class CodeLayout extends Component {
   componentDidMount() {
@@ -12,6 +12,6 @@ export default class CodeLayout extends Component {
   }
 
   render() {
-    return <div></div>;
+    return <Fragment></Fragment>;
   }
 }

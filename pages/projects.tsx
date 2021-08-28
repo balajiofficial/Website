@@ -24,8 +24,8 @@ export default function Projects(): ReactElement<ReactFragment> {
                     [
                       "from-blue-400 to-blue-700",
                       "from-yellow-400 to-yellow-700",
-                      "from-green-400 to-green-800",
-                      "from-red-400 to-red-600",
+                      "from-green-500 to-green-700",
+                      "from-rose-500 to-rose-600",
                       "from-purple-400 to-purple-700",
                     ][i_content % 5]
                   } mb-4 p-5`}
@@ -46,7 +46,7 @@ export default function Projects(): ReactElement<ReactFragment> {
                               {keywords[i_content].map((keyword: string) => {
                                 return (
                                   <div
-                                    className="mr-2 rounded bg-card p-1 mt-1.5 font-semibold"
+                                    className="mr-2 rounded bg-card pl-1 pr-1 pt-0.5 pb-0.5 mt-1.5 font-semibold"
                                     key={keyword}
                                   >
                                     {keyword}
