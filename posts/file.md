@@ -45,7 +45,7 @@ Lists
 [Link](https://balajiofficial.vercel.app)
 [Another Link](https://github.com/balajiofficial/Website)
 
-```cpp
+```c++
 #include<bits/stdc++.h>
 
 using namespace std;
@@ -61,6 +61,26 @@ int main() {
     }
     cout << ans << "\n";
 }
+```
+
+```python
+n = int(input("Enter number : "))
+
+if n == 1:
+    print(1)
+elif n == 2:
+    print(1, 1, end=" ")
+else:
+    a = 1
+    b = 1
+    print(1, 1, end=" ")
+    c = 0
+    n -= 2
+    for _ in range(n):
+        c = a + b
+        print(c, end=" ")
+        a = b
+        b = c
 ```
 
 [Another Another Link](https://github.com)

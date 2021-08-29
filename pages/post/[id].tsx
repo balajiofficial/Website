@@ -29,7 +29,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title} - Blog | Balaji</title>
       </Head>
-      <div className="flex justify-center mt-2">
+      <div className="flex justify-center mt-2 mb-2">
         <div className="md:w-2/3 w-screen">
           <div className="pb-2 dark:border-gray-400 border-gray-300 mb-2">
             <p className="text-5xl font-bold mt-3 text-center dark:text-white">
