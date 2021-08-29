@@ -36,11 +36,10 @@ export default class BlogPage extends Component {
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3">
               <div className="mb-4">
-                <div className="flex justify-between w-full p-2 rounded-lg border-2 border-cyan-600 dark:border-cyan-500 dark:bg-gray-800">
+                <div className="flex items-center p-1 w-full rounded-lg border-2 border-cyan-600 dark:border-cyan-500 dark:bg-gray-800">
                   <input
-                    type="search"
                     placeholder="Search posts"
-                    className=" dark:text-white font-medium font-about w-full dark:bg-gray-800"
+                    className=" dark:text-white font-medium p-1 font-about w-full dark:bg-gray-800"
                     spellCheck={false}
                     onChange={(e) => {
                       this.setState({ searchText: e.target.value });

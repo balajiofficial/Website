@@ -1,6 +1,5 @@
 import { Component, Fragment } from "react";
 import hljs from "highlight.js";
-//import "highlight.js/styles/github-dark-dimmed.css";
 import "highlight.js/styles/base16/solarized-dark.css";
 
 export default class CodeLayout extends Component {
