@@ -8,4 +8,4 @@ desc: This is a test description number 2 - convert md to html
 
 hello
 
-![Photo](/profile.png)
+[![Photo](/profile.png)](/profile.png)

@@ -4,9 +4,15 @@ import React, { Component, ReactElement } from "react";
 export default class Navbar extends Component {
   state = {
     theme: "light",
+    pages: [
+      ["Home", ""],
+      ["About", "about"],
+      ["Projects", "projects"],
+      ["Posts", "posts"],
+    ],
   };
 
-  componentDidMount() {
+  setTheme = () => {
     window.document.body.classList.add("dark:bg-gray-900");
     window.document.body.classList.add("bg-white");
 
@@ -20,6 +26,10 @@ export default class Navbar extends Component {
     window.document.documentElement.classList.add(
       localStorage.getItem("balajiofficial_theme")
     );
+  };
+
+  componentDidMount() {
+    this.setTheme();
   }
 
   render(): ReactElement<HTMLDivElement> {
@@ -28,12 +38,7 @@ export default class Navbar extends Component {
         <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-rose-600 dark:via-yellow-600 dark:to-green-600">
           <div>
             <div className="flex justify-evenly font-medium">
-              {[
-                ["Home", ""],
-                ["About", "about"],
-                ["Projects", "projects"],
-                ["Posts", "posts"],
-              ].map((e) => {
+              {this.state.pages.map((e) => {
                 return (
                   <Link href={`/${e[1]}`} key={e[0]} passHref>
                     <a className="text-white hover:no-underline no-underline">

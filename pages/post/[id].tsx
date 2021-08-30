@@ -42,6 +42,7 @@ export default class Post extends Component {
   componentDidMount() {
     let preElements = document.getElementsByTagName("pre");
     let codeElements = document.getElementsByTagName("code");
+    let imgElements = document.getElementsByTagName("img");
     for (let i = 0; i < preElements.length; i++) {
       preElements[i].className = "bg-pre rounded-lg";
       let language = codeElements[i].className
@@ -60,6 +61,9 @@ export default class Post extends Component {
       codeElements[i].className = codeElements[i].className.replace("hljs", "");
       codeElements[i].className +=
         " pl-4 pr-4 pb-4 overflow-x-auto block bg-pre bg-code";
+    }
+    for (let i = 0; i < imgElements.length; i++) {
+      imgElements[i].parentElement.className += 'flex justify-center'
     }
   }
 

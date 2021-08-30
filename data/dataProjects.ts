@@ -32,11 +32,11 @@ export const content: Array<Array<string>> = [
 ];
 
 export const keywords: Array<Array<string>> = [
-  ["graph", "plotting", "matplotlib", "tkinter", "python"],
-  ["nextjs", "react", "typescript", "tailwindcss", "vercel"],
-  ["encryption", "command-line-tool", "unicode", "golang", "ascii"],
-  ["electron", "tailwindcss", "javascript", "notes-app"],
-  ["c++", "algorithm", "data-structures", "codeforces", "usaco"],
+  ["Python", "Graph", "Plotting", "Matplotlib", "Tkinter"],
+  ["Typescript", "Next.js", "React", "Tailwind CSS", "Vercel", "Markdown"],
+  ["Go", "Encryption", "Command Line Tool", "Unicode", "ASCII"],
+  ["Javascript", "Electron", "Tailwind CSS", "Notes GUI", "HTML"],
+  ["C++", "Algorithms", "Data Structures", "Codeforces", "USACO"],
 ];
 
 export const links: Array<Array<Array<string>>> = [
@@ -49,7 +49,7 @@ export const links: Array<Array<Array<string>>> = [
   ],
   [
     ["Github", "https://github.com/balajiofficial/Website"],
-    ["Website", "https://balajiofficial.vercel.app"],
+    ["Website", "/"],
   ],
   [
     ["Github", "https://github.com/balajiofficial/EncryptCLI"],
