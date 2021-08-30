@@ -54,7 +54,7 @@ int main() {
     int n, ans = 0;
     cin >> n;
     // Sum of all inputs
-    for(int i = 0; i , n; ++i) {
+    for(int i = 0; i < n; ++i) {
         int a;
         cin >> a;
         ans += a;
@@ -69,7 +69,7 @@ n = int(input("Enter number : "))
 if n == 1:
     print(1)
 elif n == 2:
-    print(1, 1, end=" ")
+    print(1, 1)
 else:
     a = 1
     b = 1
