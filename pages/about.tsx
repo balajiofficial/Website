@@ -22,25 +22,24 @@ export default function About(): ReactElement<ReactFragment> {
               className="rounded-full"
             />
           </div>
+          <div className="flex justify-center mt-1">
+            <p className="text-3xl font-bold text-gray-900 dark:text-gray-300 font-about">
+              Balaji K
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <p className="text-lg text-gray-600 dark:text-gray-300 font-about">
+              Student
+            </p>
+          </div>
           <div>
-            {aboutData.map((p, i) => {
-              return (
-                <div className="flex justify-center" key={p[0]}>
-                  <div className="w-11/12 lg:w-3/5">
-                    <p
-                      className={`font-about-header font-semibold text-3xl ${
-                        i == 0 ? "" : "mt-5"
-                      } dark:text-blue-300`}
-                    >
-                      {p[0]}
-                    </p>
-                    <p className="pt-2 text-lg dark:text-gray-400 font-about">
-                      {p[1]}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
+            <div className="flex justify-center">
+              <div className="w-11/12 lg:w-3/5">
+                <p className="pt-2 text-lg dark:text-gray-400 font-about">
+                  {aboutData[0]}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

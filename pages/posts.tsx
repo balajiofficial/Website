@@ -5,7 +5,7 @@ import Post from "../components/post";
 import { getSortedPostsData } from "../lib/posts";
 import { searchAlgo } from "../utils/searchAlgo";
 
-export async function getStaticProps() {
+export function getStaticProps() {
   let data = getSortedPostsData();
   return {
     props: {
@@ -35,30 +35,33 @@ export default class BlogPage extends Component {
         <div>
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3">
-              <div className="mb-4">
-                <div className="flex items-center p-1 w-full rounded-lg border-2 border-cyan-600 dark:border-cyan-500 dark:bg-gray-800">
-                  <input
-                    placeholder="Search posts"
-                    className=" dark:text-white font-medium p-1 font-about w-full dark:bg-gray-800"
-                    spellCheck={false}
-                    onChange={(e) => {
-                      this.setState({ searchText: e.target.value });
-                    }}
-                  />
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6 text-gray-400"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              <div className="mb-3">
+                <div>
+                  <div className="relative max-w-lg">
+                    <input
+                      type="text"
+                      className="block w-full px-4 py-2 text-gray-900 dark:text-white bg-gray-100 border-2 border-transparent focus:border-cyan-500 rounded-md  dark:bg-gray-800 font-medium p-1 font-about "
+                      placeholder="Search posts"
+                      spellCheck={false}
+                      onChange={(e) => {
+                        this.setState({ searchText: e.target.value });
+                      }}
                     />
-                  </svg>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5 absolute right-3 top-3 text-gray-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>

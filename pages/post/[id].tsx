@@ -63,7 +63,7 @@ export default class Post extends Component {
         " pl-4 pr-4 pb-4 overflow-x-auto block bg-pre bg-code";
     }
     for (let i = 0; i < imgElements.length; i++) {
-      imgElements[i].parentElement.className += 'flex justify-center'
+      imgElements[i].parentElement.className += "flex justify-center";
     }
   }
 

@@ -3,6 +3,7 @@ import { Component, ReactElement } from "react";
 export default class Footer extends Component {
   state = {
     device: "",
+    fixEnd: false,
   };
 
   getDeviceType = (): string => {
@@ -21,12 +22,17 @@ export default class Footer extends Component {
   componentDidMount() {
     const device = this.getDeviceType();
     this.setState({ device: device });
+    this.setState({ fixEnd: location.href.endsWith("/about") });
   }
 
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <footer className="bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800">
+        <footer
+          className={`bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800 ${
+            this.state.fixEnd ? "absolute" : ""
+          }`}
+        >
           <div className="max-w-screen-xl mx-auto pt-3 pb-3 dark:text-gray-300">
             <span className="text-center md:flex md:justify-evenly">
               <div>
