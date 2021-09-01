@@ -79,7 +79,7 @@ export default class Navbar extends Component {
                     {this.state.theme == "dark" ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-7 w-7"
+                        className="sm:h-7 sm:w-7 h-6 w-6"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -88,7 +88,7 @@ export default class Navbar extends Component {
                     ) : (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-7 w-7"
+                        className="sm:h-7 sm:w-7 h-6 w-6"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >

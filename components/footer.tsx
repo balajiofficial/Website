@@ -1,4 +1,5 @@
 import { Component, ReactElement } from "react";
+import Link from "next/link";
 
 export default class Footer extends Component {
   state = {
@@ -22,7 +23,10 @@ export default class Footer extends Component {
   componentDidMount() {
     const device = this.getDeviceType();
     this.setState({ device: device });
-    this.setState({ fixEnd: location.href.endsWith("/about") });
+    this.setState({
+      fixEnd:
+        location.href.endsWith("/about") || location.href.endsWith("/credits"),
+    });
   }
 
   render(): ReactElement<HTMLDivElement> {
@@ -30,22 +34,28 @@ export default class Footer extends Component {
       <div>
         <footer
           className={`bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800 ${
-            this.state.fixEnd ? "absolute" : ""
+            this.state.fixEnd ? "xl:absolute" : ""
           }`}
         >
-          <div className="max-w-screen-xl mx-auto pt-3 pb-3 dark:text-gray-300">
-            <span className="text-center md:flex md:justify-evenly">
+          <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
+            <span className="text-center sm:flex sm:justify-evenly">
               <div>
+                <Link href="/credits">
+                  <a className="text-black dark:text-gray-300 hover:no-underline border-b-2 hover:border-black border-transparent dark:border-gray-300 dark:hover:border-transparent">
+                    Credits
+                  </a>
+                </Link>
+              </div>
+              <div className="mb-1 md:mb-0">
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
                   className="text-black dark:text-gray-300 hover:no-underline border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
                   rel="noreferrer"
                 >
-                  License
+                  Copyright © 2021 Balaji K
                 </a>
               </div>
-              <div className="mt-1 sm:mt-0">Copyright © 2021 Balaji K</div>
               <div>
                 <div>
                   {this.state.device == "Desktop" ? (
