@@ -6,10 +6,10 @@ import { searchAlgo } from "../utils/searchAlgo";
 import { getSortedPostsData } from "../lib/posts";
 
 export function getStaticProps() {
-  //let data = getSortedPostsData();
+  let data = getSortedPostsData();
   return {
     props: {
-      data: [],
+      data,
     },
   };
 }
