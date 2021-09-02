@@ -31,8 +31,7 @@ export default class BlogPage extends Component {
           <title>Blog | Balaji</title>
         </Head>
 
-        <div className="dark:bg-gray-900 mt-5"></div>
-        <div>
+        <div className="mt-5">
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3">
               <div className="mb-3">
@@ -69,8 +68,11 @@ export default class BlogPage extends Component {
           <div>
             {this.state.content.map((post, index) => {
               if (searchAlgo(post, this.state.searchText))
-                return <Post post={post} key={post.id} index={index} />;
-              else return <Fragment></Fragment>;
+                return (
+                  <div key={post.id}>
+                    <Post post={post} keyValue={post.id} index={index} />
+                  </div>
+                );
             })}
           </div>
         </div>

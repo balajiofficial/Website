@@ -15,6 +15,8 @@
 
 * {
   outline: 0 !important;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Scrollbar CSS */

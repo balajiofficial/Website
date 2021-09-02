@@ -23,7 +23,7 @@ export default function Home(): ReactElement<ReactFragment> {
                   rel="noreferrer"
                   className="text-white"
                 >
-                  <button className="bg-black hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                  <button className="bg-gray-800 hover:bg-black dark:bg-gray-300 dark:hover:bg-gray-200 dark:text-black rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <div className="whitespace-nowrap">
                       <svg
                         height="32"
@@ -48,7 +48,7 @@ export default function Home(): ReactElement<ReactFragment> {
               <div className="pt-3 pb-3">
                 <a href="" className="text-white">
                   <button
-                    className="bg-blue-500 hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
+                    className="bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
                       alert("No Twitter account created yet");
                     }}
@@ -72,15 +72,13 @@ export default function Home(): ReactElement<ReactFragment> {
               <div className="pt-3 pb-3">
                 <a href="" className="text-white">
                   <button
-                    className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 hover:from-red-500 hover:via-purple-500 hover:to-blue-500 font-semibold h-14 hover:shadow-lg"
+                    className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 dark:hover:from-red-500 dark:hover:via-purple-500 dark:hover:to-blue-500 hover:from-red-700 hover:via-purple-700 hover:to-blue-700 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
                       alert("No Instagram account created yet");
                     }}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
                       viewBox="0 0 24 24"
                       className="fill-current inline-block h-8 w-8"
                     >
@@ -95,7 +93,7 @@ export default function Home(): ReactElement<ReactFragment> {
               </div>
               <div className="pt-3 pb-3">
                 <a href="mailto:notanemail@email.com" className="text-white">
-                  <button className="bg-gradient-to-l from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                  <button className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-9 w-9 inline-block"

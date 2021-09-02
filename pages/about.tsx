@@ -24,13 +24,13 @@ export default function About(): ReactElement<ReactFragment> {
           </div>
           <div className="mt-3 flex justify-center">
             <p className="text-4xl sm:text-6xl text-gray-600 dark:text-gray-200 font-footer">
-              Balaji K
+              Balaji
             </p>
           </div>
           <div>
             <div className="flex justify-center">
-              <div className="lg:ml-0 lg:mr-0 ml-2 mr-2">
-                <div className="mt-4 sm:mt-7 xl:mt-10">
+              <div>
+                <div className="mt-7 xl:mt-10">
                   <ul>
                     {aboutData.map((e, i) => {
                       return (
@@ -41,17 +41,17 @@ export default function About(): ReactElement<ReactFragment> {
                           }
                         >
                           <div className="sm:flex sm:items-center">
-                            <div className="flex sm:flex-none justify-center sm:mb-0 mb-2">
+                            <div className="flex sm:flex-none justify-center sm:mb-0 mb-5">
                               <Image
                                 src={e[0]}
                                 width={35}
                                 height={35}
                                 alt="Image"
-                                quality={50}
+                                quality={25}
                               />
                             </div>
-                            <div className="ml-4 text-gray-600 dark:text-gray-400 font-about text-lg">
-                              <p>{e[1]}</p>
+                            <div className="ml-2 mr-2 text-gray-600 dark:text-gray-400 font-about text-lg flex sm:flex-none justify-center">
+                              <p className="text-center">{e[1]}</p>
                             </div>
                           </div>
                         </li>

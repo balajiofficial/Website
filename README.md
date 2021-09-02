@@ -2,7 +2,7 @@
 
 ## About
 
-My personal website - [https://balajiofficial.vercel.app](https://balajiofficial.vercel.app).
+My personal website - [balajiofficial.vercel.app](https://balajiofficial.vercel.app).
 
 ## License
 
@@ -14,10 +14,10 @@ The code for the website is open source and is licensed under the [Apache-2.0 Li
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Markdown](https://en.wikipedia.org/wiki/Markdown)
-- [PostCSS](https://postcss.org/)
 - [ESLint](https://eslint.org/)
 - [Vercel](https://vercel.com/)
-- [Heroicons](https://heroicons.com/)
+
+For more details visit [here](https://balajiofficial.vercel.app/credits).
 
 ## Test Locally
 
@@ -29,10 +29,11 @@ The code for the website is open source and is licensed under the [Apache-2.0 Li
 ```
 yarn
 yarn run css
-yarn run dev
+yarn run build
+yarn run start
 ```
 
-5. Then open [http://localhost:3000/](http://localhost:3000/) in your browser.
+5. Then open [localhost:3000](http://localhost:3000/) in your browser.
 
 ## Screenshot
 

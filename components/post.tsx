@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Post({ post, index }) {
   return (
-    <div className="flex justify-center" key={post.id}>
+    <div className="flex justify-center">
       <div className="font-about md:w-2/3 w-11/12 mt-4">
         <div>
           <Link href={`/post/${post.id}`} passHref>

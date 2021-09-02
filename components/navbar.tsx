@@ -35,7 +35,7 @@ export default class Navbar extends Component {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-rose-600 dark:via-yellow-600 dark:to-green-600">
+        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-cyan-600">
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {
@@ -54,7 +54,8 @@ export default class Navbar extends Component {
                   </Link>
                 );
               })}
-              <div className="flex items-center">
+
+              <div className="mt-2 sm:mt-1.5">
                 <div
                   className="cursor-pointer"
                   onClick={() => {
@@ -75,7 +76,7 @@ export default class Navbar extends Component {
                     );
                   }}
                 >
-                  <div className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-green-900 cursor-pointer">
+                  <div className="p-1 rounded-lg hover:bg-blue-900 cursor-pointer">
                     {this.state.theme == "dark" ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
