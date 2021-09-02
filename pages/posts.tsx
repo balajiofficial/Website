@@ -70,7 +70,7 @@ export default class BlogPage extends Component {
               if (searchAlgo(post, this.state.searchText))
                 return (
                   <div key={post.id}>
-                    <Post post={post} keyValue={post.id} index={index} />
+                    <Post post={post} index={index} />
                   </div>
                 );
             })}
