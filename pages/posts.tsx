@@ -2,14 +2,14 @@ import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment, Component, Fragment } from "react";
 import Post from "../components/post";
-import { getSortedPostsData } from "../lib/posts";
 import { searchAlgo } from "../utils/searchAlgo";
+import { getSortedPostsData } from "../lib/posts";
 
 export function getStaticProps() {
-  let data = getSortedPostsData();
+  //let data = getSortedPostsData();
   return {
     props: {
-      data,
+      data: [],
     },
   };
 }
@@ -18,7 +18,7 @@ export default class BlogPage extends Component {
   state = {
     content: (
       this.props as {
-        data: Array<{ id: string; title: string; date: string; desc: string }>;
+        data;
       }
     ).data,
     searchText: "",
