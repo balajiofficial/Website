@@ -7,7 +7,7 @@ export default class Navbar extends Component {
     pages: [
       ["Home", ""],
       ["About", "about"],
-      ["Projects", "projects"],
+      ["Skills", "skills"],
       ["Posts", "posts"],
     ],
   };
@@ -35,7 +35,7 @@ export default class Navbar extends Component {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
-        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-cyan-600">
+        <nav className="min-h-full h-10 sm:h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-cyan-600">
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {
@@ -45,7 +45,7 @@ export default class Navbar extends Component {
                       <div className="cursor-pointer">
                         <div
                           key={e[0]}
-                          className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-3 sm:mt-2"
+                          className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-1.5 sm:mt-2"
                         >
                           {e[0]}
                         </div>
@@ -55,7 +55,7 @@ export default class Navbar extends Component {
                 );
               })}
 
-              <div className="mt-2 sm:mt-1.5">
+              <div className="mt-1 sm:mt-1.5">
                 <div
                   className="cursor-pointer"
                   onClick={() => {

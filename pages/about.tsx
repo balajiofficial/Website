@@ -40,8 +40,8 @@ export default function About(): ReactElement<ReactFragment> {
                             "list-none" + (i == 0 ? "" : " mt-2 sm:mt-4")
                           }
                         >
-                          <div className="sm:flex sm:items-center">
-                            <div className="flex sm:flex-none justify-center sm:mb-0 mb-5">
+                          <div className="sm:flex sm:items-center sm:mb-0 mb-5">
+                            <div className="flex sm:flex-none justify-center mb-1 sm:mb-0 ml-0 sm:ml-1">
                               <Image
                                 src={e[0]}
                                 width={35}

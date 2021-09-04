@@ -56,7 +56,7 @@ export default function CreditPage() {
               <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
                 React.js
               </a>{" "}
-              framework{" "}
+              framework called{" "}
               <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
                 Next.js
               </a>{" "}

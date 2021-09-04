@@ -1,8 +1,8 @@
-import Layout from "../layouts/pageLayout";
+import Layout from "../../layouts/pageLayout";
 import Image from "next/image";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
-import { content, keywords, links } from "../data/dataProjects";
+import { content, keywords, links } from "../../data/dataProjects";
 
 export default function Projects(): ReactElement<ReactFragment> {
   return (

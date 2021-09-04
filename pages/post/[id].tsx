@@ -87,7 +87,7 @@ export default class Post extends Component {
               <div className="mb-3">
                 <div className="flex justify-between">
                   <div>
-                    <div className="text-lg font-about text-gray-500 dark:text-gray-300 ml-1">
+                    <div className="text-lg font-about text-gray-500 dark:text-gray-300 ml-2">
                       <div className="flex items-center">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ export default class Post extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="font-about text-gray-500 dark:text-gray-300 text-lg mr-1">
+                  <div className="font-about text-gray-500 dark:text-gray-300 text-lg mr-2">
                     <div className="flex items-center space-x-2">
                       <Image
                         src="/profile.png"

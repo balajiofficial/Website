@@ -1,7 +1,7 @@
 export const searchAlgo = (
   post: { title: string; desc: string; id: string; date: string },
   searchText: string
-) => {
+): boolean => {
   searchText = searchText.toLowerCase();
   if (
     post.title.toLowerCase().includes(searchText) ||
