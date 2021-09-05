@@ -22,6 +22,7 @@
 /* Scrollbar CSS */
 body::-webkit-scrollbar {
   width: 11px;
+  background-color: rgb(220, 224, 233);
 }
 
 body::-webkit-scrollbar-thumb {
@@ -44,10 +45,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Background Colors */
-.bg-card {
-  background-color: #00bbff;
-}
-
 .bg-pre {
   background-color: #002b36;
 }

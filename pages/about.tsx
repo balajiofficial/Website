@@ -40,17 +40,17 @@ export default function About(): ReactElement<ReactFragment> {
                             "list-none" + (i == 0 ? "" : " mt-2 sm:mt-4")
                           }
                         >
-                          <div className="sm:flex sm:items-center sm:mb-0 mb-5">
-                            <div className="flex sm:flex-none justify-center mb-1 sm:mb-0 ml-0 sm:ml-1">
+                          <div className="md:flex md:items-center sm:mb-0 mb-5">
+                            <div className="flex sm:flex-none justify-center mb-2 md:mb-0 ml-0 sm:ml-1">
                               <Image
                                 src={e[0]}
-                                width={35}
-                                height={35}
+                                width={44}
+                                height={44}
                                 alt="Image"
                                 quality={25}
                               />
                             </div>
-                            <div className="ml-2 mr-2 text-gray-600 dark:text-gray-400 font-about text-lg flex sm:flex-none justify-center">
+                            <div className="ml-3 mr-2 text-gray-600 dark:text-gray-400 font-about text-xl flex sm:flex-none justify-center">
                               <p className="text-center">{e[1]}</p>
                             </div>
                           </div>

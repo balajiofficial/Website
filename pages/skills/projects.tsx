@@ -22,31 +22,31 @@ export default function Projects(): ReactElement<ReactFragment> {
                 <div
                   className={`rounded-none sm:rounded-lg bg-gradient-to-br ${
                     [
-                      "from-blue-400 to-blue-700",
+                      "from-sky-400 to-blue-700",
                       "from-yellow-400 to-yellow-700",
                       "from-green-500 to-green-700",
-                      "from-rose-500 to-rose-600",
-                      "from-purple-400 to-purple-700",
+                      "from-pink-500 to-rose-700",
+                      "from-purple-500 to-violet-700",
                     ][i_content % 5]
                   } mb-4 p-5`}
                   key={e[0]}
                 >
-                  <div className="flex flex-col lg:flex-row">
+                  <div className="flex flex-col lg:flex-row items-center">
                     <div className="break-words">
                       <div className="flex justify-between">
                         <div>
                           <div className="break-words">
-                            <p className="text-2xl font-semibold text-black hover:text-gray-800">
-                              {e[0]}
-                            </p>
+                            <p className="text-2xl font-semibold">{e[0]}</p>
                           </div>
-                          <p className="text-white text-sm">{e[2]}</p>
+                          <p className="text-white text-sm font-normal">
+                            {e[2]}
+                          </p>
                           <div className="mb-1">
                             <div className="flex flex-wrap">
                               {keywords[i_content].map((keyword: string) => {
                                 return (
                                   <div
-                                    className="mr-2 rounded bg-card pl-1 pr-1 pt-0.5 pb-0.5 mt-1.5 font-semibold"
+                                    className="mr-2 rounded bg-sky-400 pl-1 pr-1 pt-0.5 pb-0.5 mt-1.5 font-semibold"
                                     key={keyword}
                                   >
                                     {keyword}
@@ -59,7 +59,9 @@ export default function Projects(): ReactElement<ReactFragment> {
                             {e[1]}
                           </p>
                           <div className="flex pt-2">
-                            <p className="font-semibold pr-1">Links :</p>
+                            <p className="font-semibold pr-1 text-gray-800">
+                              Links :
+                            </p>
                             {links[i_content].map(
                               (link: Array<string>, i_links) => {
                                 return (
@@ -85,8 +87,8 @@ export default function Projects(): ReactElement<ReactFragment> {
                         </div>
                       </div>
                     </div>
-                    <div className="pt-3 lg:pt-6">
-                      <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg">
+                    <div className="pt-3 lg:pt-0">
+                      <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg text-gray-200">
                         <Image
                           src={e[3]}
                           alt="Screenshot"

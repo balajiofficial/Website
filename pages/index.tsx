@@ -15,7 +15,7 @@ export default function Home(): ReactElement<ReactFragment> {
             Balaji
           </h1>
           <div className="flex justify-center mt-3 md:mt-7">
-            <div className="text-white dark:text-blue-100 flex md:justify-evenly md:w-3/4 flex-col md:flex-row">
+            <div className="text-white dark:text-blue-100 flex md:justify-evenly w-auto md:w-11/12 lg:w-3/4 flex-col md:flex-row">
               <div className="pt-3 pb-3">
                 <a
                   href="https://github.com/balajiofficial"

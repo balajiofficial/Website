@@ -76,7 +76,7 @@ export default class Navbar extends Component {
                     );
                   }}
                 >
-                  <div className="p-1 rounded-lg hover:bg-blue-900 cursor-pointer">
+                  <div className="p-1 rounded-lg hover:bg-blue-900 dark:hover:bg-sky-500 cursor-pointer">
                     {this.state.theme == "dark" ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
