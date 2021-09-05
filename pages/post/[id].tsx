@@ -1,5 +1,5 @@
 import Layout from "../../layouts/pageLayout";
-import { getAllPostIds, getPostData } from "../../lib/posts";
+import { getAllPostIds, getPostData } from "../../commands/posts";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";

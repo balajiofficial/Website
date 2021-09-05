@@ -2,7 +2,7 @@ import Layout from "../../layouts/pageLayout";
 import Image from "next/image";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
-import { content, keywords, links } from "../../data/dataProjects";
+import { content } from "../../content/dataProjects";
 
 export default function Projects(): ReactElement<ReactFragment> {
   return (
@@ -17,7 +17,7 @@ export default function Projects(): ReactElement<ReactFragment> {
       <div className="dark:bg-gray-900">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
           <div className="xl:w-10/12">
-            {content.map((e: Array<string>, i_content) => {
+            {content.map((e, index) => {
               return (
                 <div
                   className={`rounded-none sm:rounded-lg bg-gradient-to-br ${
@@ -27,23 +27,23 @@ export default function Projects(): ReactElement<ReactFragment> {
                       "from-green-500 to-green-700",
                       "from-pink-500 to-rose-700",
                       "from-purple-500 to-violet-700",
-                    ][i_content % 5]
+                    ][index % 5]
                   } mb-4 p-5`}
-                  key={e[0]}
+                  key={e.title}
                 >
                   <div className="flex flex-col lg:flex-row items-center">
                     <div className="break-words">
                       <div className="flex justify-between">
                         <div>
                           <div className="break-words">
-                            <p className="text-2xl font-semibold">{e[0]}</p>
+                            <p className="text-2xl font-semibold">{e.title}</p>
                           </div>
                           <p className="text-white text-sm font-normal">
-                            {e[2]}
+                            {e.date}
                           </p>
                           <div className="mb-1">
                             <div className="flex flex-wrap">
-                              {keywords[i_content].map((keyword: string) => {
+                              {e.keywords.map((keyword: string) => {
                                 return (
                                   <div
                                     className="mr-2 rounded bg-sky-400 pl-1 pr-1 pt-0.5 pb-0.5 mt-1.5 font-semibold"
@@ -56,33 +56,31 @@ export default function Projects(): ReactElement<ReactFragment> {
                             </div>
                           </div>
                           <p className="text-lg lg:mr-2 mr-0 font-about">
-                            {e[1]}
+                            {e.desc}
                           </p>
                           <div className="flex pt-2">
                             <p className="font-semibold pr-1 text-gray-800">
                               Links :
                             </p>
-                            {links[i_content].map(
-                              (link: Array<string>, i_links) => {
-                                return (
-                                  <div key={link[0]} className="flex">
-                                    <div className="text-gray-100 font-semibold inline-block">
-                                      {i_links == 0 ? "" : ", "}
-                                      <p className="hover:underline inline-block">
-                                        <a
-                                          href={link[1]}
-                                          target="_blank"
-                                          rel="noreferrer"
-                                          className="text-white"
-                                        >
-                                          {link[0]}
-                                        </a>
-                                      </p>
-                                    </div>
+                            {e.links.map((link, index_links) => {
+                              return (
+                                <div key={link.label} className="flex">
+                                  <div className="text-gray-100 font-semibold inline-block">
+                                    {index_links == 0 ? "" : ", "}
+                                    <p className="hover:underline inline-block">
+                                      <a
+                                        href={link.link}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="text-white"
+                                      >
+                                        {link.label}
+                                      </a>
+                                    </p>
                                   </div>
-                                );
-                              }
-                            )}
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
                       </div>
@@ -90,7 +88,7 @@ export default function Projects(): ReactElement<ReactFragment> {
                     <div className="pt-3 lg:pt-0">
                       <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg text-gray-200">
                         <Image
-                          src={e[3]}
+                          src={e.img}
                           alt="Screenshot"
                           width={1920}
                           height={1080}

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { ReactElement, ReactFragment, Component, Fragment } from "react";
 import Post from "../components/post";
 import { searchAlgo } from "../utils/searchAlgo";
-import { getSortedPostsData } from "../lib/posts";
+import { getSortedPostsData } from "../commands/posts";
 
 export function getStaticProps() {
   let data = getSortedPostsData();
