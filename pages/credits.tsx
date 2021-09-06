@@ -3,11 +3,11 @@ import Layout from "../layouts/pageLayout";
 
 export default function CreditPage() {
   return (
-    <Layout footer>
+    <Layout>
       <Head>
         <title>Credits | Balaji</title>
       </Head>
-      <div className="mb-3">
+      <div>
         <div className="flex justify-center">
           <div>
             <div className="flex justify-center">

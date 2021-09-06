@@ -6,13 +6,13 @@ import { aboutData } from "../content/dataAbout";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
-    <Layout footer>
+    <Layout>
       <Head>
         <title>About | Balaji</title>
         <meta name="description" content="About me and my passions." />
       </Head>
       <div className="dark:bg-gray-900">
-        <div className="mb-8 xl:mb-0">
+        <div>
           <div className="flex justify-center mt-1.5 sm:mt-5">
             <Image
               src="/profile.png"
@@ -47,7 +47,7 @@ export default function About(): ReactElement<ReactFragment> {
                                 width={44}
                                 height={44}
                                 alt="Image"
-                                quality={25}
+                                quality={50}
                               />
                             </div>
                             <div className="ml-3 mr-2 text-gray-600 dark:text-gray-400 font-about text-xl flex sm:flex-none justify-center">

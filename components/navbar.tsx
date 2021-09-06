@@ -5,10 +5,15 @@ export default class Navbar extends Component {
   state = {
     theme: "light",
     pages: [
-      ["Home", ""],
-      ["About", "about"],
-      ["Skills", "skills"],
-      ["Posts", "posts"],
+      { label: "Home", page: "" },
+      { label: "About", page: "about" },
+      { label: "Skills" },
+      { label: "Posts", page: "posts" },
+    ],
+    skillsMenu: false,
+    skillsMenuLinks: [
+      { label: "Projects", page: "projects" },
+      { label: "Skills", page: "skills" },
     ],
   };
 
@@ -39,15 +44,29 @@ export default class Navbar extends Component {
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {
-                return (
-                  <Link href={`/${e[1]}`} key={e[0]} passHref>
+                return e.label == "Skills" ? (
+                  <div
+                    key={e.label}
+                    className="text-white hover:no-underline no-underline"
+                    onClick={() => {
+                      this.setState({ skillsMenu: !this.state.skillsMenu });
+                    }}
+                  >
+                    <div className="cursor-pointer">
+                      <div className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-1.5 sm:mt-2">
+                        {e.label}
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <Link href={`/${e.page}`} key={e.label} passHref>
                     <a className="text-white hover:no-underline no-underline">
                       <div className="cursor-pointer">
                         <div
                           key={e[0]}
                           className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-1.5 sm:mt-2"
                         >
-                          {e[0]}
+                          {e.label}
                         </div>
                       </div>
                     </a>
@@ -106,6 +125,29 @@ export default class Navbar extends Component {
             </div>
           </div>
         </nav>
+        {this.state.skillsMenu ? (
+          <div className="flex justify-center">
+            <div className="w-2/3 mt-3">
+              <div className="text-lg bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <div className="font-medium">
+                  <div className="pt-2.5 pb-1 flex justify-evenly">
+                    {this.state.skillsMenuLinks.map((e) => {
+                      return (
+                        <Link href={`/skills/${e.page}`} passHref key={e.label}>
+                          <a className="text-black dark:text-white hover:no-underline border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
+                            <p>{e.label}</p>
+                          </a>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     );
   }

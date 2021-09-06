@@ -23,25 +23,19 @@ export default class Footer extends Component {
   componentDidMount() {
     const device = this.getDeviceType();
     this.setState({ device: device });
-    this.setState({
-      fixEnd:
-        location.href.endsWith("/about") || location.href.endsWith("/credits"),
-    });
   }
 
   render(): ReactElement<HTMLDivElement> {
     return (
       <div>
         <footer
-          className={`bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800 ${
-            this.state.fixEnd ? "xl:absolute" : ""
-          }`}
+          className={`bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800`}
         >
           <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
             <span className="text-center sm:flex sm:justify-evenly">
               <div>
                 <Link href="/credits">
-                  <a className="text-black dark:text-gray-300 hover:no-underline border-b-2 hover:border-black border-transparent dark:border-gray-300 dark:hover:border-transparent">
+                  <a className="text-black dark:text-gray-300 hover:no-underline border-b-2 hover:border-black border-transparent dark:hover:border-gray-300 dark:border-transparent">
                     Credits
                   </a>
                 </Link>
