@@ -3,45 +3,44 @@ import { join } from "path";
 import matter from "gray-matter";
 import remarkHtml from "remark-html";
 import remarkGfm from "remark-gfm";
-import { sortByDate } from "../utils/sortAlgo";
 import { remark } from "remark";
+import readingTime from "reading-time";
 
 const postsDirectory = join(process.cwd(), "posts");
 
-export function getSortedPostsData() {
-  const fileNames = readdirSync(postsDirectory);
-  const allPostsData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.md$/, "");
-
-    const fullPath = join(postsDirectory, fileName);
-    const fileContents = readFileSync(fullPath, "utf8");
-
-    const matterResult = matter(fileContents);
-
-    return {
-      id,
-      ...matterResult.data,
-    };
-  });
-
-  return allPostsData.sort(sortByDate);
-}
-
-export function getAllPostIds() {
+export function getAllPostIds(): Array<{
+  params: {
+    slug: string;
+  };
+}> {
   const fileNames = readdirSync(postsDirectory);
 
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, ""),
+        slug: fileName.replace(/\.md$/, ""),
       },
     };
   });
 }
 
-export async function getPostData(id: string) {
-  const fullPath = join(postsDirectory, `${id}.md`);
+export async function getPostData(slug: string): Promise<{
+  slug: string;
+  contentHtml: string;
+  time: string;
+  content: string;
+  title: string;
+  date: string;
+  desc: string;
+}> {
+  const fullPath = join(postsDirectory, `${slug}.md`);
   const fileContents = readFileSync(fullPath, "utf8");
+
+  const reading_time = readingTime(fileContents);
+  const time =
+    reading_time.minutes >= 1
+      ? Math.ceil(reading_time.minutes) + " minutes"
+      : Math.ceil(reading_time.minutes * 60) + " seconds";
 
   const matterResult = matter(fileContents);
 
@@ -52,9 +51,14 @@ export async function getPostData(id: string) {
   const contentHtml = processedContent.toString();
 
   return {
-    id,
+    slug,
     contentHtml,
+    time,
     content: matterResult.content,
-    ...matterResult.data,
+    ...(matterResult.data as {
+      title: string;
+      date: string;
+      desc: string;
+    }),
   };
 }

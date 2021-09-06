@@ -1,15 +1,14 @@
 import Layout from "../../layouts/pageLayout";
-import { getAllPostIds, getPostData } from "../../commands/posts";
-import Head from "next/head";
+import { getAllPostIds, getPostData } from "../../commands/post";
 import Image from "next/image";
-import React from "react";
-import readingTime from "reading-time";
+import React, { ReactFragment } from "react";
 import { Component } from "react";
 import hljs from "highlight.js";
 import "highlight.js/styles/base16/solarized-dark.css";
+import PageSEO from "../../components/seo";
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+  const postData = await getPostData(params.slug);
   return {
     props: {
       postData,
@@ -32,6 +31,7 @@ export default class Post extends Component {
         postData: {
           title: string;
           date: string;
+          time: string;
           content: string;
           contentHtml: string;
         };
@@ -67,12 +67,10 @@ export default class Post extends Component {
     }
   }
 
-  render() {
+  render(): ReactFragment {
     return (
       <Layout footer>
-        <Head>
-          <title>{this.state.postData.title} - Blog | Balaji</title>
-        </Head>
+        <PageSEO title={this.state.postData.title + " - Post"} />
         <div className="flex justify-center mt-2 mb-2">
           <div className="lg:w-2/3 md:w-5/6 w-screen">
             <div className="pb-2 dark:border-gray-400 border-gray-300 mb-2">
@@ -104,14 +102,7 @@ export default class Post extends Component {
                           />
                         </svg>
                         <p className="align-middle">
-                          {readingTime(this.state.postData.content).minutes >= 1
-                            ? Math.ceil(
-                                readingTime(this.state.postData.content).minutes
-                              ) + " minutes"
-                            : Math.ceil(
-                                readingTime(this.state.postData.content)
-                                  .minutes * 60
-                              ) + " seconds"}
+                          {this.state.postData.time}
                         </p>
                       </div>
                     </div>

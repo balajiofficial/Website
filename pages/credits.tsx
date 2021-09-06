@@ -1,12 +1,11 @@
 import Head from "next/head";
+import PageSEO from "../components/seo";
 import Layout from "../layouts/pageLayout";
 
 export default function CreditPage() {
   return (
     <Layout>
-      <Head>
-        <title>Credits | Balaji</title>
-      </Head>
+      <PageSEO title="Credits" />
       <div>
         <div className="flex justify-center">
           <div>

@@ -1,0 +1,36 @@
+import { readdirSync, readFileSync } from "fs";
+import { join } from "path";
+import matter from "gray-matter";
+import { sortByDate } from "../utils/sortAlgo";
+
+const postsDirectory = join(process.cwd(), "posts");
+
+export function getSortedPostsData(): Array<{
+  id: string;
+  title: string;
+  date: string;
+  desc: string;
+}> {
+  const fileNames = readdirSync(postsDirectory);
+  const allPostsData = fileNames.map(
+    (fileName): { id: string; title: string; date: string; desc: string } => {
+      const id = fileName.replace(/\.md$/, "");
+
+      const fullPath = join(postsDirectory, fileName);
+      const fileContents = readFileSync(fullPath, "utf8");
+
+      const matterResult = matter(fileContents);
+
+      return {
+        id,
+        ...(matterResult.data as {
+          title: string;
+          date: string;
+          desc: string;
+        }),
+      };
+    }
+  );
+
+  return allPostsData.sort(sortByDate);
+}

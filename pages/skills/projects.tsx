@@ -3,17 +3,12 @@ import Image from "next/image";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import { content } from "../../content/dataProjects";
+import PageSEO from "../../components/seo";
 
 export default function Projects(): ReactElement<ReactFragment> {
   return (
     <Layout footer>
-      <Head>
-        <title>Projects | Balaji</title>
-        <meta
-          name="description"
-          content="Several of my projects I did over the years."
-        />
-      </Head>
+      <PageSEO title="Projects" />
       <div className="dark:bg-gray-900">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
           <div className="xl:w-10/12">

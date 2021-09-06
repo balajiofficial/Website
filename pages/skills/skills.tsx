@@ -1,13 +1,12 @@
 import Layout from "../../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
+import PageSEO from "../../components/seo";
 
 export default function Skills(): ReactElement<ReactFragment> {
   return (
     <Layout footer>
-      <Head>
-        <title>Skills | Balaji</title>
-      </Head>
+      <PageSEO title="Skills" />
 
       <div className="mb-3">
         <div className="flex justify-center">

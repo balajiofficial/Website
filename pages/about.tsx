@@ -3,14 +3,12 @@ import Image from "next/image";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import { aboutData } from "../content/dataAbout";
+import PageSEO from "../components/seo";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
     <Layout>
-      <Head>
-        <title>About | Balaji</title>
-        <meta name="description" content="About me and my passions." />
-      </Head>
+      <PageSEO title="About" />
       <div className="dark:bg-gray-900">
         <div>
           <div className="flex justify-center mt-1.5 sm:mt-5">

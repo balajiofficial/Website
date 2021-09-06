@@ -3,7 +3,8 @@ import Head from "next/head";
 import { ReactElement, ReactFragment, Component, Fragment } from "react";
 import Post from "../components/post";
 import { searchAlgo } from "../utils/searchAlgo";
-import { getSortedPostsData } from "../commands/posts";
+import { getSortedPostsData } from "../commands/allPosts";
+import PageSEO from "../components/seo";
 
 export function getStaticProps() {
   let data = getSortedPostsData();
@@ -27,9 +28,7 @@ export default class BlogPage extends Component {
   render(): ReactElement<ReactFragment> {
     return (
       <Layout>
-        <Head>
-          <title>Blog | Balaji</title>
-        </Head>
+        <PageSEO title="Posts" />
 
         <div className="mt-5">
           <div className="flex justify-center">
@@ -66,11 +65,11 @@ export default class BlogPage extends Component {
             </div>
           </div>
           <div>
-            {this.state.content.map((post, index) => {
+            {this.state.content.map((post) => {
               if (searchAlgo(post, this.state.searchText))
                 return (
                   <div key={post.id}>
-                    <Post post={post} index={index} />
+                    <Post post={post} />
                   </div>
                 );
             })}

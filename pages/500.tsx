@@ -2,13 +2,12 @@ import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import Link from "next/link";
 import { ReactElement, ReactFragment } from "react";
+import PageSEO from "../components/seo";
 
 export default function FiveZeroZero(): ReactElement<ReactFragment> {
   return (
     <Layout>
-      <Head>
-        <title>Error 500 | Balaji</title>
-      </Head>
+      <PageSEO title="Error 500" />
       <div className="dark:bg-gray-900">
         <div className="pt-4">
           <p className="flex justify-center align-middle pt-60 text-4xl font-extrabold text-center dark:text-gray-300">

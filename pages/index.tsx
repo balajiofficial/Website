@@ -1,14 +1,12 @@
 import Layout from "../layouts/pageLayout";
 import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
+import PageSEO from "../components/seo";
 
 export default function Home(): ReactElement<ReactFragment> {
   return (
     <Layout>
-      <Head>
-        <title>Home | Balaji</title>
-        <meta name="description" content="The Official Website of Balaji K." />
-      </Head>
+      <PageSEO index />
       <div className="dark:bg-gray-900">
         <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
           <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold font-about">
