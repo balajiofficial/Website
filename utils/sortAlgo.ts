@@ -1,6 +1,6 @@
 export function sortByDate(
-  a: { id: string; date: string; title: string; desc: string },
-  b: { id: string; date: string; title: string; desc: string }
+  a: { slug: string; date: string; title: string; desc: string },
+  b: { slug: string; date: string; title: string; desc: string }
 ): number {
   let a_date = new Date(a.date);
   let b_date = new Date(b.date);

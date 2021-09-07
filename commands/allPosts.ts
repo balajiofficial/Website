@@ -6,15 +6,15 @@ import { sortByDate } from "../utils/sortAlgo";
 const postsDirectory = join(process.cwd(), "posts");
 
 export function getSortedPostsData(): Array<{
-  id: string;
+  slug: string;
   title: string;
   date: string;
   desc: string;
 }> {
   const fileNames = readdirSync(postsDirectory);
   const allPostsData = fileNames.map(
-    (fileName): { id: string; title: string; date: string; desc: string } => {
-      const id = fileName.replace(/\.md$/, "");
+    (fileName): { slug: string; title: string; date: string; desc: string } => {
+      const slug = fileName.replace(/\.md$/, "");
 
       const fullPath = join(postsDirectory, fileName);
       const fileContents = readFileSync(fullPath, "utf8");
@@ -22,7 +22,7 @@ export function getSortedPostsData(): Array<{
       const matterResult = matter(fileContents);
 
       return {
-        id,
+        slug,
         ...(matterResult.data as {
           title: string;
           date: string;

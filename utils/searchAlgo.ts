@@ -1,5 +1,5 @@
 export const searchAlgo = (
-  post: { title: string; desc: string; id: string; date: string },
+  post: { title: string; desc: string; slug: string; date: string },
   searchText: string
 ): boolean => {
   searchText = searchText.toLowerCase();

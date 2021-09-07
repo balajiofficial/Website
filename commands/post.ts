@@ -1,18 +1,12 @@
 import { readFileSync, readdirSync } from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import remarkHtml from "remark-html";
-import remarkGfm from "remark-gfm";
-import { remark } from "remark";
 import readingTime from "reading-time";
+import { serialize } from "next-mdx-remote/serialize";
 
 const postsDirectory = join(process.cwd(), "posts");
 
-export function getAllPostIds(): Array<{
-  params: {
-    slug: string;
-  };
-}> {
+export function getAllPostIds() {
   const fileNames = readdirSync(postsDirectory);
 
   return fileNames.map((fileName) => {
@@ -24,15 +18,7 @@ export function getAllPostIds(): Array<{
   });
 }
 
-export async function getPostData(slug: string): Promise<{
-  slug: string;
-  contentHtml: string;
-  time: string;
-  content: string;
-  title: string;
-  date: string;
-  desc: string;
-}> {
+export async function getPostData(slug: string) {
   const fullPath = join(postsDirectory, `${slug}.md`);
   const fileContents = readFileSync(fullPath, "utf8");
 
@@ -42,23 +28,20 @@ export async function getPostData(slug: string): Promise<{
       ? Math.ceil(reading_time.minutes) + " minutes"
       : Math.ceil(reading_time.minutes * 60) + " seconds";
 
-  const matterResult = matter(fileContents);
+  const { content, data } = matter(fileContents);
 
-  const processedContent = await remark()
-    .use(remarkHtml)
-    .use(remarkGfm)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  const source = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [],
+      rehypePlugins: [],
+    },
+    scope: data,
+  });
 
   return {
     slug,
-    contentHtml,
     time,
-    content: matterResult.content,
-    ...(matterResult.data as {
-      title: string;
-      date: string;
-      desc: string;
-    }),
+    source,
+    ...data,
   };
 }

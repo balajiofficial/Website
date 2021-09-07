@@ -38,11 +38,11 @@ Lists
 - Item 1
 - Item 2
 - Item 3
-- [Link](https://balajiofficial.vercel.app)
-- [Link](https://balajiofficial.vercel.app)
-- [Link](https://balajiofficial.vercel.app)
+- [Link](/)
+- [Link](/posts)
+- [Link](/about)
 
-[Link](https://balajiofficial.vercel.app)
+[Link](/skills/projects)
 [Another Link](https://github.com/balajiofficial/Website)
 
 ```c++

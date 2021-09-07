@@ -6,11 +6,9 @@ export default function Post({ post }): ReactElement<HTMLDivElement> {
     <div className="flex justify-center">
       <div className="font-about md:w-2/3 w-11/12 mt-4">
         <div>
-          <Link href={`/post/${post.id}`} passHref>
-            <a className="text-3xl font-extrabold font-sans text-black hover:text-sky-600 dark:text-gray-300 dark:hover:text-cyan-500 hover:no-underline">
-              <div className="cursor-pointer">
-                <p>{post.title}</p>
-              </div>
+          <Link href={`/post/${post.slug}`} passHref>
+            <a className="text-3xl font-extrabold font-sans hover:text-sky-600 dark:text-gray-300 dark:hover:text-cyan-500">
+              {post.title}
             </a>
           </Link>
           <p className="text-gray-600 text-lg dark:text-blue-300">

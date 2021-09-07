@@ -1,11 +1,10 @@
+import React, { ReactFragment, Component } from "react";
+import Image from "next/image";
+import { MDXRemote } from "next-mdx-remote";
 import Layout from "../../layouts/pageLayout";
 import { getAllPostIds, getPostData } from "../../commands/post";
-import Image from "next/image";
-import React, { ReactFragment } from "react";
-import { Component } from "react";
-import hljs from "highlight.js";
-import "highlight.js/styles/base16/solarized-dark.css";
 import PageSEO from "../../components/seo";
+import BlogLink from "../../mapping/link";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);
@@ -28,18 +27,16 @@ export default class Post extends Component {
   state = {
     postData: (
       this.props as {
-        postData: {
-          title: string;
-          date: string;
-          time: string;
-          content: string;
-          contentHtml: string;
-        };
+        postData;
       }
     ).postData,
+    components: {
+      a: BlogLink,
+    },
   };
 
   componentDidMount() {
+    /*
     let preElements = document.getElementsByTagName("pre");
     let codeElements = document.getElementsByTagName("code");
     let imgElements = document.getElementsByTagName("img");
@@ -65,6 +62,7 @@ export default class Post extends Component {
     for (let i = 0; i < imgElements.length; i++) {
       imgElements[i].parentElement.className += "flex justify-center";
     }
+    */
   }
 
   render(): ReactFragment {
@@ -123,11 +121,12 @@ export default class Post extends Component {
               <hr />
             </div>
             <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.postData.contentHtml,
-                }}
-              />
+              <main>
+                <MDXRemote
+                  {...this.state.postData.source}
+                  components={this.state.components}
+                />
+              </main>
             </div>
           </div>
         </div>

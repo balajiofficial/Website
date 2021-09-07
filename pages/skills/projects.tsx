@@ -1,6 +1,5 @@
 import Layout from "../../layouts/pageLayout";
 import Image from "next/image";
-import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import { content } from "../../content/dataProjects";
 import PageSEO from "../../components/seo";

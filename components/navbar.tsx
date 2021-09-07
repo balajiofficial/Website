@@ -22,14 +22,14 @@ export default class Navbar extends Component {
     window.document.body.classList.add("bg-white");
 
     localStorage.setItem(
-      "balajiofficial_theme",
-      localStorage.getItem("balajiofficial_theme") == "dark" ? "dark" : "light"
+      "theme",
+      localStorage.getItem("theme") == "dark" ? "dark" : "light"
     );
 
-    this.setState({ theme: localStorage.getItem("balajiofficial_theme") });
+    this.setState({ theme: localStorage.getItem("theme") });
 
     window.document.documentElement.classList.add(
-      localStorage.getItem("balajiofficial_theme")
+      localStorage.getItem("theme")
     );
   };
 
@@ -60,7 +60,7 @@ export default class Navbar extends Component {
                   </div>
                 ) : (
                   <Link href={`/${e.page}`} key={e.label} passHref>
-                    <a className="text-white hover:no-underline no-underline">
+                    <a>
                       <div className="cursor-pointer">
                         <div
                           key={e[0]}
@@ -79,19 +79,17 @@ export default class Navbar extends Component {
                   className="cursor-pointer"
                   onClick={() => {
                     window.document.documentElement.classList.remove(
-                      localStorage.getItem("balajiofficial_theme")
+                      localStorage.getItem("theme")
                     );
                     window.localStorage.setItem(
-                      "balajiofficial_theme",
-                      localStorage.getItem("balajiofficial_theme") == "dark"
-                        ? "light"
-                        : "dark"
+                      "theme",
+                      localStorage.getItem("theme") == "dark" ? "light" : "dark"
                     );
                     this.setState({
-                      theme: localStorage.getItem("balajiofficial_theme"),
+                      theme: localStorage.getItem("theme"),
                     });
                     window.document.documentElement.classList.add(
-                      localStorage.getItem("balajiofficial_theme")
+                      localStorage.getItem("theme")
                     );
                   }}
                 >
@@ -130,11 +128,11 @@ export default class Navbar extends Component {
             <div className="w-2/3 mt-3">
               <div className="text-lg bg-gray-100 dark:bg-gray-800 rounded-lg">
                 <div className="font-medium">
-                  <div className="pt-2.5 pb-1 flex justify-evenly">
+                  <div className="pt-2.5 pb-2.5 flex justify-evenly">
                     {this.state.skillsMenuLinks.map((e) => {
                       return (
                         <Link href={`/skills/${e.page}`} passHref key={e.label}>
-                          <a className="text-black dark:text-white hover:no-underline border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
+                          <a className="text-black dark:text-white border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
                             <p>{e.label}</p>
                           </a>
                         </Link>
