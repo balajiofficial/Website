@@ -3,6 +3,7 @@ import { join } from "path";
 import matter from "gray-matter";
 import readingTime from "reading-time";
 import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemoteSerializeResult } from "next-mdx-remote/dist/types";
 
 const postsDirectory = join(process.cwd(), "posts");
 
@@ -12,14 +13,21 @@ export function getAllPostIds() {
   return fileNames.map((fileName) => {
     return {
       params: {
-        slug: fileName.replace(/\.md$/, ""),
+        slug: fileName.replace(/\.mdx$/, ""),
       },
     };
   });
 }
 
-export async function getPostData(slug: string) {
-  const fullPath = join(postsDirectory, `${slug}.md`);
+export async function getPostData(slug: string): Promise<{
+  slug: string;
+  time: string;
+  source: MDXRemoteSerializeResult<Record<string, unknown>>;
+  title: string;
+  date: string;
+  desc: string;
+}> {
+  const fullPath = join(postsDirectory, `${slug}.mdx`);
   const fileContents = readFileSync(fullPath, "utf8");
 
   const reading_time = readingTime(fileContents);
@@ -42,6 +50,10 @@ export async function getPostData(slug: string) {
     slug,
     time,
     source,
-    ...data,
+    ...(data as {
+      title: string;
+      date: string;
+      desc: string;
+    }),
   };
 }

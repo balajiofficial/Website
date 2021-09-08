@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ReactElement } from "react";
 
-export default function Post({ post }): ReactElement<HTMLDivElement> {
+export default function PostsBox({ post }): ReactElement<HTMLDivElement> {
   return (
     <div className="flex justify-center">
       <div className="font-about md:w-2/3 w-11/12 mt-4">

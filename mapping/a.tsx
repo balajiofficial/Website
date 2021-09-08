@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BlogLink({ href, props, children }) {
+export default function PostLink({ href, children, ...props }) {
   const isLocal = href.startsWith("/");
 
   const linkClass = "text-blue-500 hover:underline dark:text-blue-400";

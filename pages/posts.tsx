@@ -1,7 +1,6 @@
 import Layout from "../layouts/pageLayout";
-import Head from "next/head";
-import { ReactElement, ReactFragment, Component, Fragment } from "react";
-import Post from "../components/post";
+import { ReactElement, ReactFragment, Component } from "react";
+import PostsBox from "../components/post";
 import { searchAlgo } from "../utils/searchAlgo";
 import { getSortedPostsData } from "../commands/allPosts";
 import PageSEO from "../components/seo";
@@ -15,7 +14,7 @@ export function getStaticProps() {
   };
 }
 
-export default class BlogPage extends Component {
+export default class PostPage extends Component {
   state = {
     content: (
       this.props as {
@@ -68,8 +67,8 @@ export default class BlogPage extends Component {
             {this.state.content.map((post) => {
               if (searchAlgo(post, this.state.searchText))
                 return (
-                  <div key={post.id}>
-                    <Post post={post} />
+                  <div key={post.slug}>
+                    <PostsBox post={post} />
                   </div>
                 );
             })}

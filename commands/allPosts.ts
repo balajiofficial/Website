@@ -14,7 +14,7 @@ export function getSortedPostsData(): Array<{
   const fileNames = readdirSync(postsDirectory);
   const allPostsData = fileNames.map(
     (fileName): { slug: string; title: string; date: string; desc: string } => {
-      const slug = fileName.replace(/\.md$/, "");
+      const slug = fileName.replace(/\.mdx$/, "");
 
       const fullPath = join(postsDirectory, fileName);
       const fileContents = readFileSync(fullPath, "utf8");

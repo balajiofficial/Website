@@ -1,10 +1,10 @@
 import React, { ReactFragment, Component } from "react";
-import Image from "next/image";
 import { MDXRemote } from "next-mdx-remote";
+import Image from "next/image";
 import Layout from "../../layouts/pageLayout";
 import { getAllPostIds, getPostData } from "../../commands/post";
 import PageSEO from "../../components/seo";
-import BlogLink from "../../mapping/link";
+import { components } from "../../content/blogComponents";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.slug);
@@ -30,16 +30,13 @@ export default class Post extends Component {
         postData;
       }
     ).postData,
-    components: {
-      a: BlogLink,
-    },
+    components: components,
   };
 
   componentDidMount() {
     /*
     let preElements = document.getElementsByTagName("pre");
     let codeElements = document.getElementsByTagName("code");
-    let imgElements = document.getElementsByTagName("img");
     for (let i = 0; i < preElements.length; i++) {
       preElements[i].className = "bg-pre rounded-lg";
       let language = codeElements[i].className
@@ -58,9 +55,6 @@ export default class Post extends Component {
       codeElements[i].className = codeElements[i].className.replace("hljs", "");
       codeElements[i].className +=
         " pl-4 pr-4 pb-4 overflow-x-auto block bg-pre bg-code";
-    }
-    for (let i = 0; i < imgElements.length; i++) {
-      imgElements[i].parentElement.className += "flex justify-center";
     }
     */
   }
@@ -120,13 +114,13 @@ export default class Post extends Component {
               </div>
               <hr />
             </div>
-            <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300">
-              <main>
+            <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300 leading-relaxed">
+              <div>
                 <MDXRemote
                   {...this.state.postData.source}
                   components={this.state.components}
                 />
-              </main>
+              </div>
             </div>
           </div>
         </div>
