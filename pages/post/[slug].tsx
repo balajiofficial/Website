@@ -65,7 +65,7 @@ export default class Post extends Component {
         <PageSEO title={this.state.postData.title + " - Post"} />
         <div className="flex justify-center mt-2 mb-2">
           <div className="lg:w-2/3 md:w-5/6 w-screen">
-            <div className="pb-2 dark:border-gray-400 border-gray-300 mb-2">
+            <div className="pb-2 border-b dark:border-gray-400 border-gray-300 mb-2">
               <p className="text-5xl font-bold mt-3 text-center dark:text-white">
                 {this.state.postData.title}
               </p>
@@ -112,7 +112,6 @@ export default class Post extends Component {
                   </div>
                 </div>
               </div>
-              <hr />
             </div>
             <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300 leading-relaxed">
               <div>

@@ -6,6 +6,7 @@ import PostLink from "../mapping/a";
 import PostImage from "../mapping/img";
 import PostUnorderedList from "../mapping/ul";
 import PostListItem from "../mapping/li";
+import PostCode from "../mapping/code";
 
 export const components = {
   h1: PostH1,
@@ -16,4 +17,5 @@ export const components = {
   img: PostImage,
   ul: PostUnorderedList,
   li: PostListItem,
+  code: PostCode,
 };
