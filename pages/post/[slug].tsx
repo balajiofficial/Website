@@ -33,32 +33,6 @@ export default class Post extends Component {
     components: components,
   };
 
-  componentDidMount() {
-    /*
-    let preElements = document.getElementsByTagName("pre");
-    let codeElements = document.getElementsByTagName("code");
-    for (let i = 0; i < preElements.length; i++) {
-      preElements[i].className = "bg-pre rounded-lg";
-      let language = codeElements[i].className
-        .replaceAll("hljs", "")
-        .replaceAll(" ", "")
-        .replace("language-", "");
-      language = language[0].toUpperCase() + language.slice(1);
-      preElements[i].innerHTML =
-        `<div class="mr-6 mt-3 text-white flex justify-end"><p class="text-base pl-2 pr-2 pb-0.5 bg-blue-600 rounded-b-md">${language}</p></div>` +
-        preElements[i].innerHTML;
-    }
-    for (let i = 0; i < codeElements.length; i++) {
-      codeElements[i].className =
-        "rounded-b-lg font-code font-medium text-base";
-      hljs.highlightElement(codeElements[i]);
-      codeElements[i].className = codeElements[i].className.replace("hljs", "");
-      codeElements[i].className +=
-        " pl-4 pr-4 pb-4 overflow-x-auto block bg-pre bg-code";
-    }
-    */
-  }
-
   render(): ReactFragment {
     return (
       <Layout footer>
@@ -74,7 +48,7 @@ export default class Post extends Component {
                   {this.state.postData.date}
                 </p>
               </div>
-              <div className="mb-3">
+              <div className="mb-1.5">
                 <div className="flex justify-between">
                   <div>
                     <div className="text-lg font-about text-gray-500 dark:text-gray-300 ml-2">
@@ -103,9 +77,9 @@ export default class Post extends Component {
                     <div className="flex items-center space-x-2">
                       <Image
                         src="/profile.png"
-                        width={30}
-                        height={31.5}
-                        alt="Profile"
+                        width={26.25}
+                        height={27.5625}
+                        alt="Profile Pic"
                       />
                       <p>Balaji K</p>
                     </div>
@@ -113,7 +87,7 @@ export default class Post extends Component {
                 </div>
               </div>
             </div>
-            <div className="mr-2 ml-2 text-lg font-about dark:text-gray-300 leading-relaxed">
+            <div className="mr-2 ml-2 text-lg dark:text-gray-300 leading-relaxed">
               <div>
                 <MDXRemote
                   {...this.state.postData.source}

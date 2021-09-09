@@ -29,7 +29,7 @@ export default class Footer extends Component {
     return (
       <div>
         <footer
-          className={`bg-gray-200 bottom-0 left-0 right-0 font-footer dark:bg-gray-800`}
+          className={`bg-gray-200 bottom-0 left-0 right-0 font-quicksand dark:bg-gray-800`}
         >
           <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
             <span className="text-center sm:flex sm:justify-evenly">

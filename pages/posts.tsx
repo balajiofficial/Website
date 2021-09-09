@@ -1,7 +1,7 @@
 import Layout from "../layouts/pageLayout";
 import { ReactElement, ReactFragment, Component } from "react";
 import PostsBox from "../components/post";
-import { searchAlgo } from "../utils/searchAlgo";
+import { searchAlgo } from "../functions/searchAlgo";
 import { getSortedPostsData } from "../commands/allPosts";
 import PageSEO from "../components/seo";
 

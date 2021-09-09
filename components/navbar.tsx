@@ -7,11 +7,11 @@ export default class Navbar extends Component {
     pages: [
       { label: "Home", page: "" },
       { label: "About", page: "about" },
-      { label: "Skills" },
+      { label: "Curriculum Vitae" },
       { label: "Posts", page: "posts" },
     ],
-    skillsMenu: false,
-    skillsMenuLinks: [
+    cvMenu: false,
+    cvMenuLinks: [
       { label: "Projects", page: "projects" },
       { label: "Skills", page: "skills" },
     ],
@@ -44,12 +44,12 @@ export default class Navbar extends Component {
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {
-                return e.label == "Skills" ? (
+                return e.label == "Curriculum Vitae" ? (
                   <div
                     key={e.label}
                     className="text-white hover:no-underline no-underline"
                     onClick={() => {
-                      this.setState({ skillsMenu: !this.state.skillsMenu });
+                      this.setState({ cvMenu: !this.state.cvMenu });
                     }}
                   >
                     <div className="cursor-pointer">
@@ -123,15 +123,15 @@ export default class Navbar extends Component {
             </div>
           </div>
         </nav>
-        {this.state.skillsMenu ? (
+        {this.state.cvMenu ? (
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3 mt-3">
               <div className="text-lg bg-gray-100 dark:bg-gray-800 rounded-lg">
                 <div className="font-medium">
                   <div className="pt-2.5 pb-2.5 flex justify-evenly">
-                    {this.state.skillsMenuLinks.map((e) => {
+                    {this.state.cvMenuLinks.map((e) => {
                       return (
-                        <Link href={`/skills/${e.page}`} passHref key={e.label}>
+                        <Link href={`/cv/${e.page}`} passHref key={e.label}>
                           <a className="text-black dark:text-white border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
                             <p>{e.label}</p>
                           </a>

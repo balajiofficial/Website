@@ -6,6 +6,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "Cascadia Code";
   src: "./fonts/codeFont.ttf";
@@ -13,8 +14,6 @@
 
 * {
   outline: 0 !important;
-  -webkit-user-select: none;
-  user-select: none;
 }
 
 /* Scrollbar CSS */
@@ -27,7 +26,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 8px;
   border: 2px solid transparent;
   background-clip: content-box;
-  background-color: rgb(161, 161, 161);
+  background-color: rgb(152, 150, 158);
 }
 
 .dark body::-webkit-scrollbar {
@@ -52,7 +51,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Font classes */
-.font-footer {
+.font-quicksand {
   font-family: "Quicksand", sans-serif;
 }
 
@@ -62,4 +61,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .font-code {
   font-family: "Cascadia Code", monospace;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
 }

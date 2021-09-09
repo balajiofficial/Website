@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function PostLink({ href, children, ...props }) {
   const isLocal = href.startsWith("/");
 
-  const linkClass = "text-blue-500 hover:underline dark:text-blue-400";
+  const linkClass = "text-blue-600 dark:text-blue-500 font-semibold font-inter";
 
   if (isLocal) {
     return (

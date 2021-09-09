@@ -20,14 +20,13 @@ const PostCode = ({
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
             className={
-              className +
-              " rounded-lg text-base text-left overflow-auto mt-2 mb-2"
+              className + " rounded-lg text-base text-left mt-2 mb-2 font-code"
             }
             style={style}
           >
-            <div className="flex justify-end mr-4">
+            <div className="flex justify-end mr-5">
               <button
-                className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md"
+                className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md "
                 onClick={() => {
                   navigator.clipboard.writeText(children);
                 }}
@@ -35,7 +34,7 @@ const PostCode = ({
                 Copy
               </button>
             </div>
-            <div className="pl-2 pb-5 pr-2">
+            <div className="pl-2 pb-5 pr-2 overflow-auto">
               {tokens.map((line, i) => (
                 <div
                   key={i}
