@@ -44,7 +44,7 @@ export default class PostCode extends Component {
             <pre
               className={
                 className +
-                " rounded-lg text-base text-left mt-2 mb-2 font-code"
+                " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-gray-300"
               }
               style={style}
             >
