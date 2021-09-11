@@ -4,6 +4,7 @@ import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import { aboutData } from "../content/dataAbout";
 import PageSEO from "../components/seo";
+import Typist from "../components/typist";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
@@ -21,8 +22,8 @@ export default function About(): ReactElement<ReactFragment> {
             />
           </div>
           <div className="mt-3 flex justify-center">
-            <p className="text-4xl sm:text-6xl text-gray-600 dark:text-gray-200 font-quicksand">
-              Balaji
+            <p className="text-4xl sm:text-5xl text-gray-600 dark:text-gray-200 font-quicksand">
+              <Typist />
             </p>
           </div>
           <div>

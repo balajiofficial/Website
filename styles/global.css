@@ -66,3 +66,14 @@ body::-webkit-scrollbar-thumb:hover {
 .font-inter {
   font-family: "Inter", sans-serif;
 }
+
+/* Animation */
+.cursor-blink {
+  animation: blink 0.75s infinite;
+  opacity: 1;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
