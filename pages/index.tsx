@@ -1,12 +1,120 @@
 import Layout from "../layouts/pageLayout";
 import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
+import Particles from "react-tsparticles";
 
 export default function Home(): ReactElement<ReactFragment> {
   return (
     <Layout>
       <PageSEO index />
-      <div className="dark:bg-gray-900">
+      <div className="dark:bg-gray-900 dark:text-gray-100 text-black">
+        <div className="absolute">
+          <Particles
+            params={{
+              particles: {
+                number: {
+                  value: 200,
+                  density: {
+                    enable: true,
+                    value_area: 1803.4120608655228,
+                  },
+                },
+                color: {
+                  value: "#808080",
+                },
+                shape: {
+                  type: "circle",
+                  stroke: {
+                    width: 2,
+                    color: "#808080",
+                  },
+                  polygon: {
+                    nb_sides: 4,
+                  },
+                },
+                opacity: {
+                  value: 0.4008530152163807,
+                  random: false,
+                  anim: {
+                    enable: false,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false,
+                  },
+                },
+                size: {
+                  value: 1.5,
+                  random: true,
+                  anim: {
+                    enable: true,
+                    speed: 40,
+                    size_min: 0.1,
+                    sync: true,
+                  },
+                },
+                line_linked: {
+                  enable: true,
+                  distance: 150,
+                  color: "#808080",
+                  opacity: 0.3687847739990702,
+                  width: 0.6413648243462091,
+                },
+                move: {
+                  enable: true,
+                  speed: 4,
+                  direction: "none",
+                  random: false,
+                  straight: false,
+                  out_mode: "out",
+                  bounce: false,
+                  attract: {
+                    enable: false,
+                    rotateX: 600,
+                    rotateY: 1200,
+                  },
+                },
+              },
+              interactivity: {
+                detect_on: "window",
+                events: {
+                  onhover: {
+                    enable: true,
+                    mode: "repulse",
+                  },
+                  onclick: {
+                    enable: false,
+                  },
+                  resize: true,
+                },
+                modes: {
+                  grab: {
+                    distance: 400,
+                    line_linked: {
+                      opacity: 1,
+                    },
+                  },
+                  bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                  },
+                  repulse: {
+                    distance: 100,
+                    duration: 0.4,
+                  },
+                  push: {
+                    particles_nb: 4,
+                  },
+                  remove: {
+                    particles_nb: 2,
+                  },
+                },
+              },
+              retina_detect: true,
+            }}
+          />
+        </div>
         <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
           <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold font-about">
             Balaji
