@@ -2,26 +2,30 @@ import { Component } from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
 
-export default class PostCode extends Component {
+export default class PostCode extends Component<{
+  children: string;
+  className: string;
+}> {
   state = {
-    children: (
-      this.props as {
-        children: string;
-        className: string;
-      }
-    ).children.trim(),
-    className: (
-      this.props as {
-        children: string;
-        className: string;
-      }
-    ).className,
+    children: this.props.children.trim(),
+    className: this.props.className,
     copied: false,
   };
 
   language = this.state.className.replace("language-", "");
-  languageText =
-    this.language[0].toUpperCase() + this.language.slice(1).toLowerCase();
+  getLanguageText = () => {
+    let languageText =
+      this.language[0].toUpperCase() + this.language.slice(1).toLowerCase();
+    switch (languageText) {
+      case "Cpp":
+        languageText = "C++";
+        break;
+      default:
+        languageText = languageText;
+        break;
+    }
+    return languageText;
+  };
 
   copyIt = () => {
     this.setState({ copied: true });
@@ -44,13 +48,13 @@ export default class PostCode extends Component {
             <pre
               className={
                 className +
-                " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-gray-300"
+                " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-white dark:border-gray-500"
               }
               style={style}
             >
               <div className="flex justify-end">
                 <p className="bg-blue-600 text-white pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 rounded-b-md mr-4 text-sm">
-                  {this.languageText}
+                  {this.getLanguageText()}
                 </p>
                 <button
                   className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-5"

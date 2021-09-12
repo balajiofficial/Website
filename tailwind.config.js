@@ -5,6 +5,7 @@ module.exports = {
   purge: [
     "./layouts/*.tsx",
     "./components/*.tsx",
+    "./components/*/*.tsx",
     "./pages/*.tsx",
     "./pages/*/*.tsx",
     "./mappings/*.tsx",

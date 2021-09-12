@@ -39,7 +39,7 @@ export default class Navbar extends Component {
 
   render(): ReactElement<HTMLDivElement> {
     return (
-      <div>
+      <div className="top-0">
         <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-cyan-600">
           <div>
             <div className="flex justify-evenly font-medium">
@@ -125,7 +125,7 @@ export default class Navbar extends Component {
         </nav>
         {this.state.skillsMenu ? (
           <div className="flex justify-center">
-            <div className="w-11/12 md:w-2/3 mt-3">
+            <div className="w-11/12 md:w-2/3 mt-4">
               <div className="text-lg bg-gray-200 dark:bg-gray-800 rounded-lg">
                 <div className="font-medium">
                   <div className="pt-2.5 pb-2.5 flex justify-evenly">

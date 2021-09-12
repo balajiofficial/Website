@@ -4,7 +4,7 @@ import { ReactElement, ReactFragment } from "react";
 import { content } from "../../content/dataProjects";
 import PageSEO from "../../components/seo";
 
-export default function Projects(): ReactElement<ReactFragment> {
+export default function Projects(): ReactFragment {
   return (
     <Layout footer>
       <PageSEO title="Projects" />

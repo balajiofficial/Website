@@ -27,10 +27,8 @@ export default class Footer extends Component {
 
   render(): ReactElement<HTMLDivElement> {
     return (
-      <div>
-        <footer
-          className={`bg-gray-200 bottom-0 left-0 right-0 font-quicksand dark:bg-gray-800`}
-        >
+      <div className="bottom-0 w-full left-0 right-0">
+        <footer className="bg-gray-200 font-quicksand dark:bg-gray-800">
           <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
             <span className="text-center sm:flex sm:justify-evenly">
               <div>

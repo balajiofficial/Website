@@ -1,8 +1,8 @@
-import Head from "next/head";
+import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
 import Layout from "../layouts/pageLayout";
 
-export default function CreditPage() {
+export default function CreditsPage(): ReactElement<ReactFragment> {
   return (
     <Layout>
       <PageSEO title="Credits" />

@@ -8,7 +8,6 @@ const words = [
   "नमस्कार! मेरा नाम बालाजी है।",
   "Привет! Меня зовут Баладжи.",
   "Halo! Nama saya Balaji.",
-  "Hello! My name is Balaji.",
 ];
 
 export default function Typist() {

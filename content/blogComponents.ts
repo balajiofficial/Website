@@ -9,6 +9,7 @@ import PostListItem from "../mappings/li";
 import PostCode from "../mappings/code";
 import PostParagraph from "../mappings/p";
 import PostBlockQuote from "../mappings/blockquote";
+import PostOrderedList from "../mappings/ol";
 
 export const components = {
   p: PostParagraph,
@@ -18,6 +19,7 @@ export const components = {
   h4: PostH4,
   a: PostLink,
   img: PostImage,
+  ol: PostOrderedList,
   ul: PostUnorderedList,
   li: PostListItem,
   code: PostCode,

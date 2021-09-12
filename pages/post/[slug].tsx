@@ -23,13 +23,18 @@ export async function getStaticPaths() {
   };
 }
 
-export default class Post extends Component {
+export default class Post extends Component<{
+  postData: {
+    slug: string;
+    time: string;
+    source;
+    title: string;
+    date: string;
+    desc: string;
+  };
+}> {
   state = {
-    postData: (
-      this.props as {
-        postData;
-      }
-    ).postData,
+    postData: this.props.postData,
     components: components,
   };
 

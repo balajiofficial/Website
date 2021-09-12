@@ -1,5 +1,4 @@
 import Layout from "../layouts/pageLayout";
-import Head from "next/head";
 import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
 

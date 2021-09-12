@@ -14,13 +14,16 @@ export function getStaticProps() {
   };
 }
 
-export default class PostPage extends Component {
+export default class PostPage extends Component<{
+  data: {
+    slug: string;
+    title: string;
+    date: string;
+    desc: string;
+  }[];
+}> {
   state = {
-    content: (
-      this.props as {
-        data;
-      }
-    ).data,
+    content: this.props.data,
     searchText: "",
   };
 
