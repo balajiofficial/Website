@@ -20,8 +20,6 @@ export default class PostTab extends Component<{
             } flex items-center h-11 mt-5`}
             onClick={() => {
               this.setState({ expand: !this.state.expand });
-              console.log(this.state.expand);
-              console.log(this.state.description());
             }}
           >
             <div>

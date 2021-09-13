@@ -7,7 +7,7 @@ import Typist from "../components/typist";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
-    <Layout>
+    <Layout footer={false}>
       <PageSEO title="About" />
       <div className="dark:bg-gray-900">
         <div>
@@ -20,7 +20,7 @@ export default function About(): ReactElement<ReactFragment> {
               className="rounded-full"
             />
           </div>
-          <div className="mt-3 flex justify-center">
+          <div className="mt-3 flex justify-center text-center">
             <p className="text-4xl sm:text-5xl text-gray-600 dark:text-gray-200 font-quicksand">
               <Typist />
             </p>

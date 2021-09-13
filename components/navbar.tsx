@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React, { Component, ReactElement } from "react";
 
-export default class Navbar extends Component {
+export default class Navbar extends Component<{ themeFunc }> {
   state = {
     theme: "light",
     pages: [
@@ -17,24 +17,8 @@ export default class Navbar extends Component {
     ],
   };
 
-  setTheme = () => {
-    window.document.body.classList.add("dark:bg-gray-900");
-    window.document.body.classList.add("bg-white");
-
-    localStorage.setItem(
-      "theme",
-      localStorage.getItem("theme") == "dark" ? "dark" : "light"
-    );
-
-    this.setState({ theme: localStorage.getItem("theme") });
-
-    window.document.documentElement.classList.add(
-      localStorage.getItem("theme")
-    );
-  };
-
   componentDidMount() {
-    this.setTheme();
+    this.setState({ theme: localStorage.getItem("theme") });
   }
 
   render(): ReactElement<HTMLDivElement> {
@@ -85,9 +69,8 @@ export default class Navbar extends Component {
                       "theme",
                       localStorage.getItem("theme") == "dark" ? "light" : "dark"
                     );
-                    this.setState({
-                      theme: localStorage.getItem("theme"),
-                    });
+                    this.props.themeFunc(localStorage.getItem("theme"));
+                    this.setState({ theme: localStorage.getItem("theme") });
                     window.document.documentElement.classList.add(
                       localStorage.getItem("theme")
                     );

@@ -1,16 +1,47 @@
-import NavBar from "../components/navbar";
+import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { Fragment, ReactElement, ReactFragment } from "react";
+import { Component, Fragment } from "react";
 
-export default function Layout({
-  children = {},
-  footer = false,
-}): ReactElement<ReactFragment> {
-  return (
-    <Fragment>
-      <NavBar />
-      {children}
-      {footer ? <Footer /> : <></>}
-    </Fragment>
-  );
+export default class Layout extends Component<{
+  children;
+  footer;
+}> {
+  state = {
+    children: this.props.children,
+    theme: "light",
+  };
+
+  themeFunc = (theme: string) => {
+    this.setState({ theme: theme });
+  };
+
+  setTheme = () => {
+    window.document.body.classList.add("dark:bg-gray-900");
+    window.document.body.classList.add("bg-white");
+
+    localStorage.setItem(
+      "theme",
+      localStorage.getItem("theme") == "dark" ? "dark" : "light"
+    );
+
+    this.setState({ theme: localStorage.getItem("theme") });
+
+    window.document.documentElement.classList.add(
+      localStorage.getItem("theme")
+    );
+  };
+
+  componentDidMount() {
+    this.setTheme();
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <Navbar themeFunc={this.themeFunc} />
+        {this.state.children}
+        {this.props.footer ? <Footer /> : <></>}
+      </Fragment>
+    );
+  }
 }

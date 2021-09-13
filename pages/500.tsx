@@ -5,7 +5,7 @@ import PageSEO from "../components/seo";
 
 export default function FiveZeroZero(): ReactElement<ReactFragment> {
   return (
-    <Layout>
+    <Layout footer={false}>
       <PageSEO title="Error 500" />
       <div className="dark:bg-gray-900">
         <div className="pt-4">

@@ -6,7 +6,7 @@ import PageSEO from "../../components/seo";
 
 export default function Projects(): ReactFragment {
   return (
-    <Layout footer>
+    <Layout footer={true}>
       <PageSEO title="Projects" />
       <div className="dark:bg-gray-900">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">
@@ -20,7 +20,7 @@ export default function Projects(): ReactFragment {
                       "from-yellow-400 to-yellow-700",
                       "from-green-500 to-green-700",
                       "from-pink-500 to-rose-700",
-                      "from-purple-500 to-violet-700",
+                      "from-purple-500 to-violet-600",
                     ][index % 5]
                   } mb-4 p-5`}
                   key={e.title}

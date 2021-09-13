@@ -40,7 +40,7 @@ export default class Post extends Component<{
 
   render(): ReactFragment {
     return (
-      <Layout footer>
+      <Layout footer={true}>
         <PageSEO title={this.state.postData.title + " - Post"} />
         <div className="flex justify-center mt-2 mb-2">
           <div className="lg:w-2/3 md:w-5/6 w-screen">

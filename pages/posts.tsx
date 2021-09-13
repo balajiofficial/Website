@@ -29,7 +29,7 @@ export default class PostPage extends Component<{
 
   render(): ReactElement<ReactFragment> {
     return (
-      <Layout>
+      <Layout footer={false}>
         <PageSEO title="Posts" />
 
         <div className="mt-5">
@@ -63,18 +63,18 @@ export default class PostPage extends Component<{
                     </svg>
                   </div>
                 </div>
+                <div>
+                  {this.state.content.map((post) => {
+                    if (searchAlgo(post, this.state.searchText))
+                      return (
+                        <div key={post.slug}>
+                          <PostsBox post={post} />
+                        </div>
+                      );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-          <div>
-            {this.state.content.map((post) => {
-              if (searchAlgo(post, this.state.searchText))
-                return (
-                  <div key={post.slug}>
-                    <PostsBox post={post} />
-                  </div>
-                );
-            })}
           </div>
         </div>
       </Layout>

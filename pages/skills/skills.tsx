@@ -6,9 +6,9 @@ import pl1 from "../../components/skills/pl1";
 import pl2 from "../../components/skills/pl2";
 import pl3 from "../../components/skills/pl3";
 
-export default function Skills(): ReactFragment {
+export default function Skills(): ReactElement<ReactFragment> {
   return (
-    <Layout>
+    <Layout footer={false}>
       <PageSEO title="Skills" />
 
       <div className="mb-3">

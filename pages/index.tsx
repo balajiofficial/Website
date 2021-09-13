@@ -1,157 +1,49 @@
-import Layout from "../layouts/pageLayout";
 import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
-import Particles from "react-tsparticles";
+import IndexLayout from "../layouts/indexLayout";
 
 export default function Home(): ReactElement<ReactFragment> {
   return (
-    <Layout>
+    <IndexLayout>
       <PageSEO index />
-      <div className="dark:bg-gray-900 dark:text-gray-100 text-black">
-        <div className="absolute">
-          <Particles
-            params={{
-              particles: {
-                number: {
-                  value: 200,
-                  density: {
-                    enable: true,
-                    value_area: 1803.4120608655228,
-                  },
-                },
-                color: {
-                  value: "#808080",
-                },
-                shape: {
-                  type: "circle",
-                  stroke: {
-                    width: 2,
-                    color: "#808080",
-                  },
-                  polygon: {
-                    nb_sides: 4,
-                  },
-                },
-                opacity: {
-                  value: 0.4008530152163807,
-                  random: false,
-                  anim: {
-                    enable: false,
-                    speed: 1,
-                    opacity_min: 0.1,
-                    sync: false,
-                  },
-                },
-                size: {
-                  value: 1.5,
-                  random: true,
-                  anim: {
-                    enable: true,
-                    speed: 40,
-                    size_min: 0.1,
-                    sync: true,
-                  },
-                },
-                line_linked: {
-                  enable: true,
-                  distance: 150,
-                  color: "#808080",
-                  opacity: 0.3687847739990702,
-                  width: 0.6413648243462091,
-                },
-                move: {
-                  enable: true,
-                  speed: 4,
-                  direction: "none",
-                  random: false,
-                  straight: false,
-                  out_mode: "out",
-                  bounce: false,
-                  attract: {
-                    enable: false,
-                    rotateX: 600,
-                    rotateY: 1200,
-                  },
-                },
-              },
-              interactivity: {
-                detect_on: "window",
-                events: {
-                  onhover: {
-                    enable: true,
-                    mode: "repulse",
-                  },
-                  onclick: {
-                    enable: false,
-                  },
-                  resize: true,
-                },
-                modes: {
-                  grab: {
-                    distance: 400,
-                    line_linked: {
-                      opacity: 1,
-                    },
-                  },
-                  bubble: {
-                    distance: 400,
-                    size: 40,
-                    duration: 2,
-                    opacity: 8,
-                  },
-                  repulse: {
-                    distance: 100,
-                    duration: 0.4,
-                  },
-                  push: {
-                    particles_nb: 4,
-                  },
-                  remove: {
-                    particles_nb: 2,
-                  },
-                },
-              },
-              retina_detect: true,
-            }}
-          />
-        </div>
-        <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
-          <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold font-about">
-            Balaji
-          </h1>
-          <div className="flex justify-center mt-3 md:mt-7">
-            <div className="text-white dark:text-blue-100 flex md:justify-evenly w-auto md:w-11/12 lg:w-3/4 flex-col md:flex-row">
-              <div className="pt-3 pb-3">
-                <a
-                  href="https://github.com/balajiofficial"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="text-white"
-                >
-                  <button className="bg-gray-800 hover:bg-black dark:bg-gray-300 dark:hover:bg-gray-200 dark:text-black rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
-                    <div className="whitespace-nowrap">
-                      <svg
-                        height="32"
-                        className="fill-current inline-block w-10 pr-1"
-                        viewBox="0 0 16 16"
-                        version="1.1"
-                        width="32"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-                        ></path>
-                      </svg>
-                      <p className="inline-block text-lg align-middle">
-                        Github
-                      </p>
-                    </div>
-                  </button>
-                </a>
-              </div>
-              <div className="pt-3 pb-3">
-                <a href="" className="text-white">
+      <div>
+        <div className="relative">
+          <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
+            <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold font-about">
+              Balaji
+            </h1>
+            <div className="flex justify-center mt-3 md:mt-7">
+              <div className="text-white dark:text-blue-100 flex md:justify-evenly w-auto md:w-11/12 lg:w-3/4 flex-col md:flex-row">
+                <div className="pt-3 pb-3">
+                  <a
+                    href="https://github.com/balajiofficial"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white"
+                  >
+                    <button className="bg-gray-800 hover:bg-black dark:bg-gray-300 dark:hover:bg-gray-200 dark:text-black rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                      <div className="whitespace-nowrap">
+                        <svg
+                          height="32"
+                          className="fill-current inline-block w-10 pr-1"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="32"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+                          ></path>
+                        </svg>
+                        <p className="inline-block text-lg align-middle">
+                          Github
+                        </p>
+                      </div>
+                    </button>
+                  </a>
+                </div>
+                <div className="pt-3 pb-3">
                   <button
                     className="bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
@@ -172,10 +64,8 @@ export default function Home(): ReactElement<ReactFragment> {
                       </p>
                     </div>
                   </button>
-                </a>
-              </div>
-              <div className="pt-3 pb-3">
-                <a href="" className="text-white">
+                </div>
+                <div className="pt-3 pb-3">
                   <button
                     className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 dark:hover:from-red-500 dark:hover:via-purple-500 dark:hover:to-blue-500 hover:from-red-700 hover:via-purple-700 hover:to-blue-700 font-semibold h-14 hover:shadow-lg"
                     onClick={() => {
@@ -194,11 +84,24 @@ export default function Home(): ReactElement<ReactFragment> {
                       Instagram
                     </p>
                   </button>
-                </a>
-              </div>
-              <div className="pt-3 pb-3">
-                <a href="mailto:notanemail@email.com" className="text-white">
-                  <button className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 rounded-lg p-3 font-semibold h-14 hover:shadow-lg">
+                </div>
+                <div className="pt-3 pb-3">
+                  <button
+                    className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 rounded-lg p-3 font-semibold h-14 hover:shadow-lg"
+                    onClick={() => {
+                      if (
+                        prompt(
+                          "Enter 'I am not an annoying bot' to verify that you are not a bot"
+                        ) == "I am not an annoying bot"
+                      ) {
+                        location.replace(
+                          "mailto:balajikyadav.official@gmail.com"
+                        );
+                      } else {
+                        alert("Sorry, 🤖");
+                      }
+                    }}
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-9 w-9 inline-block"
@@ -212,12 +115,12 @@ export default function Home(): ReactElement<ReactFragment> {
                       Email
                     </p>
                   </button>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </Layout>
+    </IndexLayout>
   );
 }

@@ -4,7 +4,7 @@ import Layout from "../layouts/pageLayout";
 
 export default function CreditsPage(): ReactElement<ReactFragment> {
   return (
-    <Layout>
+    <Layout footer={false}>
       <PageSEO title="Credits" />
       <div>
         <div className="flex justify-center">
