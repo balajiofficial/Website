@@ -1,7 +1,7 @@
 import Layout from "../layouts/pageLayout";
 import { ReactElement, ReactFragment, Component } from "react";
 import PostsBox from "../components/post";
-import { searchAlgo } from "../functions/searchAlgo";
+import { search } from "../functions/search";
 import { getSortedPostsData } from "../commands/allPosts";
 import PageSEO from "../components/seo";
 
@@ -65,7 +65,7 @@ export default class PostPage extends Component<{
                 </div>
                 <div>
                   {this.state.content.map((post) => {
-                    if (searchAlgo(post, this.state.searchText))
+                    if (search(post, this.state.searchText))
                       return (
                         <div key={post.slug}>
                           <PostsBox post={post} />

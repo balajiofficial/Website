@@ -1,4 +1,4 @@
-export const searchAlgo = (
+export const search = (
   post: { title: string; desc: string; slug: string; date: string },
   searchText: string
 ): boolean => {

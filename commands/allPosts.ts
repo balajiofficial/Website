@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync } from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import { sortByDate } from "../functions/sortAlgo";
+import { sortByDate } from "../functions/sort";
 
 const postsDirectory = join(process.cwd(), "posts");
 

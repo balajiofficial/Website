@@ -1,12 +1,15 @@
 import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
 import Layout from "../layouts/pageLayout";
+import PostLink from "../mappings/a";
+import PostListItem from "../mappings/li";
+import PostUnorderedList from "../mappings/ul";
 
 export default function CreditsPage(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={false}>
+    <Layout footer={true}>
       <PageSEO title="Credits" />
-      <div>
+      <div className="mb-3">
         <div className="flex justify-center">
           <div>
             <div className="flex justify-center">
@@ -21,125 +24,100 @@ export default function CreditsPage(): ReactElement<ReactFragment> {
             <p>
               The icons on this site have been used from the following sites -{" "}
             </p>
-            <ul className="mt-1">
-              <li>
-                <a
-                  href="https://heroicons.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Heroicons
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.freepik.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Freepik
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://feathericons.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Feather Icons
-                </a>
-              </li>
-            </ul>
+            <div className="mt-1">
+              <PostUnorderedList>
+                <PostListItem>
+                  <PostLink href="https://heroicons.com/">Heroicons</PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink href="https://www.freepik.com/">Freepik</PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink href="https://feathericons.com/">
+                    Feather Icons
+                  </PostLink>
+                </PostListItem>
+              </PostUnorderedList>
+            </div>
             <p>
               The site has been created using a{" "}
-              <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
-                React.js
-              </a>{" "}
+              <PostLink href="https://reactjs.org/">React.js</PostLink>{" "}
               framework called{" "}
-              <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-                Next.js
-              </a>{" "}
-              and has been deployed on{" "}
-              <a href="https://vercel.com/" target="_blank" rel="noreferrer">
-                Vercel
-              </a>
-              .
+              <PostLink href="https://nextjs.org/">Next.js</PostLink> and has
+              been deployed on{" "}
+              <PostLink href="https://vercel.com/">Vercel</PostLink>.
             </p>
             <p className="mt-1">
               It uses{" "}
-              <a
-                href="https://tailwindcss.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Tailwind CSS
-              </a>{" "}
+              <PostLink href="https://tailwindcss.com">Tailwind CSS</PostLink>{" "}
               for styling.
             </p>
             <p className="mt-1">
+              It uses a <PostLink href="https://prismjs.com/">Prism</PostLink>{" "}
+              framework known as{" "}
+              <PostLink href="https://github.com/FormidableLabs/prism-react-renderer">
+                React Prism Renderer
+              </PostLink>{" "}
+              to highlight the syntax codes in blogs.
+            </p>
+            <p className="mt-1">
               Fonts have been imported from{" "}
-              <a
-                href="https://fonts.google.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Google Fonts
-              </a>
+              <PostLink href="https://fonts.google.com/">Google Fonts</PostLink>
               .
             </p>
             <p className="mt-1">The following fonts have been used - </p>
-            <ul className="mt-1">
-              <li>
-                <a
-                  href="https://github.com/microsoft/cascadia-code"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Cascadia Code
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fonts.google.com/specimen/Quicksand"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Quicksand
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://fonts.google.com/specimen/Roboto"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Roboto
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.jetbrains.com/lp/mono/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Jetbrains Mono
-                </a>
-              </li>
-            </ul>
+            <div className="mt-1">
+              <PostUnorderedList>
+                <PostListItem>
+                  <PostLink href="https://github.com/microsoft/cascadia-code">
+                    Cascadia Code
+                  </PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink
+                    href="https://fonts.google.com/specimen/Quicksand"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Quicksand
+                  </PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink href="https://fonts.google.com/specimen/Roboto">
+                    Roboto
+                  </PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink href="https://www.jetbrains.com/lp/mono/">
+                    Jetbrains Mono
+                  </PostLink>
+                </PostListItem>
+                <PostListItem>
+                  <PostLink href="https://fonts.google.com/specimen/Inter">
+                    Inter
+                  </PostLink>
+                </PostListItem>
+              </PostUnorderedList>
+            </div>
             <p>
               The blogs were written in{" "}
-              <a
-                href="https://en.wikipedia.org/wiki/Markdown"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Markdown
-              </a>{" "}
-              and converted to HTML using{" "}
-              <a href="https://remark.js.org/" target="_blank" rel="noreferrer">
-                Remark.js
-              </a>
+              <PostLink href="https://mdxjs.com/">Markdown JSX</PostLink> and
+              converted to HTML using{" "}
+              <PostLink href="https://github.com/hashicorp/next-mdx-remote">
+                Next-MDX-Remote
+              </PostLink>
               .
+            </p>
+            <p className="mt-1">
+              The Particle animation has been created using{" "}
+              <PostLink href="https://particles.js.org/">Particles.js</PostLink>
+              .
+            </p>
+            <p className="mt-1">
+              The Source Code has been formatted using{" "}
+              <PostLink href="https://prettier.io/">Prettier</PostLink> and
+              linted using{" "}
+              <PostLink href="https://eslint.org/">ESLint</PostLink>.
             </p>
           </div>
         </div>
