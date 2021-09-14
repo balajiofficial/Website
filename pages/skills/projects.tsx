@@ -4,7 +4,7 @@ import { ReactElement, ReactFragment } from "react";
 import { content } from "../../content/dataProjects";
 import PageSEO from "../../components/seo";
 
-export default function Projects(): ReactFragment {
+export default function Projects(): ReactElement<ReactFragment> {
   return (
     <Layout footer={true}>
       <PageSEO title="Projects" />
@@ -79,8 +79,8 @@ export default function Projects(): ReactFragment {
                         </div>
                       </div>
                     </div>
-                    <div className="pt-3 lg:pt-0">
-                      <div className="bg-opacity-50 bg-gray-300 p-3 rounded-lg text-gray-200">
+                    <div className="mt-3 lg:mt-0">
+                      <div className="sm:bg-opacity-50 bg-transparent sm:bg-gray-300 p-0 md:p-7 lg:p-3 rounded-lg">
                         <Image
                           src={e.img}
                           alt="Screenshot"

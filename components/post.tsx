@@ -7,7 +7,7 @@ export default function PostsBox({ post }): ReactElement<HTMLDivElement> {
       <div>
         <div>
           <Link href={`/post/${post.slug}`} passHref>
-            <a className="text-2xl md:text-3xl font-extrabold text-black hover:text-cyan-400 dark:text-white dark:hover:text-cyan-400">
+            <a className="text-2xl md:text-3xl font-extrabold text-black hover:text-cyan-500 dark:text-white dark:hover:text-cyan-400">
               {post.title}
             </a>
           </Link>

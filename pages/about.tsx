@@ -21,7 +21,7 @@ export default function About(): ReactElement<ReactFragment> {
             />
           </div>
           <div className="mt-3 flex justify-center text-center">
-            <p className="text-4xl sm:text-5xl text-gray-600 dark:text-gray-200 font-quicksand">
+            <p className="text-4xl sm:text-5xl font-bold h-full bg-clip-text bg-gradient-to-r from-sky-500 to-teal-500  text-transparent font-quicksand">
               <Typist />
             </p>
           </div>

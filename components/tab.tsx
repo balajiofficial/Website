@@ -15,7 +15,7 @@ export default class PostTab extends Component<{
       <div>
         <div className="cursor-pointer">
           <div
-            className={`bg-violet-600 text-white text-2xl ${
+            className={`bg-violet-600 text-white text-lg sm:text-2xl ${
               this.state.expand ? "rounded-t-lg" : "rounded-lg"
             } flex items-center h-11 mt-5`}
             onClick={() => {

@@ -36,7 +36,7 @@ export default class IndexLayout extends Component<{ children }> {
     return (
       <div>
         <Navbar themeFunc={this.themeFunc} />
-        <div className="w-full absolute left-0">
+        <div className="w-full absolute left-0 lg:visible invisible">
           <Particles
             params={{
               particles: {

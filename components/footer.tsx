@@ -33,7 +33,7 @@ export default class Footer extends Component {
             <span className="text-center sm:flex sm:justify-evenly">
               <div>
                 <Link href="/credits">
-                  <a className="text-black dark:text-gray-300 hover:no-underline border-b-2 hover:border-black border-transparent dark:hover:border-gray-300 dark:border-transparent">
+                  <a className="text-black dark:text-gray-300 border-b-2 hover:border-black border-transparent dark:hover:border-gray-300 dark:border-transparent">
                     Credits
                   </a>
                 </Link>
@@ -42,7 +42,7 @@ export default class Footer extends Component {
                 <a
                   href="https://github.com/balajiofficial/Website/blob/main/LICENSE"
                   target="_blank"
-                  className="text-black dark:text-gray-300 hover:no-underline border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
+                  className="text-black dark:text-gray-300 border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
                   rel="noreferrer"
                 >
                   Copyright © 2021 Balaji K
