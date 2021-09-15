@@ -8,7 +8,7 @@ import pl3 from "../../components/skills/pl3";
 
 export default function Skills(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={false}>
+    <Layout>
       <PageSEO title="Skills" />
 
       <div className="mb-3">

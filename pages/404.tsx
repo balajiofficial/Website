@@ -5,7 +5,7 @@ import PageSEO from "../components/seo";
 
 export default function FourOFour(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={false}>
+    <Layout>
       <PageSEO title="Error 404" />
       <div className="dark:bg-gray-900">
         <div className="pt-4">

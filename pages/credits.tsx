@@ -7,7 +7,7 @@ import PostUnorderedList from "../mappings/ul";
 
 export default function CreditsPage(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={true}>
+    <Layout>
       <PageSEO title="Credits" />
       <div className="mb-3">
         <div className="flex justify-center">

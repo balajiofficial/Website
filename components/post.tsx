@@ -11,9 +11,17 @@ export default function PostsBox({ post }): ReactElement<HTMLDivElement> {
               {post.title}
             </a>
           </Link>
-          <p className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1">
-            {post.date}
-          </p>
+          <div className="flex">
+            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1">
+              {post.date}
+            </div>
+            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1 mr-1 ml-1">
+              •
+            </div>
+            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1">
+              {post.time}
+            </div>
+          </div>
           <p className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400">
             {post.desc}
           </p>

@@ -4,11 +4,11 @@ import { Component, Fragment } from "react";
 
 export default class Layout extends Component<{
   children;
-  footer;
 }> {
   state = {
     children: this.props.children,
     theme: "light",
+    footer: false,
   };
 
   themeFunc = (theme: string) => {
@@ -40,7 +40,7 @@ export default class Layout extends Component<{
       <Fragment>
         <Navbar themeFunc={this.themeFunc} />
         {this.state.children}
-        {this.props.footer ? <Footer /> : <></>}
+        <Footer />
       </Fragment>
     );
   }

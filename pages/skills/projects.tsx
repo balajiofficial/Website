@@ -6,7 +6,7 @@ import PageSEO from "../../components/seo";
 
 export default function Projects(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={true}>
+    <Layout>
       <PageSEO title="Projects" />
       <div className="dark:bg-gray-900">
         <div className="pt-4 flex justify-center pl-0 pr-0 sm:pl-10 sm:pr-10 w-screen sm:w-auto">

@@ -20,6 +20,7 @@ export default class PostPage extends Component<{
     title: string;
     date: string;
     desc: string;
+    time: string;
   }[];
 }> {
   state = {
@@ -29,7 +30,7 @@ export default class PostPage extends Component<{
 
   render(): ReactElement<ReactFragment> {
     return (
-      <Layout footer={false}>
+      <Layout>
         <PageSEO title="Posts" />
 
         <div className="mt-5">

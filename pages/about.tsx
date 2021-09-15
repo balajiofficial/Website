@@ -7,7 +7,7 @@ import Typist from "../components/typist";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
-    <Layout footer={false}>
+    <Layout>
       <PageSEO title="About" />
       <div className="dark:bg-gray-900">
         <div>

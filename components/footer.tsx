@@ -22,12 +22,23 @@ export default class Footer extends Component {
 
   componentDidMount() {
     const device = this.getDeviceType();
+    const footer =
+      document.getElementById("__next").clientHeight >=
+      window.innerHeight + document.getElementById("footer").clientHeight;
+    this.setState({
+      fixEnd: footer,
+    });
     this.setState({ device: device });
   }
 
   render(): ReactElement<HTMLDivElement> {
     return (
-      <div className="bottom-0 w-full left-0 right-0">
+      <div
+        className={`bottom-0 w-full left-0 right-0 ${
+          this.state.fixEnd ? "" : "absolute"
+        }`}
+        id="footer"
+      >
         <footer className="bg-gray-200 font-quicksand dark:bg-gray-800">
           <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
             <span className="text-center sm:flex sm:justify-evenly">
