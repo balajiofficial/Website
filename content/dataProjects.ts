@@ -9,7 +9,7 @@ export const content: Array<{
   {
     title: "Data Plotter",
     date: "April 2021",
-    keywords: ["Python", "Graph", "Plotting", "Matplotlib", "Tkinter"],
+    keywords: ["Python", "Graphs", "Plotting", "Matplotlib", "Tkinter"],
     desc: "Data Plotter is a software that can be used to read .xlsx and .csv files to plot different types of graphs. The GUI of the app has been created with tkinter. It has different GUI themes and all matplotlib's graph themes. The app uses pandas to read data files and uses matplotlib to plot this data to a graph. Data Plotter can be used by non developers and by developers who do not wish to spend time implementing their own programs.",
     links: [
       {
@@ -28,8 +28,8 @@ export const content: Array<{
     date: "April 2021",
     keywords: [
       "Typescript",
-      "Next.js",
       "React",
+      "Next.js",
       "Tailwind CSS",
       "Vercel",
       "Markdown",
@@ -58,7 +58,7 @@ export const content: Array<{
   {
     title: "Bala Notes",
     date: "March 2021",
-    keywords: ["Javascript", "Electron", "Tailwind CSS", "Notes GUI", "HTML"],
+    keywords: ["Javascript", "Electron", "Tailwind CSS", "GUI", "HTML"],
     desc: "Bala Notes is an open source desktop app created for taking notes. It was created using frontend technologies like HTML, CSS and Javascript. It uses a framework called Electron to convert web apps into functioning desktop apps. The app has a great UI thanks to the Tailwind CSS framework and works on high resolution systems as well but it is very ram and storage heavy because of the chromium engine used by electron.",
     links: [
       { label: "GitHub", link: "https://github.com/balajiofficial/BalaNotes" },
