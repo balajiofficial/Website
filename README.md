@@ -10,14 +10,14 @@ The code for the website is open source and is licensed under the [Apache-2.0 Li
 
 ## Technologies Used
 
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Prism](https://prismjs.com/)
-- [MDX](https://mdxjs.com/)
-- [Markdown](https://en.wikipedia.org/wiki/Markdown)
-- [ESLint](https://eslint.org/)
-- [Vercel](https://vercel.com/)
+- [**React**](https://reactjs.org/)
+- [**Next.js**](https://nextjs.org/)
+- [**Tailwind CSS**](https://tailwindcss.com/)
+- [**Prism**](https://prismjs.com/)
+- [**MDX**](https://mdxjs.com/)
+- [**Markdown**](https://en.wikipedia.org/wiki/Markdown)
+- [**ESLint**](https://eslint.org/)
+- [**Vercel**](https://vercel.com/)
 
 For more details visit [here](https://balajiofficial.vercel.app/credits).
 
