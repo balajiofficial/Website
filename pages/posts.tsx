@@ -36,12 +36,12 @@ export default class PostPage extends Component<{
         <div className="mt-5">
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3">
-              <div className="mb-3">
+              <div>
                 <div>
                   <div className="relative max-w-lg">
                     <input
                       type="text"
-                      className="block w-full px-4 py-2 text-gray-900 dark:text-white bg-gray-100 border-2 border-transparent focus:border-cyan-500 rounded-md  dark:bg-gray-800 font-medium p-1 font-about "
+                      className="block w-full px-4 py-2 text-gray-900 dark:text-white bg-gray-100 border-2 border-transparent focus:border-cyan-600 dark:focus:border-cyan-500 rounded-md  dark:bg-gray-800 font-medium p-1 font-about"
                       placeholder="Search posts"
                       spellCheck={false}
                       onChange={(e) => {

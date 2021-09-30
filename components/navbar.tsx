@@ -24,7 +24,7 @@ export default class Navbar extends Component<{ themeFunc }> {
   render(): ReactElement<HTMLDivElement> {
     return (
       <div className="top-0">
-        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-cyan-600">
+        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-sky-500">
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {

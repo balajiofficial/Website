@@ -7,28 +7,33 @@ export default class Footer extends Component {
     fixEnd: false,
   };
 
-  getDeviceType = (): string => {
+  setDeviceType = () => {
     const user_agent = window.navigator.userAgent;
-    return RegExp("(tablet|ipad|playbook|silk)|(android(?!.*mobi))", "i").test(
-      user_agent
-    )
+    const device = RegExp(
+      "(tablet|ipad|playbook|silk)|(android(?!.*mobi))",
+      "i"
+    ).test(user_agent)
       ? "Tablet"
       : RegExp(
           "Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)"
         ).test(user_agent)
       ? "Mobile"
       : "Desktop";
+    this.setState({ device: device });
   };
 
-  componentDidMount() {
-    const device = this.getDeviceType();
+  refreshFooterPosition = () => {
     const footer =
       document.getElementById("__next").clientHeight >=
       window.innerHeight + document.getElementById("footer").clientHeight;
     this.setState({
       fixEnd: footer,
     });
-    this.setState({ device: device });
+  };
+
+  componentDidMount() {
+    this.setDeviceType();
+    this.refreshFooterPosition();
   }
 
   render(): ReactElement<HTMLDivElement> {
@@ -40,7 +45,7 @@ export default class Footer extends Component {
         id="footer"
       >
         <footer className="bg-gray-200 font-quicksand dark:bg-gray-800">
-          <div className="mx-auto pt-3 pb-3 dark:text-gray-300">
+          <div className="mx-auto pt-3.5 pb-3.5 dark:text-gray-300">
             <span className="text-center sm:flex sm:justify-evenly">
               <div>
                 <Link href="/credits">
