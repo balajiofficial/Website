@@ -9,6 +9,7 @@ export default class Layout extends Component<{
     children: this.props.children,
     theme: "light",
     footer: false,
+    fixEnd: false,
   };
 
   themeFunc = (theme: string) => {
@@ -35,12 +36,28 @@ export default class Layout extends Component<{
     this.setTheme();
   }
 
+  refreshFooterPosition = () => {
+    const footer =
+      document.getElementById("__next").clientHeight +
+        document.getElementById("footer").clientHeight <=
+      window.innerHeight;
+    this.setState({
+      fixEnd: footer,
+    });
+  };
+
   render() {
     return (
       <Fragment>
-        <Navbar themeFunc={this.themeFunc} />
-        {this.state.children}
-        <Footer />
+        <div
+          onClick={() => {
+            this.refreshFooterPosition();
+          }}
+        >
+          <Navbar themeFunc={this.themeFunc} />
+          {this.state.children}
+          <Footer fixEnd={this.state.fixEnd} />
+        </div>
       </Fragment>
     );
   }

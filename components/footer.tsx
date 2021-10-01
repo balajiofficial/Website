@@ -1,10 +1,9 @@
 import { Component, ReactElement } from "react";
 import Link from "next/link";
 
-export default class Footer extends Component {
+export default class Footer extends Component<{ fixEnd: boolean }> {
   state = {
     device: "",
-    fixEnd: false,
   };
 
   setDeviceType = () => {
@@ -22,25 +21,20 @@ export default class Footer extends Component {
     this.setState({ device: device });
   };
 
-  refreshFooterPosition = () => {
-    const footer =
-      document.getElementById("__next").clientHeight >=
-      window.innerHeight + document.getElementById("footer").clientHeight;
-    this.setState({
-      fixEnd: footer,
-    });
+  clickFooter = () => {
+    document.getElementById("footer").click();
   };
 
   componentDidMount() {
     this.setDeviceType();
-    this.refreshFooterPosition();
+    this.clickFooter();
   }
 
   render(): ReactElement<HTMLDivElement> {
     return (
       <div
         className={`bottom-0 w-full left-0 right-0 ${
-          this.state.fixEnd ? "" : "absolute"
+          this.props.fixEnd ? "absolute" : ""
         }`}
         id="footer"
       >

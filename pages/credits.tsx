@@ -109,8 +109,12 @@ export default function CreditsPage(): ReactElement<ReactFragment> {
               .
             </p>
             <p className="mt-1">
-              The Particle animation has been created using{" "}
-              <PostLink href="https://particles.js.org/">Particles.js</PostLink>
+              The Particle animation has been created using a{" "}
+              <PostLink href="https://particles.js.org/">Particles.js</PostLink>{" "}
+              framework called{" "}
+              <PostLink href="https://github.com/matteobruni/tsparticles#readme">
+                React-tsParticles
+              </PostLink>
               .
             </p>
             <p className="mt-1">
