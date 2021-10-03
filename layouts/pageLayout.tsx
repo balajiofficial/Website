@@ -8,7 +8,6 @@ export default class Layout extends Component<{
   state = {
     children: this.props.children,
     theme: "light",
-    footer: false,
     fixEnd: false,
   };
 
@@ -50,6 +49,9 @@ export default class Layout extends Component<{
     return (
       <Fragment>
         <div
+          onMouseMove={() => {
+            this.refreshFooterPosition();
+          }}
           onClick={() => {
             this.refreshFooterPosition();
           }}

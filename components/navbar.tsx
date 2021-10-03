@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React, { Component, ReactElement } from "react";
 
-export default class Navbar extends Component<{ themeFunc }> {
+export default class Navbar extends Component<{
+  themeFunc: (theme: string) => void;
+}> {
   state = {
     theme: "light",
     pages: [
