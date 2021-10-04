@@ -11,15 +11,10 @@ export default function Skills(): ReactElement<ReactFragment> {
     <Layout>
       <PageSEO title="Skills" />
 
-      <div className="mb-3">
-        <div className="flex justify-center">
-          <div className="mt-7">
-            <p className="text-6xl font-bold dark:text-white">Skills</p>
-          </div>
-        </div>
-        <div className="mt-3">
+      <div className="mb-10">
+        <div className="mt-3 sm:mt-10">
           <div className="flex justify-center">
-            <div className="w-11/12 sm:w-2/3">
+            <div className="w-full sm:w-3/4 md:w-2/3">
               <PostTab title="Programming Languages" description={pl1} />
               <PostTab title="Languages" description={pl2} />
               <PostTab title="Frameworks" description={pl3} />

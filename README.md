@@ -6,7 +6,7 @@ My personal website - [balajiofficial.vercel.app](https://balajiofficial.vercel.
 
 ## License
 
-The code for the website is open source and is licensed under the [Apache-2.0 License](https://github.com/balajiofficial/Website/blob/main/LICENSE).
+The code for the website is open source and is licensed under the [MIT License](https://github.com/balajiofficial/Website/blob/main/LICENSE).
 
 ## Technologies Used
 
