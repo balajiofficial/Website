@@ -22,11 +22,11 @@ export default class PostTab extends Component<{
               this.setState({ expand: !this.state.expand });
             }}
           >
-            <div>
+            <div className="ml-3">
               {this.state.expand ? (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -39,7 +39,7 @@ export default class PostTab extends Component<{
               ) : (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 ml-3"
+                  className="h-6 w-6"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >

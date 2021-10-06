@@ -21,7 +21,7 @@ export default function Home(): ReactElement<ReactFragment> {
                     rel="noreferrer"
                     className="text-white"
                   >
-                    <button className="bg-gray-800 hover:bg-black dark:bg-gray-300 dark:hover:bg-gray-200 dark:text-black rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-0.5 transform transition-all duration-150">
+                    <button className="bg-gray-800 hover:bg-black dark:bg-gray-300 dark:hover:bg-gray-200 dark:text-black rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150">
                       <div className="whitespace-nowrap">
                         <svg
                           height="32"
@@ -45,7 +45,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </div>
                 <div className="pt-3 pb-3">
                   <button
-                    className="bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-0.5 transform transition-all duration-150"
+                    className="bg-blue-500 hover:bg-blue-600 dark:hover:bg-blue-400 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150"
                     onClick={() => {
                       alert("No Twitter account created yet");
                     }}
@@ -67,7 +67,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </div>
                 <div className="pt-3 pb-3">
                   <button
-                    className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 dark:hover:from-red-500 dark:hover:via-purple-500 dark:hover:to-blue-500 hover:from-red-700 hover:via-purple-700 hover:to-blue-700 font-semibold h-14 hover:shadow-xl hover:-translate-y-0.5 transform transition-all duration-150"
+                    className="bg-gradient-to-tl from-red-600 via-purple-600 to-blue-600 rounded-lg p-3 dark:hover:from-red-500 dark:hover:via-purple-500 dark:hover:to-blue-500 hover:from-red-700 hover:via-purple-700 hover:to-blue-700 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150"
                     onClick={() => {
                       alert("No Instagram account created yet");
                     }}
@@ -87,7 +87,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </div>
                 <div className="pt-3 pb-3">
                   <button
-                    className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-0.5 transform transition-all duration-150"
+                    className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150"
                     onClick={() => {
                       if (
                         prompt(
