@@ -9,6 +9,7 @@ module.exports = {
     "./pages/*.tsx",
     "./pages/*/*.tsx",
     "./mappings/*.tsx",
+    "./posts/*.mdx",
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {

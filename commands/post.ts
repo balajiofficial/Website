@@ -30,13 +30,12 @@ export async function getPostData(slug: string): Promise<{
   const fullPath = join(postsDirectory, `${slug}.mdx`);
   const fileContents = readFileSync(fullPath, "utf8");
 
-  const reading_time = readingTime(fileContents);
+  const { content, data } = matter(fileContents);
+  const reading_time = readingTime(content);
   const time =
     reading_time.minutes >= 1
       ? Math.ceil(reading_time.minutes) + " minutes"
       : Math.ceil(reading_time.minutes * 60) + " seconds";
-
-  const { content, data } = matter(fileContents);
 
   const source = await serialize(content, {
     mdxOptions: {

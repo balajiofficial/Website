@@ -1,12 +1,10 @@
 import Layout from "../layouts/pageLayout";
-import { ReactElement, ReactFragment, Component } from "react";
-import PostsBox from "../components/post";
-import { search } from "../functions/search";
-import { getSortedPostsData } from "../commands/allPosts";
 import PageSEO from "../components/seo";
+import { getSortedPostsData } from "../commands/allPosts";
+import Link from "next/link";
 
 export function getStaticProps() {
-  let data = getSortedPostsData();
+  const data = getSortedPostsData();
   return {
     props: {
       data,
@@ -14,7 +12,9 @@ export function getStaticProps() {
   };
 }
 
-export default class PostPage extends Component<{
+export default function PostPage({
+  data,
+}: {
   data: {
     slug: string;
     title: string;
@@ -22,63 +22,51 @@ export default class PostPage extends Component<{
     desc: string;
     time: string;
   }[];
-}> {
-  state = {
-    content: this.props.data,
-    searchText: "",
-  };
+}) {
+  return (
+    <Layout>
+      <PageSEO title="Posts" />
 
-  render(): ReactElement<ReactFragment> {
-    return (
-      <Layout>
-        <PageSEO title="Posts" />
-
-        <div className="mt-5">
-          <div className="flex justify-center">
-            <div className="w-11/12 md:w-2/3">
+      <div className="mt-5">
+        <div className="flex justify-center">
+          <div className="w-11/12 md:w-2/3">
+            <div>
+              <div></div>
               <div>
-                <div>
-                  <div className="relative max-w-lg">
-                    <input
-                      type="text"
-                      className="block w-full px-4 py-2 text-gray-900 dark:text-white bg-gray-100 border-2 border-transparent focus:border-cyan-600 dark:focus:border-cyan-500 rounded-md  dark:bg-gray-800 font-medium p-1 font-about"
-                      placeholder="Search posts"
-                      spellCheck={false}
-                      onChange={(e) => {
-                        this.setState({ searchText: e.target.value });
-                      }}
-                    />
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-5 w-5 absolute right-3 top-3 text-gray-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div>
-                  {this.state.content.map((post) => {
-                    if (search(post, this.state.searchText))
-                      return (
-                        <div key={post.slug}>
-                          <PostsBox post={post} />
+                {data.map((post) => {
+                  return (
+                    <div className="xl:w-3/4 lg:w-5/6 mt-7" key={post.slug}>
+                      <div>
+                        <div>
+                          <Link href={`/post/${post.slug}`} passHref>
+                            <a className="text-2xl md:text-3xl font-extrabold text-black hover:text-sky-500 dark:text-white dark:hover:text-cyan-400">
+                              {post.title}
+                            </a>
+                          </Link>
+                          <div className="flex">
+                            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1">
+                              {post.date}
+                            </div>
+                            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1 mr-1 ml-1">
+                              •
+                            </div>
+                            <div className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400 mt-1">
+                              {post.time}
+                            </div>
+                          </div>
+                          <p className="font-about text-base md:text-lg text-gray-600 dark:text-gray-400">
+                            {post.desc}
+                          </p>
                         </div>
-                      );
-                  })}
-                </div>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
-      </Layout>
-    );
-  }
+      </div>
+    </Layout>
+  );
 }
