@@ -39,7 +39,7 @@ export const content: Array<{
       { label: "GitHub", link: "https://github.com/balajiofficial/Website" },
       { label: "Website", link: "/" },
     ],
-    img: "https://raw.githubusercontent.com/balajiofficial/balajiofficial.github.io/main/images/Screenshot.png",
+    img: "https://raw.githubusercontent.com/balajiofficial/Website/main/content/Screenshot.png",
   },
   {
     title: "EncryptCLI",
