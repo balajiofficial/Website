@@ -39,4 +39,4 @@ yarn run start
 
 ## Screenshot
 
-![Screenshot](https://raw.githubusercontent.com/balajiofficial/balajiofficial.github.io/main/images/Screenshot.png)
+![Screenshot](/content/Screenshot.png)

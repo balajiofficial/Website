@@ -1,21 +1,14 @@
-import { Component } from "react";
+import { useState } from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
 
-export default class PostCode extends Component<{
-  children: string;
-  className: string;
-}> {
-  state = {
-    children: this.props.children.trim(),
-    className: this.props.className,
-    copied: false,
-  };
+export default function PostCode({ children, className }) {
+  const [copied, setCopied] = useState(false);
 
-  language = this.state.className.replace("language-", "");
-  getLanguageText = () => {
+  const language = className.replace("language-", "");
+  const getLanguageText = () => {
     let languageText =
-      this.language[0].toUpperCase() + this.language.slice(1).toLowerCase();
+      language[0].toUpperCase() + language.slice(1).toLowerCase();
     switch (languageText) {
       case "Cpp":
         languageText = "C++";
@@ -27,64 +20,62 @@ export default class PostCode extends Component<{
     return languageText;
   };
 
-  copyIt = () => {
-    this.setState({ copied: true });
-    navigator.clipboard.writeText(this.state.children);
+  const copyIt = () => {
+    setCopied(true);
+    navigator.clipboard.writeText(children);
     setTimeout(() => {
-      this.setState({ copied: false });
+      setCopied(false);
     }, 1000);
   };
 
-  render() {
-    return (
-      <div>
-        <Highlight
-          {...defaultProps}
-          theme={theme}
-          code={this.state.children}
-          language={this.language as Language}
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre
-              className={
-                className +
-                " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-white dark:border-gray-500"
-              }
-              style={style}
-            >
-              <div className="flex justify-end">
-                <p className="bg-blue-600 text-white pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 rounded-b-md mr-4 text-sm">
-                  {this.getLanguageText()}
-                </p>
-                <button
-                  className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-5"
-                  onClick={this.copyIt}
+  return (
+    <div>
+      <Highlight
+        {...defaultProps}
+        theme={theme}
+        code={children.trim()}
+        language={language as Language}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre
+            className={
+              className +
+              " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-white dark:border-gray-500"
+            }
+            style={style}
+          >
+            <div className="flex justify-end">
+              <p className="bg-blue-600 text-white pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 rounded-b-md mr-4 text-sm">
+                {getLanguageText()}
+              </p>
+              <button
+                className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-5"
+                onClick={copyIt}
+              >
+                {copied ? <p>Copied!</p> : <p>Copy</p>}
+              </button>
+            </div>
+            <div className="pl-2 pb-5 pr-2 overflow-auto">
+              {tokens.map((line, i) => (
+                <div
+                  key={i}
+                  {...getLineProps({ line, key: i })}
+                  className="table-row"
                 >
-                  {this.state.copied ? <p>Copied!</p> : <p>Copy</p>}
-                </button>
-              </div>
-              <div className="pl-2 pb-5 pr-2 overflow-auto">
-                {tokens.map((line, i) => (
-                  <div
-                    key={i}
-                    {...getLineProps({ line, key: i })}
-                    className="table-row"
-                  >
-                    <div className="table-cell text-right pr-4 pl-1.5 text-gray-500">
-                      {i + 1}
-                    </div>
-                    <div className="table-cell">
-                      {line.map((token, key) => (
-                        <span key={key} {...getTokenProps({ token, key })} />
-                      ))}
-                    </div>
+                  <div className="table-cell text-right pr-4 pl-1.5 text-gray-500">
+                    {i + 1}
                   </div>
-                ))}
-              </div>
-            </pre>
-          )}
-        </Highlight>
-      </div>
-    );
-  }
+                  <div className="table-cell">
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </pre>
+        )}
+      </Highlight>
+    </div>
+  );
 }
