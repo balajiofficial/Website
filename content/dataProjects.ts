@@ -21,7 +21,34 @@ export const content: Array<{
         link: "https://github.com/balajiofficial/DataPlotter/releases/tag/5.0.0",
       },
     ],
-    img: "https://raw.githubusercontent.com/balajiofficial/DataPlotter/main/images/Screenshot_2.png",
+    img: "https://raw.githubusercontent.com/balajiofficial/DataPlotter/main/images/Screenshot.png",
+  },
+  {
+    title: "EncryptCLI",
+    date: "March 2021",
+    keywords: ["Go", "Encryption", "Command Line Tool", "Unicode", "ASCII"],
+    desc: "EncryptCLI is a command line tool that encrypts documents. This program is written in golang and uses the golang standard library. It converts Windows 10 supported unicode text to an unintelligible document. It creates a pseudo-random key to encrypt each character in the document. It can run on Windows 7+, Intel 64-bit computers. Since it's a command line tool it uses the command prompt GUI in Windows to run.",
+    links: [
+      { label: "GitHub", link: "https://github.com/balajiofficial/EncryptCLI" },
+      {
+        label: "Download",
+        link: "https://github.com/balajiofficial/EncryptCLI/releases/tag/5.0.0",
+      },
+    ],
+    img: "https://raw.githubusercontent.com/balajiofficial/EncryptCLI/main/images/Screenshot.png",
+  },
+  {
+    title: "Competitive Programming",
+    date: "December 2020",
+    keywords: ["C++", "Algorithms", "Data Structures", "Codeforces", "USACO"],
+    desc: "This is a github repository is a library of my codes for some competitive programming problems and competitions. It includes codes for USACO, Codeforces and other such competitive programming platforms. It also has codes for several algorithms and data structures. The codes have been written in C++ because of its incredible fast runtime and the algorithm and data structures support provided by the C++ Standard Library.",
+    links: [
+      {
+        label: "GitHub",
+        link: "https://github.com/balajiofficial/CompetitiveProgramming",
+      },
+    ],
+    img: "https://raw.githubusercontent.com/balajiofficial/CompetitiveProgramming/main/images/Screenshot.png",
   },
   {
     title: "Website",
@@ -42,20 +69,6 @@ export const content: Array<{
     img: "https://raw.githubusercontent.com/balajiofficial/Website/main/content/Screenshot.png",
   },
   {
-    title: "EncryptCLI",
-    date: "March 2021",
-    keywords: ["Go", "Encryption", "Command Line Tool", "Unicode", "ASCII"],
-    desc: "EncryptCLI is a command line tool that encrypts documents. This program is written in golang and uses the golang standard library. It converts Windows 10 supported unicode text to an unintelligible document. It creates a pseudo-random key to encrypt each character in the document. It can run on Windows 7+, Intel 64-bit computers. Since it's a command line tool it uses the command prompt GUI in Windows to run.",
-    links: [
-      { label: "GitHub", link: "https://github.com/balajiofficial/EncryptCLI" },
-      {
-        label: "Download",
-        link: "https://github.com/balajiofficial/EncryptCLI/releases/tag/5.0.0",
-      },
-    ],
-    img: "https://raw.githubusercontent.com/balajiofficial/EncryptCLI/main/images/Screenshot.png",
-  },
-  {
     title: "Bala Notes",
     date: "March 2021",
     keywords: ["Javascript", "Electron", "Tailwind CSS", "GUI", "HTML"],
@@ -68,18 +81,5 @@ export const content: Array<{
       },
     ],
     img: "https://raw.githubusercontent.com/balajiofficial/BalaNotes/main/images/Screenshot.png",
-  },
-  {
-    title: "Competitive Programming",
-    date: "December 2020",
-    keywords: ["C++", "Algorithms", "Data Structures", "Codeforces", "USACO"],
-    desc: "This is a github repository is a library of my codes for some competitive programming problems and competitions. It includes codes for USACO, Codeforces and other such competitive programming platforms. It also has codes for several algorithms and data structures. The codes have been written in C++ because of its incredible fast runtime and the algorithm and data structures support provided by the C++ Standard Library.",
-    links: [
-      {
-        label: "GitHub",
-        link: "https://github.com/balajiofficial/CompetitiveProgramming",
-      },
-    ],
-    img: "https://raw.githubusercontent.com/balajiofficial/CompetitiveProgramming/main/images/Screenshot.png",
   },
 ];

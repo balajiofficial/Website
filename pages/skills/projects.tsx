@@ -18,9 +18,9 @@ export default function Projects(): ReactElement<ReactFragment> {
                     [
                       "from-sky-400 to-blue-700",
                       "from-yellow-400 to-yellow-700",
-                      "from-green-500 to-green-700",
                       "from-pink-500 to-rose-700",
                       "from-purple-500 to-violet-600",
+                      "from-green-500 to-green-700",
                     ][index % 5]
                   } mb-4 p-5`}
                   key={e.title}
