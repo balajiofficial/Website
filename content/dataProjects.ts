@@ -21,7 +21,7 @@ export const content: Array<{
         link: "https://github.com/balajiofficial/DataPlotter/releases/tag/5.0.0",
       },
     ],
-    img: "https://raw.githubusercontent.com/balajiofficial/DataPlotter/main/images/Screenshot.png",
+    img: "https://raw.githubusercontent.com/balajiofficial/DataPlotter/main/images/Screenshot_2.png",
   },
   {
     title: "Website",
