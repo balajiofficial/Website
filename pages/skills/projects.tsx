@@ -83,7 +83,7 @@ export default function Projects(): ReactElement<ReactFragment> {
                       <div className="sm:bg-opacity-50 bg-transparent sm:bg-gray-300 p-0 md:p-7 lg:p-3 rounded-lg">
                         <Image
                           src={e.img}
-                          alt="Screenshot"
+                          alt={e.title}
                           width={1920}
                           height={1080}
                           quality={1}

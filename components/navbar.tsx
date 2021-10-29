@@ -20,7 +20,21 @@ export default class Navbar extends Component<{
   };
 
   componentDidMount() {
+    window.document.body.classList.add("dark:bg-gray-900");
+    window.document.body.classList.add("bg-white");
+
+    localStorage.setItem(
+      "theme",
+      localStorage.getItem("theme") == "dark" ? "dark" : "light"
+    );
+
     this.setState({ theme: localStorage.getItem("theme") });
+
+    this.props.themeFunc(localStorage.getItem("theme"));
+
+    window.document.documentElement.classList.add(
+      localStorage.getItem("theme")
+    );
   }
 
   render(): ReactElement<HTMLDivElement> {
