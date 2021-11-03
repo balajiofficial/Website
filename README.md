@@ -31,8 +31,7 @@ For more details visit [here](https://balajiofficial.vercel.app/credits).
 ```
 yarn
 yarn run css
-yarn run build
-yarn run start
+yarn run dev
 ```
 
 5. Then open [localhost:3000](http://localhost:3000/) in your browser.
