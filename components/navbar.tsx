@@ -40,7 +40,7 @@ export default class Navbar extends Component<{
   render(): ReactElement<HTMLDivElement> {
     return (
       <div className="top-0">
-        <nav className="min-h-full h-12 text-base sm:text-lg bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-sky-500">
+        <nav className="min-h-full h-16 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-sky-500">
           <div>
             <div className="flex justify-evenly font-medium">
               {this.state.pages.map((e) => {
@@ -53,7 +53,7 @@ export default class Navbar extends Component<{
                     }}
                   >
                     <div className="cursor-pointer">
-                      <div className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-2.5 sm:mt-2">
+                      <div className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-5 sm:mt-3.5 md:mt-4">
                         {e.label}
                       </div>
                     </div>
@@ -64,7 +64,7 @@ export default class Navbar extends Component<{
                       <div className="cursor-pointer">
                         <div
                           key={e[0]}
-                          className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-2.5 sm:mt-2"
+                          className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-5 sm:mt-3.5 md:mt-4"
                         >
                           {e.label}
                         </div>
@@ -74,7 +74,7 @@ export default class Navbar extends Component<{
                 );
               })}
 
-              <div className="mt-2 sm:mt-1.5">
+              <div className="mt-4 sm:mt-3.5">
                 <div
                   className="cursor-pointer"
                   onClick={() => {
@@ -96,7 +96,7 @@ export default class Navbar extends Component<{
                     {this.state.theme == "dark" ? (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="sm:h-7 sm:w-7 h-6 w-6"
+                        className="sm:h-7 sm:w-7 lg:h-8 lg:w-8 h-6 w-6"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -105,7 +105,7 @@ export default class Navbar extends Component<{
                     ) : (
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="sm:h-7 sm:w-7 h-6 w-6"
+                        className="sm:h-7 sm:w-7 lg:h-8 lg:w-8 h-6 w-6"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
