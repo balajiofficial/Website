@@ -40,7 +40,7 @@ export default function Typist() {
   return (
     <Fragment>
       <div className="inline-block">{words[index].substring(0, subIndex)}</div>
-      <div className="inline-block cursor-blink text-teal-500 text-5xl sm:text-6xl">
+      <div className="inline-block cursor-blink text-purple-500 dark:text-teal-500 text-5xl sm:text-6xl">
         |
       </div>
     </Fragment>
