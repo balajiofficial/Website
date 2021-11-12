@@ -62,7 +62,7 @@ export default function PostCode({ children, className }) {
                   {...getLineProps({ line, key: i })}
                   className="table-row"
                 >
-                  <div className="table-cell text-right pr-4 pl-1.5 text-gray-500">
+                  <div className="table-cell text-right pr-4 pl-1.5 text-gray-500 select-none">
                     {i + 1}
                   </div>
                   <div className="table-cell">
