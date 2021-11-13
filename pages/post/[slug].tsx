@@ -45,7 +45,23 @@ export default function Post({
               <p className="text-5xl font-bold mt-3 text-center dark:text-white">
                 {postData.title}
               </p>
-              <div className="font-about mb-5 sm:mb-4 mt-1">
+              <div className="font-about mb-5 sm:mb-4 mt-1.5 flex justify-center text-gray-600 dark:text-gray-400">
+                <div className="flex justify-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6 mr-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
                 <p className="text-gray-600 dark:text-gray-400 text-lg text-center">
                   {postData.date}
                 </p>
@@ -77,8 +93,8 @@ export default function Post({
                     <div className="flex items-center space-x-2">
                       <Image
                         src="/profile.png"
-                        width={26.25}
-                        height={27.5625}
+                        width={26}
+                        height={27}
                         alt="Profile Pic"
                       />
                       <p>Balaji K</p>
