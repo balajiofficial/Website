@@ -2,23 +2,32 @@ import { useState } from "react";
 
 export default function PostTab({ title, description }) {
   const [expand, setExpand] = useState(false);
+  const [rotate, setRotate] = useState(false);
+  const [expandDescription, setExpandDescription] = useState(false);
 
   return (
     <div>
       <div className="cursor-pointer">
         <div
           className={`bg-gradient-to-r from-sky-500 to-purple-700 text-white text-lg sm:text-2xl ${
-            expand ? "sm:rounded-t-lg" : "sm:rounded-lg"
+            expandDescription ? "sm:rounded-t-lg" : "sm:rounded-lg"
           } flex items-center h-11 mt-5`}
           onClick={() => {
-            setExpand(!expand);
+            setRotate(true);
+            setExpandDescription(!expandDescription);
+            setTimeout(() => {
+              setRotate(false);
+              setExpand(!expand);
+            }, 320);
           }}
         >
           <div className="ml-3">
             {expand ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className={`h-6 w-6 ${
+                  rotate ? "-rotate-90 transform duration-300" : ""
+                }`}
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -31,7 +40,9 @@ export default function PostTab({ title, description }) {
             ) : (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className={`h-6 w-6 ${
+                  rotate ? "rotate-90 transform duration-300" : ""
+                }`}
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >
@@ -45,7 +56,7 @@ export default function PostTab({ title, description }) {
           </div>
           <p className="ml-2 font-inter font-semibold">{title}</p>
         </div>
-        <div>{expand ? description() : <></>}</div>
+        <div>{expandDescription ? description() : <></>}</div>
       </div>
     </div>
   );
