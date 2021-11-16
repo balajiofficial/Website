@@ -107,7 +107,7 @@ export default function Post({
         </div>
         <div className="flex justify-center">
           <div className="lg:w-2/3 md:w-5/6 w-screen">
-            <div>
+            <div className="mb-3">
               <div className="mr-2 ml-2 text-lg dark:text-gray-300 leading-relaxed">
                 <MDXRemote {...postData.source} components={components} />
               </div>

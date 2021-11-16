@@ -2,8 +2,16 @@ import { useState } from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
 
-export default function PostCode({ children, className }) {
+export default function PostCode({
+  children,
+  className,
+}: {
+  children: string;
+  className: string;
+}) {
   const [copied, setCopied] = useState(false);
+
+  children = children.trim();
 
   const language = className.replace("language-", "");
   const getLanguageText = () => {
@@ -33,7 +41,7 @@ export default function PostCode({ children, className }) {
       <Highlight
         {...defaultProps}
         theme={theme}
-        code={children.trim()}
+        code={children}
         language={language as Language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
