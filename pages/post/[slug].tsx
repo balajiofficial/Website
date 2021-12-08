@@ -93,9 +93,10 @@ export default function Post({
                     <div className="flex items-center space-x-2">
                       <Image
                         src="/profile.png"
-                        width={26}
+                        width={27}
                         height={27}
                         alt="Profile Pic"
+                        className="rounded-full"
                       />
                       <p>Balaji K</p>
                     </div>
