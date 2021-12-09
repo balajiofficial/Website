@@ -1,35 +1,23 @@
 {
-  "name": "website",
-  "version": "1.0.0",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "yarn run css && next build",
-    "start": "next start",
-    "lint": "next lint",
-    "css": "tailwindcss build -i styles/global.css -o styles/styles.css",
-    "prettier": "prettier --write ."
-  },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "12.0.1",
-    "next-mdx-remote": "^3.0.7",
+    "next": "^12.0.7",
+    "next-mdx-remote": "^3.0.8",
     "prism-react-renderer": "^1.2.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-tsparticles": "^1.37.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-tsparticles": "^1.37.5",
     "reading-time": "^1.5.0",
-    "sharp": "^0.29.2"
+    "sharp": "^0.29.3"
   },
   "devDependencies": {
-    "@types/react": "^17.0.33",
+    "@types/react": "^17.0.37",
     "autoprefixer": "^10.4.0",
-    "eslint": "7",
-    "eslint-config-next": "12.0.1",
-    "postcss": "^8.3.11",
-    "prettier": "^2.4.1",
-    "tailwindcss": "^2.2.19",
-    "typescript": "^4.4.4"
+    "eslint": "^8.4.1",
+    "eslint-config-next": "^12.0.7",
+    "postcss": "^8.4.4",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.0",
+    "typescript": "^4.5.3"
   }
 }
