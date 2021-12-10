@@ -6,18 +6,20 @@ export default class Navbar extends Component<{
 }> {
   state = {
     theme: "light",
-    pages: [
-      { label: "Home", page: "" },
-      { label: "About", page: "about" },
-      { label: "Skills" },
-      { label: "Posts", page: "posts" },
-    ],
-    skillsMenu: false,
-    skillsMenuLinks: [
-      { label: "Projects", page: "projects" },
-      { label: "Skills", page: "skills" },
-    ],
+    aboutMenu: false,
   };
+
+  pages = [
+    { label: "Home", page: "" },
+    { label: "About" },
+    { label: "Posts", page: "posts" },
+  ];
+
+  aboutMenuLinks = [
+    { label: "About", page: "" },
+    { label: "Projects", page: "projects" },
+    { label: "Skills", page: "skills" },
+  ];
 
   componentDidMount() {
     window.document.body.classList.add("dark:bg-gray-900");
@@ -43,13 +45,13 @@ export default class Navbar extends Component<{
         <nav className="min-h-full h-16 text-base sm:text-lg lg:text-xl bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600  text-white dark:text-white dark:from-fuchsia-600 dark:via-indigo-600 dark:to-sky-500">
           <div>
             <div className="flex justify-evenly font-medium">
-              {this.state.pages.map((e) => {
-                return e.label == "Skills" ? (
+              {this.pages.map((e) => {
+                return e.label == "About" ? (
                   <div
                     key={e.label}
                     className="text-white hover:no-underline no-underline"
                     onClick={() => {
-                      this.setState({ skillsMenu: !this.state.skillsMenu });
+                      this.setState({ aboutMenu: !this.state.aboutMenu });
                     }}
                   >
                     <div className="cursor-pointer">
@@ -122,15 +124,15 @@ export default class Navbar extends Component<{
             </div>
           </div>
         </nav>
-        {this.state.skillsMenu ? (
+        {this.state.aboutMenu ? (
           <div className="flex justify-center">
             <div className="w-11/12 md:w-2/3 mt-4">
               <div className="text-lg bg-gray-200 dark:bg-gray-800 rounded-lg">
                 <div className="font-medium">
                   <div className="pt-2.5 pb-2.5 flex justify-evenly">
-                    {this.state.skillsMenuLinks.map((e) => {
+                    {this.aboutMenuLinks.map((e) => {
                       return (
-                        <Link href={`/skills/${e.page}`} passHref key={e.label}>
+                        <Link href={`/about/${e.page}`} passHref key={e.label}>
                           <a className="text-black dark:text-white border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
                             <p>{e.label}</p>
                           </a>

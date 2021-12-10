@@ -1,8 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  mode: "jit",
-  purge: [
+  content: [
     "./layouts/*.tsx",
     "./components/*.tsx",
     "./components/*/*.tsx",
@@ -19,7 +18,7 @@ module.exports = {
       current: "currentColor",
       black: colors.black,
       white: colors.white,
-      gray: colors.coolGray,
+      gray: colors.gray,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,

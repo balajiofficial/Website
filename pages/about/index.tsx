@@ -1,9 +1,9 @@
-import Layout from "../layouts/pageLayout";
+import Layout from "../../layouts/pageLayout";
 import Image from "next/image";
 import { ReactElement, ReactFragment } from "react";
-import { aboutData } from "../content/dataAbout";
-import PageSEO from "../components/seo";
-import Typist from "../components/typist";
+import { aboutData } from "../../content/dataAbout";
+import PageSEO from "../../components/seo";
+import Typist from "../../components/typist";
 
 export default function About(): ReactElement<ReactFragment> {
   return (
@@ -12,7 +12,13 @@ export default function About(): ReactElement<ReactFragment> {
       <div className="dark:bg-gray-900">
         <div className="mb-5">
           <div className="flex justify-center mt-1.5 sm:mt-5">
-            <Image src="/profile.png" alt="Profile" width={205} height={205} className="rounded-full" />
+            <Image
+              src="/profile.png"
+              alt="Profile"
+              width={205}
+              height={205}
+              className="rounded-full"
+            />
           </div>
           <div className="mt-3 flex justify-center text-center">
             <p className="text-4xl sm:text-5xl font-bold h-full bg-clip-text bg-gradient-to-r from-rose-500 to-purple-500 dark:from-sky-500 dark:to-teal-500  text-transparent font-quicksand">
