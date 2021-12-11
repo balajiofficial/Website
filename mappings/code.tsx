@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/vsDark";
+import darkTheme from "prism-react-renderer/themes/vsDark";
+import lightTheme from "prism-react-renderer/themes/vsLight";
 
 export default function PostCode({
   children,
@@ -10,6 +11,7 @@ export default function PostCode({
   className: string;
 }) {
   const [copied, setCopied] = useState(false);
+  const [codeTheme, setCodeTheme] = useState(true);
 
   children = children.trim();
 
@@ -36,19 +38,22 @@ export default function PostCode({
     }, 1000);
   };
 
+  const switchTheme = () => {
+    setCodeTheme(!codeTheme);
+  };
+
   return (
     <div>
       <Highlight
         {...defaultProps}
-        theme={theme}
+        theme={codeTheme == true ? darkTheme : lightTheme}
         code={children}
         language={language as Language}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre
             className={
-              className +
-              " rounded-lg text-base text-left mt-2 mb-2 font-code border-2 border-white dark:border-gray-500"
+              className + " rounded-lg text-base text-left mt-2 mb-2 font-code"
             }
             style={style}
           >
@@ -57,7 +62,21 @@ export default function PostCode({
                 {getLanguageText()}
               </p>
               <button
-                className="bg-gray-300 hover:bg-gray-100 text-black pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-5"
+                className={`${
+                  codeTheme
+                    ? "bg-gray-300 hover:bg-gray-100 text-black"
+                    : "dark:bg-black dark:hover:bg-gray-700 dark:text-white"
+                } pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-4`}
+                onClick={switchTheme}
+              >
+                Switch Theme
+              </button>
+              <button
+                className={`${
+                  codeTheme
+                    ? "bg-gray-300 hover:bg-gray-100 text-black"
+                    : "dark:bg-black dark:hover:bg-gray-700 dark:text-white"
+                } pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-4`}
                 onClick={copyIt}
               >
                 {copied ? <p>Copied!</p> : <p>Copy</p>}
