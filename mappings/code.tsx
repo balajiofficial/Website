@@ -65,7 +65,7 @@ export default function PostCode({
                 className={`${
                   codeTheme
                     ? "bg-gray-300 hover:bg-gray-100 text-black"
-                    : "dark:bg-black dark:hover:bg-gray-700 dark:text-white"
+                    : "bg-black hover:bg-gray-700 text-white"
                 } pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-4`}
                 onClick={switchTheme}
               >
@@ -75,8 +75,8 @@ export default function PostCode({
                 className={`${
                   codeTheme
                     ? "bg-gray-300 hover:bg-gray-100 text-black"
-                    : "dark:bg-black dark:hover:bg-gray-700 dark:text-white"
-                } pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-4`}
+                    : "bg-black hover:bg-gray-700 text-white"
+                } pl-2 pr-2 pb-0.5 mb-1 sm:mb-0 text-sm rounded-b-md mr-5`}
                 onClick={copyIt}
               >
                 {copied ? <p>Copied!</p> : <p>Copy</p>}

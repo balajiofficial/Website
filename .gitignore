@@ -32,6 +32,3 @@ yarn-error.log*
 
 # vercel
 .vercel
-
-# styles
-/styles/styles.css

@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn run css && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "css": "tailwindcss build -i styles/global.css -o styles/styles.css",
