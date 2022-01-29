@@ -1,4 +1,16 @@
 {
+  "name": "website",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "css": "tailwindcss build -i styles/global.css -o styles/styles.css",
+    "prettier": "prettier --write ."
+  },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "next": "^12.0.9",
