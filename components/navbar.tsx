@@ -16,7 +16,7 @@ export default class Navbar extends Component<{
   ];
 
   aboutMenuLinks = [
-    { label: "About", page: "" },
+    { label: "About Me", page: "" },
     { label: "Projects", page: "projects" },
     { label: "Skills", page: "skills" },
   ];
@@ -65,7 +65,7 @@ export default class Navbar extends Component<{
                     <a>
                       <div className="cursor-pointer">
                         <div
-                          key={e[0]}
+                          key={e.page}
                           className="border-b-2 border-transparent dark:hover:border-white hover:border-white mt-5 sm:mt-3.5 md:mt-4"
                         >
                           {e.label}
