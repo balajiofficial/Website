@@ -1,13 +1,12 @@
 export const aboutData: Array<{ img: string; title: string; alt: string }> = [
   {
-    title:
-      "My name is Balaji. I am a 16 year old high school student from India",
+    title: "My name is Balaji. I am a 16 year old high school student",
     img: "/images/1.png",
     alt: "Info",
   },
   {
     title:
-      "My hobbies include reading novels, listening to music and learning new skills",
+      "My hobbies are reading novels, watching web series and exploring new fields",
     img: "/images/2.png",
     alt: "Hobby",
   },
@@ -19,7 +18,7 @@ export const aboutData: Array<{ img: string; title: string; alt: string }> = [
   },
   {
     title:
-      "Check out my posts where I talk about algorithms, philosophy, math, etc.",
+      "I love having intriguing discussions about philosophy, problem solving and math",
     img: "/images/4.png",
     alt: "Posts",
   },
