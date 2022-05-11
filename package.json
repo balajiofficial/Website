@@ -13,24 +13,24 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^12.1.4",
-    "next-mdx-remote": "^4.0.2",
+    "next": "^12.1.6",
+    "next-mdx-remote": "^4.0.3",
     "prism-react-renderer": "^1.3.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-tsparticles": "^1.42.4",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-tsparticles": "^2.0.6",
     "reading-time": "^1.5.0",
-    "sharp": "^0.30.3"
+    "sharp": "^0.30.4"
   },
   "devDependencies": {
-    "@types/node": "^17.0.23",
-    "@types/react": "^17.0.43",
-    "autoprefixer": "^10.4.4",
-    "eslint": "^8.12.0",
-    "eslint-config-next": "^12.1.4",
-    "postcss": "^8.4.12",
-    "prettier": "^2.6.1",
-    "tailwindcss": "^3.0.23",
-    "typescript": "^4.6.3"
+    "@types/node": "^17.0.32",
+    "@types/react": "^18.0.9",
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.15.0",
+    "eslint-config-next": "^12.1.6",
+    "postcss": "^8.4.13",
+    "prettier": "^2.6.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.6.4"
   }
 }
