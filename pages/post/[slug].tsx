@@ -34,9 +34,8 @@ export default function Post({
     date: string;
     desc: string;
   };
-}): ReactFragment {
-  return;
-  <Layout>
+}) {
+  return <Layout>
     <PageSEO title={postData.title + " - Post"} />
     <div>
       <div className="flex justify-center mt-2 mb-2">
