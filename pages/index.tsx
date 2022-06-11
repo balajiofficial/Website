@@ -47,7 +47,7 @@ export default function Home(): ReactElement<ReactFragment> {
                 </div>
                 <div className="pt-3 pb-3">
                   <a
-                    href="https://www.linkedin.com/in/balaji-k-0389a8239/"
+                    href="https://www.linkedin.com/in/balaji-kannan-/"
                     target="_blank"
                     rel="noreferrer"
                     className="text-white"
