@@ -18,6 +18,7 @@ The code for the website is open source and is licensed under the [MIT License](
 - [**Markdown**](https://en.wikipedia.org/wiki/Markdown)
 - [**ESLint**](https://eslint.org/)
 - [**Vercel**](https://vercel.com/)
+- [**Node.js](https://nodejs.org/)
 
 For more details visit [here](https://balajiofficial.vercel.app/credits).
 
