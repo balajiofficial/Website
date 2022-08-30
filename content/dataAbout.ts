@@ -1,6 +1,6 @@
 export const aboutData: Array<{ img: string; title: string; alt: string }> = [
   {
-    title: "My name is Balaji. I am a 16 year old high school student from India",
+    title: "My name is Balaji. I am a 17 year old high school student from India",
     img: "/images/1.png",
     alt: "Info",
   },
