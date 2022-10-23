@@ -7,6 +7,16 @@ export const content: Array<{
   img: string;
 }> = [
   {
+    title: "Password Manager",
+    date: "October 2022",
+    keywords: ["Python", "MySQL", "Tkinter", "PyMySQL"],
+    desc: "Password Manager stores passwords securely using a MySQL Database. The source code is in python and is connected to a MySQL Database using PyMySQL. The passwords are stored in a computer's local MySQL database, which eliminates the risk of passwords being sold or exploited by a commercial password manager that sends data to its servers. If your computer fails, however, your passwords will also get deleted.",
+    links: [
+      { label: "Icon Source", link: "https://www.flaticon.com/free-icons/key" },
+    ],
+    img: "https://raw.githubusercontent.com/balajiofficial/Website/main/content/Password_Manager.png",
+  },
+  {
     title: "Data Plotter",
     date: "April 2021",
     keywords: ["Python", "Graphs", "Plotting", "Matplotlib", "Tkinter"],
