@@ -7,6 +7,19 @@ export const content: Array<{
   img: string;
 }> = [
   {
+    title: "Object Detector",
+    date: "April 2022",
+    keywords: ["YOLOv3", "Darknet", "Computer Vision", "Numpy", "Python"],
+    desc: "Object Detector uses YOLOv3 weights and darknet framework to detect objects in real life. It also provides a confidence level of the detection. The 'cv2' module captures frames from camera footage and allows for easy image manipulation. It has two variants - heavy and light. Heavy is more accurate, however, it uses a lot more CPU cores and RAM than light and vice versa.",
+    links: [
+      {
+        label: "Github",
+        link: "https://github.com/balajiofficial/ObjectDetection",
+      },
+    ],
+    img: "https://raw.githubusercontent.com/balajiofficial/Website/main/content/ObjectDetection.png",
+  },
+  {
     title: "Password Manager",
     date: "October 2022",
     keywords: ["Python", "MySQL", "Tkinter", "PyMySQL"],
