@@ -55,7 +55,7 @@ export default class Footer extends Component<{ fixEnd: boolean }> {
                   className="text-black dark:text-gray-300 border-b-2 border-black hover:border-transparent dark:border-gray-300 dark:hover:border-transparent"
                   rel="noreferrer"
                 >
-                  Copyright © 2021 Balaji K
+                  Copyright © 2021 Balaji Kannan
                 </a>
               </div>
               <div>
