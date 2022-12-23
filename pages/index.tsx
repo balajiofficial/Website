@@ -39,7 +39,7 @@ export default function Home(): ReactElement<ReactFragment> {
                           ></path>
                         </svg>
                         <p className="inline-block text-lg align-middle">
-                          Github
+                          GitHub
                         </p>
                       </div>
                     </button>

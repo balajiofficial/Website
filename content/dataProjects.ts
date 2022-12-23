@@ -13,7 +13,7 @@ export const content: Array<{
     desc: "Object Detector uses YOLOv3 weights and darknet framework to detect objects in real life. It also provides a confidence level of the detection. The 'cv2' module captures frames from camera footage and allows for easy image manipulation. It has two variants - heavy and light. Heavy is more accurate, however, it uses a lot more CPU cores and RAM than light and vice versa.",
     links: [
       {
-        label: "Github",
+        label: "GitHub",
         link: "https://github.com/balajiofficial/ObjectDetection",
       },
     ],
