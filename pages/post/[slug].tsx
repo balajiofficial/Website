@@ -97,7 +97,7 @@ export default function Post({
                       alt="Profile Pic"
                       className="rounded-full"
                     />
-                    <p>Balaji K</p>
+                    <p>Balaji Kannan</p>
                   </div>
                 </div>
               </div>
