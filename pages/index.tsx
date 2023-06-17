@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ReactElement, ReactFragment } from "react";
 import PageSEO from "../components/seo";
-import Image from "next/image";
 import IndexLayout from "../layouts/indexLayout";
 
 export default function Home(): ReactElement<ReactFragment> {
@@ -11,10 +10,10 @@ export default function Home(): ReactElement<ReactFragment> {
       <div className="text-black dark:text-white">
         <div className="relative">
           <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
-            <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-9xl pb-7 sm:pb-10 font-semibold font-about">
-              Balaji
+            <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-8xl pb-7 sm:pb-10 font-semibold font-about select-none">
+              Balaji Kannan
             </h1>
-            <div className="flex justify-center mt-3 md:mt-7">
+            <div className="flex justify-center mt-3 md:mt-10">
               <div className="text-white dark:text-white flex md:justify-evenly w-auto md:w-11/12 lg:w-3/4 flex-col md:flex-row">
                 <div className="pt-3 pb-3">
                   <a
