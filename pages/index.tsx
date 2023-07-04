@@ -10,7 +10,7 @@ export default function Home(): ReactElement<ReactFragment> {
       <div className="text-black dark:text-white">
         <div className="relative">
           <div className="lg:pt-48 md:pt-36 sm:pt-12 pt-20">
-            <h1 className="dark:text-gray-100 flex justify-center text-8xl sm:text-8xl pb-7 sm:pb-10 font-semibold font-about select-none">
+            <h1 className="dark:text-gray-100 flex justify-center text-center text-8xl sm:text-8xl pb-7 sm:pb-10 font-semibold font-about select-none">
               Balaji Kannan
             </h1>
             <div className="flex justify-center mt-3 md:mt-10">
