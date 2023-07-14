@@ -6,9 +6,9 @@ export default function PageSEO({ title = "", index = false }) {
     <div>
       <Head>
         {index ? (
-          <title>Balaji&apos;s Website</title>
+          <title>Balaji Kannan</title>
         ) : (
-          <title>{title} | Balaji&apos;s Website</title>
+          <title>{title} | Balaji Kannan</title>
         )}
         <link
           href={
