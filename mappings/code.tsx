@@ -1,7 +1,5 @@
 import { useState } from "react";
-import Highlight, { defaultProps, Language } from "prism-react-renderer";
-import darkTheme from "prism-react-renderer/themes/vsDark";
-import lightTheme from "prism-react-renderer/themes/vsLight";
+import {Highlight, themes, Language} from "prism-react-renderer";
 
 export default function PostCode({
   children,
@@ -45,8 +43,7 @@ export default function PostCode({
   return (
     <div>
       <Highlight
-        {...defaultProps}
-        theme={codeTheme == true ? darkTheme : lightTheme}
+        theme={codeTheme == true ? themes.vsDark : themes.vsLight}
         code={children}
         language={language as Language}
       >

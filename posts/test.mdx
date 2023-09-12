@@ -75,24 +75,34 @@ int main() {
 
 ![Website Image](https://raw.githubusercontent.com/balajiofficial/Website/main/content/Screenshot.png)
 
-```python
-n = int(input("Enter number : "))
+```go
+package main
 
-if n == 1:
-    print(1)
-elif n == 2:
-    print(1, 1)
-else:
-    a = 1
-    b = 1
-    print(1, 1, end=" ")
-    c = 0
-    n -= 2
-    for _ in range(n):
-        c = a + b
-        print(c, end=" ")
-        a = b
-        b = c
+import "fmt"
+
+func main() {
+    var n int
+    fmt.Print("Enter number : ")
+    fmt.Scan(&n)
+    
+    if n == 1 {
+        fmt.Println(1)
+    } else if n == 2 {
+        fmt.Println(1, 1)
+    } else {
+        a := 1
+        b := 1
+        fmt.Print(1, 1, " ")
+        c := 0
+        n -= 2
+        for i := 0; i < n; i++ {
+            c = a + b
+            fmt.Print(c, " ")
+            a = b
+            b = c
+        }
+    }
+}
 ```
 
 [Another Another Link](https://github.com)

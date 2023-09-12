@@ -61,7 +61,7 @@ export default class Navbar extends Component<{
                     </div>
                   </div>
                 ) : (
-                  <Link href={`/${e.page}`} key={e.label} passHref>
+                  <Link href={`/${e.page}`} key={e.label} passHref legacyBehavior>
                     <a>
                       <div className="cursor-pointer">
                         <div
