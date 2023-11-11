@@ -18,7 +18,7 @@ export default class Navbar extends Component<{
   aboutMenuLinks = [
     { label: "About Me", page: "" },
     { label: "Projects", page: "projects" },
-    { label: "Skills", page: "skills" },
+    { label: "Resume" },
   ];
 
   componentDidMount() {
@@ -132,7 +132,7 @@ export default class Navbar extends Component<{
                   <div className="pt-2.5 pb-2.5 flex justify-evenly">
                     {this.aboutMenuLinks.map((e) => {
                       return (
-                        <Link href={`/about/${e.page}`} passHref key={e.label} legacyBehavior>
+                        <Link href={e.label == "Resume" ? '/resume.pdf' : `/about/${e.page}`} passHref key={e.label} legacyBehavior>
                           <a className="text-black dark:text-white border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
                             <p>{e.label}</p>
                           </a>

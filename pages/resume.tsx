@@ -7,6 +7,7 @@ export default function ResumePage() {
     <Layout>
       <PageSEO title="Resume" />
       <div>
+        
       </div>
     </Layout>
   );
