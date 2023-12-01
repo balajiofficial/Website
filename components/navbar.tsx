@@ -18,7 +18,6 @@ export default class Navbar extends Component<{
   aboutMenuLinks = [
     { label: "About Me", page: "" },
     { label: "Projects", page: "projects" },
-    { label: "Resume" },
   ];
 
   componentDidMount() {
