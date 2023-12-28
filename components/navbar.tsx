@@ -23,6 +23,8 @@ export default class Navbar extends Component<{
   componentDidMount() {
     window.document.body.classList.add("dark:bg-gray-900");
     window.document.body.classList.add("bg-white");
+    
+    window.document.documentElement.setAttribute('lang', 'en');
 
     localStorage.setItem(
       "theme",
