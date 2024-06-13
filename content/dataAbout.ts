@@ -1,12 +1,12 @@
 export const aboutData: Array<{ img: string; title: string; alt: string }> = [
   {
-    title: "My name is Balaji Kannan. I am a freshman majoring in Computer Science",
+    title: "My name is Balaji Kannan. I am a sophomore majoring in Computer Science & Economics",
     img: "/images/1.png",
     alt: "Info",
   },
   {
     title:
-      "My hobbies are reading novels, watching web series and exploring new things",
+      "My hobbies are reading novels, watching movies, playing the guitar and exploring new hobbies",
     img: "/images/2.png",
     alt: "Hobby",
   },
