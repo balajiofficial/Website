@@ -74,60 +74,42 @@ export default function Home(): ReactElement<ReactFragment> {
                 </div>
                 <div className="pt-3 pb-3">
                   <a
-                    href="https://data.typeracer.com/pit/profile?user=balawastaken"
+                    href="/static/resume.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="text-white"
                   >
                     <button className="bg-blue-800 hover:bg-blue-700 rounded-lg p-3 dark:hover:shadow-gray-600 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 inline-block">
+                        <path fill-rule="evenodd" d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0 0 16.5 9h-1.875a1.875 1.875 0 0 1-1.875-1.875V5.25A3.75 3.75 0 0 0 9 1.5H5.625ZM7.5 15a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7.5 15Zm.75 2.25a.75.75 0 0 0 0 1.5H12a.75.75 0 0 0 0-1.5H8.25Z" clip-rule="evenodd" />
+                        <path d="M12.971 1.816A5.23 5.23 0 0 1 14.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 0 1 3.434 1.279 9.768 9.768 0 0 0-6.963-6.963Z" />
+                      </svg>
+
+                      <p className="inline-block text-lg align-middle ml-1.5">
+                        Resume
+                      </p>
+                    </button>
+                  </a>
+                </div>
+                <div className="pt-3 pb-3">
+                  <a href="mailto:balaji.kannan@tcu.edu">
+                    <button
+                      className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 dark:hover:shadow-gray-600 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-9 w-9 inline-block"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
-                        <path
-                          fillRule="evenodd"
-                          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                          clipRule="evenodd"
-                        />
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                       </svg>
-                      <p className="inline-block text-lg align-middle ml-1.5">
-                        TypeRacer
+                      <p className="inline-block text-lg align-middle pl-1">
+                        Email
                       </p>
                     </button>
                   </a>
-                </div>
-                <div className="pt-3 pb-3">
-                  <button
-                    className="bg-gradient-to-r from-pink-600 to-pink-700 hover:from-pink-700 hover:to-pink-800 dark:hover:from-pink-500 dark:hover:to-pink-600 dark:hover:shadow-gray-600 rounded-lg p-3 font-semibold h-14 hover:shadow-xl hover:-translate-y-1 transform transition-all duration-150"
-                    onClick={() => {
-                      if (
-                        prompt(
-                          "Enter 'I am not an annoying bot' to verify that you are not a bot",
-                        ) == "I am not an annoying bot"
-                      ) {
-                        location.replace(
-                          "mailto:balajikyadav.official@gmail.com",
-                        );
-                      } else {
-                        alert("Sorry, 🤖");
-                      }
-                    }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-9 w-9 inline-block"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                    <p className="inline-block text-lg align-middle pl-1">
-                      Email
-                    </p>
-                  </button>
                 </div>
               </div>
             </div>
