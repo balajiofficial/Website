@@ -6,7 +6,7 @@ export function search(
     desc: string;
     time: string;
   },
-  searchText: string
+  searchText: string,
 ) {
   return (
     post.title.toLowerCase().includes(searchText.toLowerCase()) ||

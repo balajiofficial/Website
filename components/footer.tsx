@@ -10,14 +10,14 @@ export default class Footer extends Component<{ fixEnd: boolean }> {
     const user_agent = window.navigator.userAgent;
     const device = RegExp(
       "(tablet|ipad|playbook|silk)|(android(?!.*mobi))",
-      "i"
+      "i",
     ).test(user_agent)
       ? "Tablet"
       : RegExp(
-          "Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)"
-        ).test(user_agent)
-      ? "Mobile"
-      : "Desktop";
+            "Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)",
+          ).test(user_agent)
+        ? "Mobile"
+        : "Desktop";
     this.setState({ device: device });
   };
 

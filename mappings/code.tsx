@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {Highlight, themes, Language} from "prism-react-renderer";
+import { Highlight, themes, Language } from "prism-react-renderer";
 
 export default function PostCode({
   children,

@@ -22,7 +22,8 @@ export default function CreditsPage(): ReactElement<ReactFragment> {
         <div className="flex justify-center mt-4 md:mt-8">
           <div className="w-10/12 sm:w-3/4 lg:w-1/2 text-xl font-about text-gray-600 dark:text-gray-300">
             <p>
-              The icons on this site have been used from the following sites -{" "}
+              The icons on this site have been used from the following sites
+              -{" "}
             </p>
             <div className="mt-1">
               <PostUnorderedList>

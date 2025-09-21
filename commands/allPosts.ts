@@ -16,7 +16,7 @@ export function getSortedPostsData(): Array<{
   const fileNames = readdirSync(postsDirectory);
   const allPostsData = fileNames.map(
     (
-      fileName
+      fileName,
     ): {
       slug: string;
       title: string;
@@ -45,7 +45,7 @@ export function getSortedPostsData(): Array<{
         }),
         time,
       };
-    }
+    },
   );
 
   return allPostsData.sort(sortByDate);

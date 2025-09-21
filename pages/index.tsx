@@ -104,11 +104,11 @@ export default function Home(): ReactElement<ReactFragment> {
                     onClick={() => {
                       if (
                         prompt(
-                          "Enter 'I am not an annoying bot' to verify that you are not a bot"
+                          "Enter 'I am not an annoying bot' to verify that you are not a bot",
                         ) == "I am not an annoying bot"
                       ) {
                         location.replace(
-                          "mailto:balajikyadav.official@gmail.com"
+                          "mailto:balajikyadav.official@gmail.com",
                         );
                       } else {
                         alert("Sorry, 🤖");

@@ -11,7 +11,7 @@ export default function pl1() {
               {e}
             </div>
           );
-        }
+        },
       )}
     </div>
   );

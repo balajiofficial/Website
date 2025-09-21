@@ -23,12 +23,12 @@ export default class Navbar extends Component<{
   componentDidMount() {
     window.document.body.classList.add("dark:bg-gray-900");
     window.document.body.classList.add("bg-white");
-    
-    window.document.documentElement.setAttribute('lang', 'en');
+
+    window.document.documentElement.setAttribute("lang", "en");
 
     localStorage.setItem(
       "theme",
-      localStorage.getItem("theme") == "dark" ? "dark" : "light"
+      localStorage.getItem("theme") == "dark" ? "dark" : "light",
     );
 
     this.setState({ theme: localStorage.getItem("theme") });
@@ -36,7 +36,7 @@ export default class Navbar extends Component<{
     this.props.themeFunc(localStorage.getItem("theme"));
 
     window.document.documentElement.classList.add(
-      localStorage.getItem("theme")
+      localStorage.getItem("theme"),
     );
   }
 
@@ -62,7 +62,12 @@ export default class Navbar extends Component<{
                     </div>
                   </div>
                 ) : (
-                  <Link href={`/${e.page}`} key={e.label} passHref legacyBehavior>
+                  <Link
+                    href={`/${e.page}`}
+                    key={e.label}
+                    passHref
+                    legacyBehavior
+                  >
                     <a>
                       <div className="cursor-pointer">
                         <div
@@ -82,16 +87,18 @@ export default class Navbar extends Component<{
                   className="cursor-pointer"
                   onClick={() => {
                     window.document.documentElement.classList.remove(
-                      localStorage.getItem("theme")
+                      localStorage.getItem("theme"),
                     );
                     window.localStorage.setItem(
                       "theme",
-                      localStorage.getItem("theme") == "dark" ? "light" : "dark"
+                      localStorage.getItem("theme") == "dark"
+                        ? "light"
+                        : "dark",
                     );
                     this.props.themeFunc(localStorage.getItem("theme"));
                     this.setState({ theme: localStorage.getItem("theme") });
                     window.document.documentElement.classList.add(
-                      localStorage.getItem("theme")
+                      localStorage.getItem("theme"),
                     );
                   }}
                 >
@@ -133,7 +140,16 @@ export default class Navbar extends Component<{
                   <div className="pt-2.5 pb-2.5 flex justify-evenly">
                     {this.aboutMenuLinks.map((e) => {
                       return (
-                        <Link href={e.label == "Resume" ? '/resume.pdf' : `/about/${e.page}`} passHref key={e.label} legacyBehavior>
+                        <Link
+                          href={
+                            e.label == "Resume"
+                              ? "/resume.pdf"
+                              : `/about/${e.page}`
+                          }
+                          passHref
+                          key={e.label}
+                          legacyBehavior
+                        >
                           <a className="text-black dark:text-white border-b-2 border-transparent hover:border-black dark:border-transparent dark:hover:border-white">
                             <p>{e.label}</p>
                           </a>

@@ -71,7 +71,11 @@ export default function PostPage({
                       <div className="xl:w-3/4 lg:w-5/6 mt-7" key={post.slug}>
                         <div>
                           <div>
-                            <Link href={`/post/${post.slug}`} passHref legacyBehavior>
+                            <Link
+                              href={`/post/${post.slug}`}
+                              passHref
+                              legacyBehavior
+                            >
                               <a className="text-2xl md:text-3xl font-extrabold text-black hover:text-sky-500 dark:text-white dark:hover:text-cyan-400">
                                 {post.title}
                               </a>

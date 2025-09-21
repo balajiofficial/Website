@@ -37,7 +37,7 @@ export default function Typist() {
       () => {
         setSubIndex(subIndex + (reverse ? -1 : 1));
       },
-      reverse ? 75 : subIndex === words[index].length ? 1500 : 75
+      reverse ? 75 : subIndex === words[index].length ? 1500 : 75,
     );
 
     return () => clearTimeout(timeout);

@@ -7,21 +7,8 @@ export const content: Array<{
   img: string;
 }> = [
   {
-    title: "Object Detector",
-    date: "April 2022",
-    keywords: ["YOLOv3", "Darknet", "Computer Vision", "Numpy", "Python"],
-    desc: "Object Detector uses YOLOv3 weights and darknet framework to detect objects in real life. It also provides a confidence level of the detection. The 'cv2' module captures frames from camera footage and allows for easy image manipulation. It has two variants - heavy and light. Heavy is more accurate, however, it uses a lot more CPU cores and RAM than light and vice versa.",
-    links: [
-      {
-        label: "GitHub",
-        link: "https://github.com/balajiofficial/ObjectDetection",
-      },
-    ],
-    img: "https://raw.githubusercontent.com/balajiofficial/Website/main/content/ObjectDetection.png",
-  },
-  {
     title: "Password Manager",
-    date: "October 2022",
+    date: "",
     keywords: ["Python", "MySQL", "Tkinter", "PyMySQL"],
     desc: "Password Manager stores passwords securely using a MySQL Database. The source code is in python and is connected to a MySQL Database using PyMySQL. The passwords are stored in a computer's local MySQL database, which eliminates the risk of passwords being sold or exploited by a commercial password manager that sends data to its servers. If your computer fails, however, your passwords will also get deleted.",
     links: [
@@ -31,7 +18,7 @@ export const content: Array<{
   },
   {
     title: "Data Plotter",
-    date: "April 2021",
+    date: "",
     keywords: ["Python", "Graphs", "Plotting", "Matplotlib", "Tkinter"],
     desc: "Data Plotter is a software that can be used to read .xlsx and .csv files to plot different types of graphs. The GUI of the app has been created with tkinter. It has different GUI themes and all matplotlib's graph themes. The app uses pandas to read data files and uses matplotlib to plot this data to a graph. Data Plotter can be used by non developers and by developers who do not wish to spend time implementing their own programs.",
     links: [
@@ -48,7 +35,7 @@ export const content: Array<{
   },
   {
     title: "EncryptCLI",
-    date: "March 2021",
+    date: "",
     keywords: ["Go", "Encryption", "Command Line Tool", "Unicode", "ASCII"],
     desc: "EncryptCLI is a command line tool that encrypts documents. This program is written in golang and uses the golang standard library. It converts Windows 10 supported unicode text to an unintelligible document. It creates a pseudo-random key to encrypt each character in the document. It can run on Windows 7+, Intel 64-bit computers. Since it's a command line tool it uses the command prompt GUI in Windows to run.",
     links: [
@@ -62,7 +49,7 @@ export const content: Array<{
   },
   {
     title: "Competitive Programming",
-    date: "December 2020",
+    date: "",
     keywords: ["C++", "Algorithms", "Data Structures", "Codeforces", "USACO"],
     desc: "This is a github repository is a library of my codes for some competitive programming problems and competitions. It includes codes for USACO, Codeforces and other such competitive programming platforms. It also has codes for several algorithms and data structures. The codes have been written in C++ because of its incredible fast runtime and the algorithm and data structures support provided by the C++ Standard Library.",
     links: [
@@ -75,7 +62,7 @@ export const content: Array<{
   },
   {
     title: "Website",
-    date: "April 2021",
+    date: "",
     keywords: [
       "Typescript",
       "React",
@@ -93,7 +80,7 @@ export const content: Array<{
   },
   {
     title: "Bala Notes",
-    date: "March 2021",
+    date: "",
     keywords: ["Javascript", "Electron", "Tailwind CSS", "GUI", "HTML"],
     desc: "Bala Notes is an open source desktop app created for taking notes. It was created using frontend technologies like HTML, CSS and Javascript. It uses a framework called Electron to convert web apps into functioning desktop apps. The app has a great UI thanks to the Tailwind CSS framework and works on high resolution systems as well but it is very ram and storage heavy because of the chromium engine used by electron.",
     links: [

@@ -33,7 +33,7 @@ export default function About(): ReactElement<ReactFragment> {
                     {aboutData.map(
                       (
                         e: { img: string; alt: string; title: string },
-                        i: number
+                        i: number,
                       ) => {
                         return (
                           <li
@@ -56,7 +56,7 @@ export default function About(): ReactElement<ReactFragment> {
                             </div>
                           </li>
                         );
-                      }
+                      },
                     )}
                   </ul>
                 </div>
